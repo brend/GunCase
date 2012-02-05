@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
+		5F1C33B614DE99C600BF808B /* GunCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33B514DE99C600BF808B /* GunCase.m */; };
+		5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */; };
+		5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
+		5F1C33C214DE99C600BF808B /* libGunCase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33A814DE99C600BF808B /* libGunCase.a */; };
+		5F1C33C814DE99C600BF808B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33C614DE99C600BF808B /* InfoPlist.strings */; };
+		5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33CA14DE99C600BF808B /* GunCaseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F1C33C014DE99C600BF808B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1C339F14DE99C600BF808B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1C33A714DE99C600BF808B;
+			remoteInfo = GunCase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F1C33A814DE99C600BF808B /* libGunCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGunCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1C33AB14DE99C600BF808B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5F1C33AF14DE99C600BF808B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5F1C33B014DE99C600BF808B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */ = {isa = PBXFileReference; path = "GunCase-Prefix.pch"; sourceTree = "<group>"; };
+		5F1C33B414DE99C600BF808B /* GunCase.h */ = {isa = PBXFileReference; path = GunCase.h; sourceTree = "<group>"; };
+		5F1C33B514DE99C600BF808B /* GunCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GunCase.m; sourceTree = "<group>"; };
+		5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GunCaseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */ = {isa = PBXFileReference; path = "GunCaseTests-Info.plist"; sourceTree = "<group>"; };
+		5F1C33C714DE99C600BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F1C33C914DE99C600BF808B /* GunCaseTests.h */ = {isa = PBXFileReference; path = GunCaseTests.h; sourceTree = "<group>"; };
+		5F1C33CA14DE99C600BF808B /* GunCaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GunCaseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1C33A514DE99C600BF808B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1C33B814DE99C600BF808B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */,
+				5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */,
+				5F1C33C214DE99C600BF808B /* libGunCase.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1C339D14DE99C600BF808B = {
+			isa = PBXGroup;
+			children = (
+				5F1C33B114DE99C600BF808B /* GunCase */,
+				5F1C33C314DE99C600BF808B /* GunCaseTests */,
+				5F1C33AA14DE99C600BF808B /* Frameworks */,
+				5F1C33A914DE99C600BF808B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F1C33A914DE99C600BF808B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33A814DE99C600BF808B /* libGunCase.a */,
+				5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1C33AA14DE99C600BF808B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33AB14DE99C600BF808B /* Cocoa.framework */,
+				5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */,
+				5F1C33AD14DE99C600BF808B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F1C33AD14DE99C600BF808B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33AE14DE99C600BF808B /* AppKit.framework */,
+				5F1C33AF14DE99C600BF808B /* CoreData.framework */,
+				5F1C33B014DE99C600BF808B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5F1C33B114DE99C600BF808B /* GunCase */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33B414DE99C600BF808B /* GunCase.h */,
+				5F1C33B514DE99C600BF808B /* GunCase.m */,
+				5F1C33B214DE99C600BF808B /* Supporting Files */,
+			);
+			path = GunCase;
+			sourceTree = "<group>";
+		};
+		5F1C33B214DE99C600BF808B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F1C33C314DE99C600BF808B /* GunCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33C914DE99C600BF808B /* GunCaseTests.h */,
+				5F1C33CA14DE99C600BF808B /* GunCaseTests.m */,
+				5F1C33C414DE99C600BF808B /* Supporting Files */,
+			);
+			path = GunCaseTests;
+			sourceTree = "<group>";
+		};
+		5F1C33C414DE99C600BF808B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */,
+				5F1C33C614DE99C600BF808B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5F1C33A614DE99C600BF808B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F1C33A714DE99C600BF808B /* GunCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1C33CE14DE99C600BF808B /* Build configuration list for PBXNativeTarget "GunCase" */;
+			buildPhases = (
+				5F1C33A414DE99C600BF808B /* Sources */,
+				5F1C33A514DE99C600BF808B /* Frameworks */,
+				5F1C33A614DE99C600BF808B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GunCase;
+			productName = GunCase;
+			productReference = 5F1C33A814DE99C600BF808B /* libGunCase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5F1C33BB14DE99C600BF808B /* GunCaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1C33D114DE99C600BF808B /* Build configuration list for PBXNativeTarget "GunCaseTests" */;
+			buildPhases = (
+				5F1C33B714DE99C600BF808B /* Sources */,
+				5F1C33B814DE99C600BF808B /* Frameworks */,
+				5F1C33B914DE99C600BF808B /* Resources */,
+				5F1C33BA14DE99C600BF808B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1C33C114DE99C600BF808B /* PBXTargetDependency */,
+			);
+			name = GunCaseTests;
+			productName = GunCaseTests;
+			productReference = 5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1C339F14DE99C600BF808B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5F1C33A214DE99C600BF808B /* Build configuration list for PBXProject "GunCase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F1C339D14DE99C600BF808B;
+			productRefGroup = 5F1C33A914DE99C600BF808B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F1C33A714DE99C600BF808B /* GunCase */,
+				5F1C33BB14DE99C600BF808B /* GunCaseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1C33B914DE99C600BF808B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33C814DE99C600BF808B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F1C33BA14DE99C600BF808B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1C33A414DE99C600BF808B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33B614DE99C600BF808B /* GunCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1C33B714DE99C600BF808B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1C33C114DE99C600BF808B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1C33A714DE99C600BF808B /* GunCase */;
+			targetProxy = 5F1C33C014DE99C600BF808B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F1C33C614DE99C600BF808B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1C33C714DE99C600BF808B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F1C33CC14DE99C600BF808B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5F1C33CD14DE99C600BF808B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5F1C33CF14DE99C600BF808B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F1C33D014DE99C600BF808B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5F1C33D214DE99C600BF808B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				INFOPLIST_FILE = "GunCaseTests/GunCaseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5F1C33D314DE99C600BF808B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				INFOPLIST_FILE = "GunCaseTests/GunCaseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1C33A214DE99C600BF808B /* Build configuration list for PBXProject "GunCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1C33CC14DE99C600BF808B /* Debug */,
+				5F1C33CD14DE99C600BF808B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1C33CE14DE99C600BF808B /* Build configuration list for PBXNativeTarget "GunCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1C33CF14DE99C600BF808B /* Debug */,
+				5F1C33D014DE99C600BF808B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5F1C33D114DE99C600BF808B /* Build configuration list for PBXNativeTarget "GunCaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1C33D214DE99C600BF808B /* Debug */,
+				5F1C33D314DE99C600BF808B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F1C339F14DE99C600BF808B /* Project object */;
+}
