@@ -3,11 +3,12 @@
 //  GunCase
 //
 //  Created by Philipp Brendel on 05.02.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef GunCase_GunCase_h
+#define GunCase_GunCase_h
 
-@interface GunCase : NSObject
+#import "GCSprite.h"
 
-@end
+#endif

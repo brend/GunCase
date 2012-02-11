@@ -8,12 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
-		5F1C33B614DE99C600BF808B /* GunCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33B514DE99C600BF808B /* GunCase.m */; };
 		5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */; };
 		5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33C214DE99C600BF808B /* libGunCase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33A814DE99C600BF808B /* libGunCase.a */; };
 		5F1C33C814DE99C600BF808B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33C614DE99C600BF808B /* InfoPlist.strings */; };
 		5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33CA14DE99C600BF808B /* GunCaseTests.m */; };
+		5F1C33DA14DE9A8000BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
+		5F1C33E014DE9A8000BF808B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33DE14DE9A8000BF808B /* InfoPlist.strings */; };
+		5F1C33E214DE9A8000BF808B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33E114DE9A8000BF808B /* main.m */; };
+		5F1C33E614DE9A8000BF808B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33E414DE9A8000BF808B /* Credits.rtf */; };
+		5F1C33E914DE9A8000BF808B /* GDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */; };
+		5F1C33EC14DE9A8000BF808B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33EA14DE9A8000BF808B /* MainMenu.xib */; };
+		5F1C33F014DE9B1500BF808B /* libGunCase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33A814DE99C600BF808B /* libGunCase.a */; };
+		5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33F614DE9F7000BF808B /* GCSprite.h */; };
+		5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33F714DE9F7000BF808B /* GCSprite.m */; };
+		5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33FB14DE9FA500BF808B /* GunCase.h */; };
+		5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33FD14DEA03E00BF808B /* Macros.h */; };
+		5F1C340414DEA37C00BF808B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340214DEA37C00BF808B /* GLUT.framework */; };
+		5F1C340514DEA37C00BF808B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340314DEA37C00BF808B /* OpenGL.framework */; };
+		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
+		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
+		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,15 +47,32 @@
 		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5F1C33AF14DE99C600BF808B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5F1C33B014DE99C600BF808B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */ = {isa = PBXFileReference; path = "GunCase-Prefix.pch"; sourceTree = "<group>"; };
-		5F1C33B414DE99C600BF808B /* GunCase.h */ = {isa = PBXFileReference; path = GunCase.h; sourceTree = "<group>"; };
-		5F1C33B514DE99C600BF808B /* GunCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GunCase.m; sourceTree = "<group>"; };
+		5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GunCase-Prefix.pch"; sourceTree = "<group>"; };
 		5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GunCaseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */ = {isa = PBXFileReference; path = "GunCaseTests-Info.plist"; sourceTree = "<group>"; };
+		5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GunCaseTests-Info.plist"; sourceTree = "<group>"; };
 		5F1C33C714DE99C600BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F1C33C914DE99C600BF808B /* GunCaseTests.h */ = {isa = PBXFileReference; path = GunCaseTests.h; sourceTree = "<group>"; };
+		5F1C33C914DE99C600BF808B /* GunCaseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GunCaseTests.h; sourceTree = "<group>"; };
 		5F1C33CA14DE99C600BF808B /* GunCaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GunCaseTests.m; sourceTree = "<group>"; };
+		5F1C33D814DE9A8000BF808B /* GunCaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GunCaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1C33DD14DE9A8000BF808B /* GunCaseDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GunCaseDemo-Info.plist"; sourceTree = "<group>"; };
+		5F1C33DF14DE9A8000BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F1C33E114DE9A8000BF808B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F1C33E314DE9A8000BF808B /* GunCaseDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GunCaseDemo-Prefix.pch"; sourceTree = "<group>"; };
+		5F1C33E514DE9A8000BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppDelegate.h; sourceTree = "<group>"; };
+		5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppDelegate.m; sourceTree = "<group>"; };
+		5F1C33EB14DE9A8000BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5F1C33F614DE9F7000BF808B /* GCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSprite.h; path = Classes/GCSprite.h; sourceTree = "<group>"; };
+		5F1C33F714DE9F7000BF808B /* GCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSprite.m; path = Classes/GCSprite.m; sourceTree = "<group>"; };
+		5F1C33FB14DE9FA500BF808B /* GunCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunCase.h; sourceTree = "<group>"; };
+		5F1C33FD14DEA03E00BF808B /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		5F1C340214DEA37C00BF808B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		5F1C340314DEA37C00BF808B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5F1C340614DEA38200BF808B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = Classes/GDMainView.h; sourceTree = "<group>"; };
+		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = Classes/GDMainView.m; sourceTree = "<group>"; };
+		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +94,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F1C33D514DE9A8000BF808B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */,
+				5F1C340414DEA37C00BF808B /* GLUT.framework in Frameworks */,
+				5F1C340514DEA37C00BF808B /* OpenGL.framework in Frameworks */,
+				5F1C33F014DE9B1500BF808B /* libGunCase.a in Frameworks */,
+				5F1C33DA14DE9A8000BF808B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +114,7 @@
 			children = (
 				5F1C33B114DE99C600BF808B /* GunCase */,
 				5F1C33C314DE99C600BF808B /* GunCaseTests */,
+				5F1C33DB14DE9A8000BF808B /* GunCaseDemo */,
 				5F1C33AA14DE99C600BF808B /* Frameworks */,
 				5F1C33A914DE99C600BF808B /* Products */,
 			);
@@ -80,6 +125,7 @@
 			children = (
 				5F1C33A814DE99C600BF808B /* libGunCase.a */,
 				5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */,
+				5F1C33D814DE9A8000BF808B /* GunCaseDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +133,9 @@
 		5F1C33AA14DE99C600BF808B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F1C340614DEA38200BF808B /* QuartzCore.framework */,
+				5F1C340214DEA37C00BF808B /* GLUT.framework */,
+				5F1C340314DEA37C00BF808B /* OpenGL.framework */,
 				5F1C33AB14DE99C600BF808B /* Cocoa.framework */,
 				5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */,
 				5F1C33AD14DE99C600BF808B /* Other Frameworks */,
@@ -107,8 +156,7 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
-				5F1C33B414DE99C600BF808B /* GunCase.h */,
-				5F1C33B514DE99C600BF808B /* GunCase.m */,
+				5F1C33F114DE9EC300BF808B /* Graphics */,
 				5F1C33B214DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCase;
@@ -117,7 +165,9 @@
 		5F1C33B214DE99C600BF808B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F1C33FD14DEA03E00BF808B /* Macros.h */,
 				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
+				5F1C33FB14DE9FA500BF808B /* GunCase.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +191,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5F1C33DB14DE9A8000BF808B /* GunCaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C340B14DEA4F200BF808B /* Classes */,
+				5F1C340114DEA35200BF808B /* Resources */,
+				5F1C33DC14DE9A8000BF808B /* Supporting Files */,
+			);
+			path = GunCaseDemo;
+			sourceTree = "<group>";
+		};
+		5F1C33DC14DE9A8000BF808B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33DD14DE9A8000BF808B /* GunCaseDemo-Info.plist */,
+				5F1C33DE14DE9A8000BF808B /* InfoPlist.strings */,
+				5F1C33E114DE9A8000BF808B /* main.m */,
+				5F1C33E314DE9A8000BF808B /* GunCaseDemo-Prefix.pch */,
+				5F1C33E414DE9A8000BF808B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F1C33F114DE9EC300BF808B /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33F614DE9F7000BF808B /* GCSprite.h */,
+				5F1C33F714DE9F7000BF808B /* GCSprite.m */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		5F1C340114DEA35200BF808B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C340F14DEBA4300BF808B /* walker.png */,
+				5F1C33EA14DE9A8000BF808B /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F1C340B14DEA4F200BF808B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */,
+				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
+				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
+				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -148,6 +249,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */,
+				5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */,
+				5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +294,23 @@
 			productReference = 5F1C33BC14DE99C600BF808B /* GunCaseTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		5F1C33D714DE9A8000BF808B /* GunCaseDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1C33ED14DE9A8000BF808B /* Build configuration list for PBXNativeTarget "GunCaseDemo" */;
+			buildPhases = (
+				5F1C33D414DE9A8000BF808B /* Sources */,
+				5F1C33D514DE9A8000BF808B /* Frameworks */,
+				5F1C33D614DE9A8000BF808B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GunCaseDemo;
+			productName = GunCaseDemo;
+			productReference = 5F1C33D814DE9A8000BF808B /* GunCaseDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +333,7 @@
 			targets = (
 				5F1C33A714DE99C600BF808B /* GunCase */,
 				5F1C33BB14DE99C600BF808B /* GunCaseTests */,
+				5F1C33D714DE9A8000BF808B /* GunCaseDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +344,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1C33C814DE99C600BF808B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1C33D614DE9A8000BF808B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33E014DE9A8000BF808B /* InfoPlist.strings in Resources */,
+				5F1C33E614DE9A8000BF808B /* Credits.rtf in Resources */,
+				5F1C33EC14DE9A8000BF808B /* MainMenu.xib in Resources */,
+				5F1C341014DEBA4300BF808B /* walker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F1C33B614DE99C600BF808B /* GunCase.m in Sources */,
+				5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1C33D414DE9A8000BF808B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1C33E214DE9A8000BF808B /* main.m in Sources */,
+				5F1C33E914DE9A8000BF808B /* GDAppDelegate.m in Sources */,
+				5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +420,30 @@
 				5F1C33C714DE99C600BF808B /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5F1C33DE14DE9A8000BF808B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1C33DF14DE9A8000BF808B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5F1C33E414DE9A8000BF808B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1C33E514DE9A8000BF808B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5F1C33EA14DE9A8000BF808B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1C33EB14DE9A8000BF808B /* en */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -371,6 +538,28 @@
 			};
 			name = Release;
 		};
+		5F1C33EE14DE9A8000BF808B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCaseDemo/GunCaseDemo-Prefix.pch";
+				INFOPLIST_FILE = "GunCaseDemo/GunCaseDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5F1C33EF14DE9A8000BF808B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GunCaseDemo/GunCaseDemo-Prefix.pch";
+				INFOPLIST_FILE = "GunCaseDemo/GunCaseDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -390,6 +579,7 @@
 				5F1C33D014DE99C600BF808B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F1C33D114DE99C600BF808B /* Build configuration list for PBXNativeTarget "GunCaseTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +588,16 @@
 				5F1C33D314DE99C600BF808B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1C33ED14DE9A8000BF808B /* Build configuration list for PBXNativeTarget "GunCaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1C33EE14DE9A8000BF808B /* Debug */,
+				5F1C33EF14DE9A8000BF808B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

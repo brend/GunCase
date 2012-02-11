@@ -1,0 +1,5 @@
+.DS_Store
+*.xcodeproj/brph0000.*
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
+build
