@@ -83,8 +83,9 @@
 	glLoadIdentity();
 	float x = 100 * cosf(a), y = 100 * sinf(a);
 
-	glTranslatef(x, y, 0);
-	[self.sprite draw];
+	[self.sprite drawAtX: x y: y
+				rotation: 5 * a
+				   scale: NSMakeSize(5 * fabs(sin((5 * a))), 3 * fabs(sin((5 * a))))];
 	
 	
 	[self.sprite drawStatusBars: self.frame.size];

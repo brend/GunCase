@@ -25,13 +25,13 @@ const GLfloat GCSpriteTexcoords[] =
 	 textureCoordinates: (GLfloat[]) textureCoordinates;
 
 @property (nonatomic, readwrite, copy) NSString *imageName;
-@property (readonly) GLuint textureName;
+@property (readonly) GLuint textureID;
 @end
 
 #pragma mark GCSprite Implementation
 @implementation GCSprite
-@synthesize widthInPixels, heightInPixels, widthInWorld, heightInWorld;
-@synthesize imageName, thumbnail;
+@synthesize width, height;
+@synthesize imageName;
 
 - (id) initWithImage: (NSImage *) anImage
 {
@@ -47,25 +47,24 @@ const GLfloat GCSpriteTexcoords[] =
 	[anImage CGImageForProposedRect: NULL 
 							context: NULL 
 							  hints: nil]; // TODO Prüfen, ob man hier was Sinnvolles für "referenceContext" übergeben kann
-	GLsizei width = 0, height = 0;
 	GLubyte *spriteData = NULL;
 	CGContextRef spriteContext = NULL;
 	GLfloat width_2 = 0, height_2 = 0;
 	
 	// Get the width and height of the image
-	widthInPixels = width = (GLsizei) CGImageGetWidth(spriteImage);
-	heightInPixels = height = (GLsizei) CGImageGetHeight(spriteImage);
+	width = (GLsizei) CGImageGetWidth(spriteImage);
+	height = (GLsizei) CGImageGetHeight(spriteImage);
 	// Texture dimensions must be a power of 2. If you write an application that allows users to supply an image,
 	// you'll want to add code that checks the dimensions and takes appropriate action if they are not a power of 2.
-	NSAssert2(GBIsPowerOf2(width) && GBIsPowerOf2(height), 
-			  @"Image dimensions must be powers of two; found: %d, %d", width, height);
+	if (!(GBIsPowerOf2(width) && GBIsPowerOf2(height))) {
+		NSString *message = [NSString stringWithFormat: @"Image dimensions must be powers of two; found: %d, %d", width, height];
+	
+		@throw [NSException exceptionWithName: @"InvalidImageFormat" reason: message userInfo: nil];
+	}
 	
 	// Compute width and height of the texture		
-	widthInWorld = anImage.size.width;
-	heightInWorld = anImage.size.height;
-	
-	width_2 = widthInWorld * 0.5;
-	height_2 = heightInWorld * 0.5;
+	width_2 = width * 0.5;
+	height_2 = height * 0.5;
 	
 	spriteVertices[0] = -width_2;	spriteVertices[1] = -height_2;
 	spriteVertices[2] =  width_2;	spriteVertices[3] = -height_2;
@@ -97,9 +96,9 @@ const GLfloat GCSpriteTexcoords[] =
 	CGContextRelease(spriteContext);
 	
 	// Use OpenGL ES to generate a name for the texture.
-	glGenTextures(1, &(texture[0]));
+	glGenTextures(1, &texture);
 	// Bind the texture name. 
-	glBindTexture(GL_TEXTURE_2D, texture[0]);
+	glBindTexture(GL_TEXTURE_2D, texture);
 	// Speidfy a 2D texture image, provideing the a pointer to the image data in memory
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
 	// Release the image data
@@ -113,26 +112,9 @@ const GLfloat GCSpriteTexcoords[] =
 	return self;
 }
 
-- (id) initWithImageNamed: (NSString *) anImageName
-{
-	NSImage *image = [NSImage imageNamed: anImageName];
-	
-	NSAssert(image != nil, @"Image not found");
-	
-	if ((self = [self initWithImage: image]) != nil)
-		self.imageName = anImageName;
-	
-	return self;
-}
-
 + (id) spriteWithImage: (NSImage *) image
 {
 	return [[GCSprite alloc] initWithImage: image];
-}
-
-+ (id) spriteWithImageNamed: (NSString *) imageName
-{
-	return [[GCSprite alloc] initWithImageNamed: imageName];
 }
 
 //+ (id) spriteWithString: (NSString *) text
@@ -159,7 +141,6 @@ const GLfloat GCSpriteTexcoords[] =
 	 textureCoordinates: (GLfloat[]) theTexCoords
 {
 	if ((self = [super init])) {
-		
 		memcpy(spriteVertices, theVertices, sizeof(GLfloat) * 8);
 		memcpy(textureCoordinates, theTexCoords, sizeof(GLfloat) * 8);
 		
@@ -170,7 +151,7 @@ const GLfloat GCSpriteTexcoords[] =
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);		
 		
 		// TODO Eigenen Textur-Namen mit 0 initialisieren oder sonstwie garantieren, daß die Textur erst freigegeben wird, wenn alle Sprites verschwunden sind
-		texture[0] = textureName;
+		texture = textureName;
 	}
 	
 	return self;
@@ -181,7 +162,6 @@ const GLfloat GCSpriteTexcoords[] =
 						height: (float) sheetHeight
 					   columns: (NSInteger) sheetColumns
 						  rows: (NSInteger) sheetRows
-			  createThumbnails: (BOOL) thumbnails
 {
 	NSInteger spriteCount = sheetColumns * sheetRows;
 	NSMutableArray *sprites = [NSMutableArray arrayWithCapacity: spriteCount];
@@ -206,12 +186,9 @@ const GLfloat GCSpriteTexcoords[] =
 									x * spriteWidth / fullWidth,		(y+1) * spriteHeight / fullHeight,
 									(x+1) * spriteWidth / fullWidth,	(y+1) * spriteHeight / fullHeight
 								  };
-			GCSprite *sprite = [[GCSprite alloc] initWithVertices: spriteVertices texture: sheetSprite.textureName textureCoordinates: texCoords];
+			GCSprite *sprite = [[GCSprite alloc] initWithVertices: spriteVertices texture: sheetSprite.textureID textureCoordinates: texCoords];
 			
 			sprite.imageName = [sheetImage name];
-			
-			if (thumbnails)
-				sprite.thumbnail = [GCSprite createThumbnailFromImage: sheetImage withRectangle: NSMakeRect(x * spriteWidth, y * spriteHeight, spriteWidth, spriteHeight)];
 			
 			[sprites addObject: sprite];
 		}
@@ -220,29 +197,32 @@ const GLfloat GCSpriteTexcoords[] =
 	return sprites;
 }
 
-+ (NSImage *) createThumbnailFromImage: (NSImage *) image
-						 withRectangle: (NSRect) rect
-{
-	NSSize size = NSMakeSize(32, 32);
-	NSImage *thumbnail = [[NSImage alloc] initWithSize: size];
-	
-	[thumbnail lockFocus];
-	[image drawInRect: NSMakeRect(0, 0, size.width, size.height) fromRect: rect operation: NSCompositeSourceOver fraction: 1];
-	[thumbnail unlockFocus];
-	
-	return thumbnail;
-}
+/* Commented out because
+ *  1) doesn't belong here
+ *  2) may be useful again some day (yeah, right)
+ */
+//+ (NSImage *) createThumbnailFromImage: (NSImage *) image
+//						 withRectangle: (NSRect) rect
+//{
+//	NSSize size = NSMakeSize(32, 32);
+//	NSImage *thumbnail = [[NSImage alloc] initWithSize: size];
+//	
+//	[thumbnail lockFocus];
+//	[image drawInRect: NSMakeRect(0, 0, size.width, size.height) fromRect: rect operation: NSCompositeSourceOver fraction: 1];
+//	[thumbnail unlockFocus];
+//	
+//	return thumbnail;
+//}
 
 - (void) dealloc
 {
 	// TODO Muss hier etwas zur Freigabe der Textur getan werden?
 	self.imageName = nil;
-	self.thumbnail = nil;
 }
 
-- (GLuint) textureName
+- (GLuint) textureID
 {
-	return texture[0];
+	return texture;
 }
 
 #pragma mark Drawing the Sprite
@@ -253,7 +233,7 @@ const GLfloat GCSpriteTexcoords[] =
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 		
 	glColor4f(1, 1, 1, 1);
-	glBindTexture(GL_TEXTURE_2D, texture[0]);
+	glBindTexture(GL_TEXTURE_2D, texture);
 	glVertexPointer(2, GL_FLOAT, 0, spriteVertices);
 	glTexCoordPointer(2, GL_FLOAT, 0, textureCoordinates);
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
@@ -325,6 +305,22 @@ const GLfloat GCSpriteTexcoords[] =
 	glPushMatrix();
 	
 	glTranslatef(x, y, 0);
+	glScalef(scale.width, scale.height, 1);
+	
+	[self draw];
+	
+	glPopMatrix();
+}
+
+- (void) drawAtX: (float) x
+			   y: (float) y
+		rotation: (float) angle
+		   scale: (NSSize) scale
+{
+	glPushMatrix();
+	
+	glTranslatef(x, y, 0);
+	glRotatef(angle, 0, 0, 1);
 	glScalef(scale.width, scale.height, 1);
 	
 	[self draw];
