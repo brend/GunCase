@@ -15,7 +15,7 @@
 
 @implementation GDMainView
 
-@synthesize sprite = _sprite, timer = _timer;
+@synthesize timer = _timer, guy = _guy;
 
 - (void)reshape
 {	
@@ -72,34 +72,22 @@
 
 -(void) drawRect: (NSRect) bounds
 {
-	if (self.sprite == nil) {
-		NSImage *image = [NSImage imageNamed: @"walker"];
-		
-		self.sprite = [GCSprite spriteWithImage: image];
+	if (self.guy == nil) {
+		self.guy = [[GDGuy alloc] init];
 	}
 	
 	glClearColor(sin(a), 1, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
-	float x = 100 * cosf(a), y = 100 * sinf(a);
-
-	[self.sprite drawAtX: x y: y
-				rotation: 5 * a
-				   scale: NSMakeSize(5 * fabs(sin((5 * a))), 3 * fabs(sin((5 * a))))];
 	
-	
-	[self.sprite drawStatusBars: self.frame.size];
-	
+	[self.guy draw];
 	
 	glFlush(); 
 }
 
 - (IBAction) toggleTimer: (id) sender
 {
-	if (self.timer)
-		[self stopTimer];
-	else
-		[self startTimer];
+	[self.guy flip];
 }
 
 @end

@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
+		5F0B6CCD14E6D0E300A87D18 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */; };
+		5F0B6CCE14E6D0E300A87D18 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */; };
+		5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD014E6D26D00A87D18 /* GDGuy.m */; };
+		5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */; };
 		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */; };
 		5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33C214DE99C600BF808B /* libGunCase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33A814DE99C600BF808B /* libGunCase.a */; };
 		5F1C33C814DE99C600BF808B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33C614DE99C600BF808B /* InfoPlist.strings */; };
-		5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33CA14DE99C600BF808B /* GunCaseTests.m */; };
 		5F1C33DA14DE9A8000BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33E014DE9A8000BF808B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C33DE14DE9A8000BF808B /* InfoPlist.strings */; };
 		5F1C33E214DE9A8000BF808B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33E114DE9A8000BF808B /* main.m */; };
@@ -42,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
+		5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
+		5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAnimation.m; path = Classes/GCAnimation.m; sourceTree = "<group>"; };
+		5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGuy.h; path = Classes/GDGuy.h; sourceTree = "<group>"; };
+		5F0B6CD014E6D26D00A87D18 /* GDGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGuy.m; path = Classes/GDGuy.m; sourceTree = "<group>"; };
+		5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAnimationTest.h; sourceTree = "<group>"; };
+		5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAnimationTest.m; sourceTree = "<group>"; };
 		5F1C33A814DE99C600BF808B /* libGunCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGunCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33AB14DE99C600BF808B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -52,8 +63,6 @@
 		5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GunCaseTests-Info.plist"; sourceTree = "<group>"; };
 		5F1C33C714DE99C600BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F1C33C914DE99C600BF808B /* GunCaseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GunCaseTests.h; sourceTree = "<group>"; };
-		5F1C33CA14DE99C600BF808B /* GunCaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GunCaseTests.m; sourceTree = "<group>"; };
 		5F1C33D814DE9A8000BF808B /* GunCaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GunCaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33DD14DE9A8000BF808B /* GunCaseDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GunCaseDemo-Info.plist"; sourceTree = "<group>"; };
 		5F1C33DF14DE9A8000BF808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -73,6 +82,7 @@
 		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = Classes/GDMainView.h; sourceTree = "<group>"; };
 		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = Classes/GDMainView.m; sourceTree = "<group>"; };
 		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
+		5F9F177C14E7DCAB00428AC4 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F0B6CC714E6CD6F00A87D18 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
+				5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */,
+				5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		5F1C339D14DE99C600BF808B = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5F1C33F114DE9EC300BF808B /* Graphics */,
+				5F0B6CC714E6CD6F00A87D18 /* Animation */,
 				5F1C33B214DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCase;
@@ -168,6 +189,7 @@
 				5F1C33FD14DEA03E00BF808B /* Macros.h */,
 				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
 				5F1C33FB14DE9FA500BF808B /* GunCase.h */,
+				5F9F177C14E7DCAB00428AC4 /* README */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,8 +197,8 @@
 		5F1C33C314DE99C600BF808B /* GunCaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				5F1C33C914DE99C600BF808B /* GunCaseTests.h */,
-				5F1C33CA14DE99C600BF808B /* GunCaseTests.m */,
+				5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */,
+				5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */,
 				5F1C33C414DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCaseTests;
@@ -238,6 +260,8 @@
 				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
 				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
 				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
+				5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */,
+				5F0B6CD014E6D26D00A87D18 /* GDGuy.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -252,6 +276,8 @@
 				5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */,
 				5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */,
 				5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */,
+				5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */,
+				5F0B6CCD14E6D0E300A87D18 /* GCAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */,
+				5F0B6CCE14E6D0E300A87D18 /* GCAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F1C33CB14DE99C600BF808B /* GunCaseTests.m in Sources */,
+				5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +427,7 @@
 				5F1C33E214DE9A8000BF808B /* main.m in Sources */,
 				5F1C33E914DE9A8000BF808B /* GDAppDelegate.m in Sources */,
 				5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */,
+				5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

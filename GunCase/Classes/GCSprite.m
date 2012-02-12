@@ -30,7 +30,7 @@ const GLfloat GCSpriteTexcoords[] =
 
 #pragma mark GCSprite Implementation
 @implementation GCSprite
-@synthesize width, height;
+@synthesize width, height, flip;
 @synthesize imageName;
 
 - (id) initWithImage: (NSImage *) anImage
@@ -225,7 +225,9 @@ const GLfloat GCSpriteTexcoords[] =
 	return texture;
 }
 
+#pragma mark -
 #pragma mark Drawing the Sprite
+
 - (void) draw
 {	
 	glEnable(GL_TEXTURE_2D);
@@ -244,32 +246,6 @@ const GLfloat GCSpriteTexcoords[] =
 //	glDisable(GL_TEXTURE_2D);
 }
 
-- (void) drawStatusBars: (NSSize) worldSize
-{
-	float GMWorldWidth_2 = worldSize.width, GMWorldHeight_2 = worldSize.height;
-	float GMPowerbarHeight = 64, GMPowerbarWidth = 500;
-	
-	float powerQuotient = 0.6;
-	
-	glDisable(GL_TEXTURE_2D);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState(GL_VERTEX_ARRAY);
-	glLoadIdentity();
-	glTranslatef(-GMWorldWidth_2 + 8, GMWorldHeight_2 - (GMPowerbarHeight + 8), 0);
-	
-	glBegin(GL_QUADS);
-	glColor3f(0, 0, 0); glVertex2f(GMPowerbarWidth, GMPowerbarHeight);
-	glColor3f(0, 0, 0); glVertex2f(0, GMPowerbarHeight);
-	glColor3f(0, 0, 0); glVertex2f(0, 0);
-	glColor3f(0, 0, 0); glVertex2f(GMPowerbarWidth, 0);
-	
-	glColor3f(1, 1, 1); glVertex2f(GMPowerbarWidth - 2, GMPowerbarHeight * powerQuotient - 2);
-	glColor3f(1, 1, 1); glVertex2f(2, GMPowerbarHeight * powerQuotient - 2);
-	glColor3f(1, 1, 1); glVertex2f(2, 2);
-	glColor3f(1, 1, 1); glVertex2f(GMPowerbarWidth - 2, 2);
-	glEnd();
-}
-
 - (void) drawAtX: (float) x y: (float) y
 {
 	glTranslatef(x, y, 0);
@@ -285,38 +261,8 @@ const GLfloat GCSpriteTexcoords[] =
 - (void) drawAtX: (float) x
 			   y: (float) y
 		rotation: (float) angle
-{
-	// glLoadIdentity();
-	
-	glPushMatrix();
-	
-	glTranslatef(x, y, 0);
-	glRotatef(angle, 0, 0, 1);
-	
-	[self draw];
-	
-	glPopMatrix();
-}
-
-- (void) drawAtX: (float) x 
-			   y: (float) y
 		   scale: (NSSize) scale
-{
-	glPushMatrix();
-	
-	glTranslatef(x, y, 0);
-	glScalef(scale.width, scale.height, 1);
-	
-	[self draw];
-	
-	glPopMatrix();
-}
-
-- (void) drawAtX: (float) x
-			   y: (float) y
-		rotation: (float) angle
-		   scale: (NSSize) scale
-{
+{	
 	glPushMatrix();
 	
 	glTranslatef(x, y, 0);

@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GunCase.h"
+#import "GDGuy.h"
 
 @interface GDMainView : NSOpenGLView
 {
@@ -18,7 +19,7 @@
 - (void) stopTimer;
 
 @property (retain) NSTimer *timer;
-@property (retain) GCSprite *sprite;
+@property (retain) GDGuy *guy;
 
 - (IBAction) toggleTimer: (id) sender;
 

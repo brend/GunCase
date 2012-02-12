@@ -9,6 +9,11 @@
 #ifndef GunCase_GunCase_h
 #define GunCase_GunCase_h
 
+// Graphics
 #import "GCSprite.h"
+
+// Animation
+#import "GCMovable.h"
+#import "GCAnimation.h"
 
 #endif
