@@ -7,6 +7,7 @@
 //
 
 #import "GCAnimation.h"
+#import "GCStep.h"
 
 @interface GCAnimation ()
 @property NSPoint beginning, end;
@@ -20,17 +21,50 @@
 #pragma mark -
 #pragma mark Initialization and Deallocation
 
-+ (id) linearAnimationFrom: (NSPoint) p
-						to: (NSPoint) q
+- (id)init
 {
-	GCAnimation *a = [[GCAnimation alloc] init];
+    self = [super init];
+    if (self) {
+		steps = [NSMutableArray array];
+    }
+    return self;
+}
+
++ (id) animation
+{
+	return [[self alloc] init];
+}
+
+- (void)dealloc 
+{
+	steps = nil;
+}
+
+- (void) lineFrom: (GCVector *) p
+			   To: (GCVector *) q
+		 duration: (double) seconds
+{
+	GCStep *step = [GCStep lineFrom: p to: q duration: seconds];
 	
-	a.beginning = p;
-	a.end = q;
-	a.stepCount = 1000;
-	a.step = 0;
+	[steps addObject: step];
+}
+
+- (void) advance: (id<GCMovable>) target;
+{
+	if (self.isFinished)
+		return;
 	
-	return a;
+	GCStep *s = [steps objectAtIndex: currentStep];
+	
+	[s advance: target];
+	
+	if (s.finished)
+		++currentStep;
+}
+
+- (BOOL) isFinished
+{
+	return currentStep >= steps.count;
 }
 
 #pragma mark -
@@ -38,17 +72,21 @@
 
 - (void) apply: (id<GCMovable>) target
 {
-	float length = (float) self.step / (float) self.stepCount;
-	NSSize v = NSMakeSize(self.end.x - self.beginning.x, self.end.y - self.beginning.y);
-	NSPoint p = NSMakePoint(self.beginning.x + v.width * length, self.beginning.y + v.height * length);
-	
-	target.position = p;
+	@throw [NSException exceptionWithName: @"NotImplemented" reason: @"Laziness" userInfo: nil];
 }
 
 - (void) advance
 {
 	if (self.step < self.stepCount)
 		++self.step;
+}
+
+- (void) rewind
+{
+	currentStep = 0;
+	for (GCStep *step in steps) {
+		[step rewind];
+	}
 }
 
 @end

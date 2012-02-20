@@ -8,6 +8,8 @@
 
 #import "GDGuy.h"
 
+#define rand	((float) rand() / RAND_MAX)
+
 @implementation GDGuy
 @synthesize position = _position, rotation = _rotation, scale = _scale, sprite = _sprite, animation = _animation;
 
@@ -15,24 +17,42 @@
     self = [super init];
     if (self) {
         self.sprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"walker"]];
-		self.animation = [GCAnimation linearAnimationFrom: NSMakePoint(-200, -200) to: NSMakePoint(500, 500)];
 		self.scale = NSMakeSize(1, 1);
+		
+		self.animation = [GCAnimation animation];
+		
+		GCVector
+			*a = [GCVector vectorWithX: 0 y: 0],
+			*b = [GCVector vectorWithX: 200 y: 0],
+			*c = [GCVector vectorWithX: 200 y: -100],
+			*d = [GCVector vectorWithX: 0 y: -100];
+		
+		[self.animation lineFrom: a To: b duration: 2];
+		[self.animation lineFrom: b To: c duration: 2];
+		[self.animation lineFrom: c To: d duration: 2];
+		[self.animation lineFrom: d To: a duration: 2];
     }
     return self;
 }
 
 - (void) draw
 {	
-	//[self.animation apply: self];
-	// [self.sprite drawAtX: self.position.x y: self.position.y rotation: self.rotation scale: self.scale];
-	[self.sprite drawTest];
-	
-	//[self.animation advance];
+	[self.sprite drawAtX: self.position.x y: self.position.y rotation: self.rotation scale: self.scale];
 }
 
 - (void) flip
 {
 	self.sprite.flip = 1 - self.sprite.flip;
+}
+
+- (void) update
+{
+	[self.animation advance: self];
+}
+
+- (void) reset
+{
+	[self.animation rewind];
 }
 
 @end

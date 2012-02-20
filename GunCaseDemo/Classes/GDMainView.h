@@ -12,15 +12,17 @@
 
 @interface GDMainView : NSOpenGLView
 {
-	float a;
+	NSMutableSet *guys;
+	GCGraphics *graphics;
 }
 
 - (void) startTimer;
 - (void) stopTimer;
 
 @property (retain) NSTimer *timer;
-@property (retain) GDGuy *guy;
 
 - (IBAction) toggleTimer: (id) sender;
+
+- (void) prepareFrame;
 
 @end

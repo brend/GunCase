@@ -10,6 +10,9 @@
 #import "GunCase.h"
 
 @interface GDGuy : NSObject <GCMovable>
+{
+}
+
 @property NSPoint position;
 @property float rotation;
 @property NSSize scale;
@@ -17,4 +20,6 @@
 @property (retain) GCSprite *sprite;
 - (void) draw;
 - (void) flip;
+- (void) update;
+- (void) reset;
 @end

@@ -10,6 +10,7 @@
 #define GunCase_GunCase_h
 
 // Graphics
+#import "GCGraphics.h"
 #import "GCSprite.h"
 
 // Animation

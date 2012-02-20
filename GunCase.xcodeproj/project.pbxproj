@@ -33,6 +33,12 @@
 		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
 		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
+		5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB63E14F2616E0062F348 /* GCGraphics.h */; };
+		5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB63F14F2616E0062F348 /* GCGraphics.m */; };
+		5F9BB64614F2674C0062F348 /* GCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB64414F2674C0062F348 /* GCVector.h */; };
+		5F9BB64714F2674C0062F348 /* GCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB64514F2674C0062F348 /* GCVector.m */; };
+		5F9F178014E7FCA200428AC4 /* GCStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F177E14E7FCA200428AC4 /* GCStep.h */; };
+		5F9F178114E7FCA200428AC4 /* GCStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F177F14E7FCA200428AC4 /* GCStep.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +88,13 @@
 		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = Classes/GDMainView.h; sourceTree = "<group>"; };
 		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = Classes/GDMainView.m; sourceTree = "<group>"; };
 		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
+		5F9BB63E14F2616E0062F348 /* GCGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGraphics.h; path = Classes/GCGraphics.h; sourceTree = "<group>"; };
+		5F9BB63F14F2616E0062F348 /* GCGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGraphics.m; path = Classes/GCGraphics.m; sourceTree = "<group>"; };
+		5F9BB64414F2674C0062F348 /* GCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVector.h; path = Classes/GCVector.h; sourceTree = "<group>"; };
+		5F9BB64514F2674C0062F348 /* GCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVector.m; path = Classes/GCVector.m; sourceTree = "<group>"; };
 		5F9F177C14E7DCAB00428AC4 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		5F9F177E14E7FCA200428AC4 /* GCStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStep.h; path = Classes/GCStep.h; sourceTree = "<group>"; };
+		5F9F177F14E7FCA200428AC4 /* GCStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStep.m; path = Classes/GCStep.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,8 @@
 				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
 				5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */,
 				5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */,
+				5F9F177E14E7FCA200428AC4 /* GCStep.h */,
+				5F9F177F14E7FCA200428AC4 /* GCStep.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
+				5F9BB64314F266090062F348 /* Geometry */,
 				5F1C33F114DE9EC300BF808B /* Graphics */,
 				5F0B6CC714E6CD6F00A87D18 /* Animation */,
 				5F1C33B214DE99C600BF808B /* Supporting Files */,
@@ -240,6 +255,8 @@
 			children = (
 				5F1C33F614DE9F7000BF808B /* GCSprite.h */,
 				5F1C33F714DE9F7000BF808B /* GCSprite.m */,
+				5F9BB63E14F2616E0062F348 /* GCGraphics.h */,
+				5F9BB63F14F2616E0062F348 /* GCGraphics.m */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -266,6 +283,15 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		5F9BB64314F266090062F348 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				5F9BB64414F2674C0062F348 /* GCVector.h */,
+				5F9BB64514F2674C0062F348 /* GCVector.m */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -278,6 +304,9 @@
 				5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */,
 				5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */,
 				5F0B6CCD14E6D0E300A87D18 /* GCAnimation.h in Headers */,
+				5F9F178014E7FCA200428AC4 /* GCStep.h in Headers */,
+				5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */,
+				5F9BB64614F2674C0062F348 /* GCVector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +372,7 @@
 		5F1C339F14DE99C600BF808B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 5F1C33A214DE99C600BF808B /* Build configuration list for PBXProject "GunCase" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -409,6 +438,9 @@
 			files = (
 				5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */,
 				5F0B6CCE14E6D0E300A87D18 /* GCAnimation.m in Sources */,
+				5F9F178114E7FCA200428AC4 /* GCStep.m in Sources */,
+				5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */,
+				5F9BB64714F2674C0062F348 /* GCVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,11 +15,12 @@
 
 @implementation GDMainView
 
-@synthesize timer = _timer, guy = _guy;
-
+@synthesize timer = _timer;
 - (void)reshape
 {	
 	[self stopTimer];
+	
+	graphics = [GCGraphics sharedGraphics];
 	
 	NSRect rect = self.frame; 
 	
@@ -46,7 +47,9 @@
 
 - (void) prepareOpenGL
 {
-//	glClearColor(1, 1, 0, 1);
+	GLint swapInt = 1;
+	
+    [[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
 }
 
 - (void) startTimer
@@ -54,7 +57,17 @@
 	if (self.timer)
 		return;
 	
-	self.timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / 60 target: self selector: @selector(redraw:) userInfo: nil repeats: YES];
+	self.timer = 
+		[NSTimer timerWithTimeInterval:0.001   //a 1ms time interval
+								 target:self
+							   selector:@selector(timerFired:)
+							   userInfo:nil
+								repeats:YES];
+	 
+	 [[NSRunLoop currentRunLoop] addTimer: self.timer
+								  forMode:NSDefaultRunLoopMode];
+	 [[NSRunLoop currentRunLoop] addTimer: self.timer 
+								  forMode:NSEventTrackingRunLoopMode]; //Ensure timer fires during resize
 }
 
 - (void) stopTimer
@@ -63,31 +76,70 @@
 	self.timer = nil;
 }
 
-- (void) redraw: (id) sender
+- (void) updateGame
 {
-	a+=0.02;
+	if (guys == nil) {
+		guys = [NSMutableSet set];
+		
+		for (int i = 0; i < 1; ++i)
+			[guys addObject: [[GDGuy alloc] init]];
+	}
 	
+	for (GDGuy *guy in guys)
+		[guy update];
+}
+
+- (void) prepareFrame
+{
+	double updateInterval = graphics.updateInterval, 
+		maxCyclesPerFrame = graphics.maxCyclesPerFrame;
+	
+	static double lastFrameTime = 0.0;
+	static double cyclesLeftOver = 0.0;
+	double currentTime;
+	double updateIterations;
+	
+	currentTime = [NSDate timeIntervalSinceReferenceDate];
+	if (lastFrameTime == 0)
+		lastFrameTime = [NSDate timeIntervalSinceReferenceDate];
+	updateIterations = ((currentTime - lastFrameTime) + cyclesLeftOver);
+	
+	if (updateIterations > (maxCyclesPerFrame * updateInterval)) {
+		updateIterations = (maxCyclesPerFrame * updateInterval);
+	}
+	
+	while (updateIterations > updateInterval) {
+		updateIterations -= updateInterval;
+		
+		[self updateGame];
+	}
+		
+	cyclesLeftOver = updateIterations;
+	lastFrameTime = currentTime;
+}
+
+- (void) timerFired: (id) sender
+{
+	[self prepareFrame];
 	[self drawRect: self.frame];
 }
 
 -(void) drawRect: (NSRect) bounds
 {
-	if (self.guy == nil) {
-		self.guy = [[GDGuy alloc] init];
-	}
-	
-	glClearColor(sin(a), 1, 0, 1);
+	// glClearColor(sin(a), 1, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 	
-	[self.guy draw];
+	for (GDGuy *guy in guys)
+		[guy draw];
 	
 	glFlush(); 
 }
 
 - (IBAction) toggleTimer: (id) sender
 {
-	[self.guy flip];
+	for (GDGuy *guy in guys)
+		[guy reset];
 }
 
 @end
