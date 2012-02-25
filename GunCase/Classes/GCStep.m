@@ -22,8 +22,8 @@
 			distance = [q distance: p],
 			updateInterval = [[GCGraphics sharedGraphics] updateInterval];
 		
-		stepOffset = [[q subtract: p] scale: seconds * updateInterval];
-		numberOfSteps = (NSInteger) (distance / (seconds * updateInterval));
+		stepOffset = [[q subtract: p] scale: updateInterval * 1.0 / seconds];
+		numberOfSteps = (NSInteger) ceil(distance / stepOffset.length);
     }
 	
     return self;

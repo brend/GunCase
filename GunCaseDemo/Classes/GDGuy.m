@@ -23,14 +23,14 @@
 		
 		GCVector
 			*a = [GCVector vectorWithX: 0 y: 0],
-			*b = [GCVector vectorWithX: 200 y: 0],
-			*c = [GCVector vectorWithX: 200 y: -100],
-			*d = [GCVector vectorWithX: 0 y: -100];
+			*b = [GCVector vectorWithX: 50 y: 0],
+			*c = [GCVector vectorWithX: 50 y: -50],
+			*d = [GCVector vectorWithX: 0 y: -50];
 		
 		[self.animation lineFrom: a To: b duration: 2];
-		[self.animation lineFrom: b To: c duration: 2];
-		[self.animation lineFrom: c To: d duration: 2];
-		[self.animation lineFrom: d To: a duration: 2];
+		[self.animation lineFrom: b To: c duration: 1.5];
+		[self.animation lineFrom: c To: d duration: 1];
+		[self.animation lineFrom: d To: a duration: 0.5];
     }
     return self;
 }

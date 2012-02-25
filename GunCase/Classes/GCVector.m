@@ -88,4 +88,9 @@
 	return NSMakePoint(x, y);
 }
 
+- (NSString *) description
+{
+	return [NSString stringWithFormat: @"(%f, %f)", x, y];
+}
+
 @end
