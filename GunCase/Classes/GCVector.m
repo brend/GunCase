@@ -83,6 +83,22 @@
 	return [[self subtract: v] length];
 }
 
+- (float) dot: (GCVector *) v
+{
+	return x * v.x + y * v.y;
+}
+
+- (float) angle: (GCVector *) v
+{
+	float dot = [self dot: v];
+	float lenProd = self.length * v.length;
+	
+	return acosf(dot / lenProd);
+}
+
+#pragma mark -
+#pragma mark Conversion to Other Data Types
+
 - (NSPoint) point
 {
 	return NSMakePoint(x, y);

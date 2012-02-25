@@ -23,6 +23,8 @@
 - (GCVector *) add: (GCVector *) v;
 - (GCVector *) subtract: (GCVector *) v;
 - (GCVector *) scale: (float) s;
+- (float) dot: (GCVector *) v;
+- (float) angle: (GCVector *) v;
 
 - (float) length;
 - (float) distance: (GCVector *) v;
