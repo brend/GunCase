@@ -22,14 +22,4 @@
     [super tearDown];
 }
 
-- (void)testOne
-{
-    STFail(@"i = %d", i);
-}
-
-- (void)testTwo
-{
-	STFail(@"i = %d", i);
-}
-
 @end

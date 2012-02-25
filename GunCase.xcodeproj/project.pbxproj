@@ -33,6 +33,7 @@
 		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
 		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
+		5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F729414F90A0B000166E5 /* GCVectorTest.m */; };
 		5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB63E14F2616E0062F348 /* GCGraphics.h */; };
 		5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB63F14F2616E0062F348 /* GCGraphics.m */; };
 		5F9BB64614F2674C0062F348 /* GCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB64414F2674C0062F348 /* GCVector.h */; };
@@ -88,6 +89,8 @@
 		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = Classes/GDMainView.h; sourceTree = "<group>"; };
 		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = Classes/GDMainView.m; sourceTree = "<group>"; };
 		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
+		5F2F729314F90A0B000166E5 /* GCVectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVectorTest.h; path = Tests/GCVectorTest.h; sourceTree = "<group>"; };
+		5F2F729414F90A0B000166E5 /* GCVectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVectorTest.m; path = Tests/GCVectorTest.m; sourceTree = "<group>"; };
 		5F9BB63E14F2616E0062F348 /* GCGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGraphics.h; path = Classes/GCGraphics.h; sourceTree = "<group>"; };
 		5F9BB63F14F2616E0062F348 /* GCGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGraphics.m; path = Classes/GCGraphics.m; sourceTree = "<group>"; };
 		5F9BB64414F2674C0062F348 /* GCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVector.h; path = Classes/GCVector.h; sourceTree = "<group>"; };
@@ -212,8 +215,8 @@
 		5F1C33C314DE99C600BF808B /* GunCaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */,
-				5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */,
+				5F2F729614F90CC7000166E5 /* Animation */,
+				5F2F729114F909E4000166E5 /* Geometry */,
 				5F1C33C414DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCaseTests;
@@ -281,6 +284,24 @@
 				5F0B6CD014E6D26D00A87D18 /* GDGuy.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		5F2F729114F909E4000166E5 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				5F2F729314F90A0B000166E5 /* GCVectorTest.h */,
+				5F2F729414F90A0B000166E5 /* GCVectorTest.m */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		5F2F729614F90CC7000166E5 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */,
+				5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 		5F9BB64314F266090062F348 /* Geometry */ = {
@@ -449,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */,
+				5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
