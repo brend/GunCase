@@ -19,7 +19,7 @@
 - (id) init;
 + (id) animation;
 
-- (void) lineFrom: (GCVector *) p
+- (id) lineFrom: (GCVector *) p
 			   To: (GCVector *) q
 		 duration: (double) seconds;
 

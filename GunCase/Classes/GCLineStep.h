@@ -10,13 +10,13 @@
 #import "GCMovable.h"
 #import "GCVector.h"
 
-@interface GCStep : NSObject
+@interface GCLineStep : NSObject
 {
 	GCVector *stepOffset;
 	NSInteger step, numberOfSteps;
 }
 
-+ (id) lineFrom: (GCVector *) p
++ (id) lineStepFrom: (GCVector *) p
 			 to: (GCVector *) q
 	   duration: (double) seconds;
 

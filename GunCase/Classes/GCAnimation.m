@@ -7,7 +7,7 @@
 //
 
 #import "GCAnimation.h"
-#import "GCStep.h"
+#import "GCLineStep.h"
 
 @interface GCAnimation ()
 @property NSPoint beginning, end;
@@ -40,13 +40,15 @@
 	steps = nil;
 }
 
-- (void) lineFrom: (GCVector *) p
+- (id) lineFrom: (GCVector *) p
 			   To: (GCVector *) q
 		 duration: (double) seconds
 {
-	GCStep *step = [GCStep lineFrom: p to: q duration: seconds];
+	GCLineStep *step = [GCLineStep lineStepFrom: p to: q duration: seconds];
 	
 	[steps addObject: step];
+	
+	return self;
 }
 
 - (void) advance: (id<GCMovable>) target;
@@ -54,7 +56,7 @@
 	if (self.isFinished)
 		return;
 	
-	GCStep *s = [steps objectAtIndex: currentStep];
+	GCLineStep *s = [steps objectAtIndex: currentStep];
 	
 	[s advance: target];
 	
@@ -84,7 +86,7 @@
 - (void) rewind
 {
 	currentStep = 0;
-	for (GCStep *step in steps) {
+	for (GCLineStep *step in steps) {
 		[step rewind];
 	}
 }

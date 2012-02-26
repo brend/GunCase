@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCStep.h"
+#import "GCLineStep.h"
 #import "GCGraphics.h"
 
-@implementation GCStep
+@implementation GCLineStep
 
 - (id)initFrom: (GCVector *) p
 			to: (GCVector *) q
@@ -29,11 +29,11 @@
     return self;
 }
 
-+ (id) lineFrom: (GCVector *) p
++ (id) lineStepFrom: (GCVector *) p
 			 to: (GCVector *) q
 	 duration: (double) seconds
 {
-	return [[GCStep alloc] initFrom: p to: q duration: seconds];
+	return [[GCLineStep alloc] initFrom: p to: q duration: seconds];
 }
 
 - (void) advance: (id<GCMovable>) target
