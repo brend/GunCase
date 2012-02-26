@@ -17,4 +17,7 @@
 #import "GCMovable.h"
 #import "GCAnimation.h"
 
+// Application
+#import "GCGameView.h"
+
 #endif

@@ -10,19 +10,11 @@
 #import "GunCase.h"
 #import "GDGuy.h"
 
-@interface GDMainView : NSOpenGLView
+@interface GDMainView : GCGameView
 {
 	NSMutableSet *guys;
-	GCGraphics *graphics;
 }
 
-- (void) startTimer;
-- (void) stopTimer;
-
-@property (retain) NSTimer *timer;
-
 - (IBAction) toggleTimer: (id) sender;
-
-- (void) prepareFrame;
 
 @end
