@@ -22,8 +22,8 @@
 @end
 
 @implementation GCGameView
-
 @synthesize timer = _timer, graphics = _graphics;
+
 - (void)reshape
 {	
 	[self stopTimer];

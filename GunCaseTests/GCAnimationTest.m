@@ -1,14 +1,14 @@
 //
-//  GCAnimationTest.m
+//  GCCompositeAnimationTest.m
 //  GunCase
 //
 //  Created by Philipp Brendel on 11.02.12.
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCAnimationTest.h"
+#import "GCCompositeAnimationTest.h"
 
-@implementation GCAnimationTest
+@implementation GCCompositeAnimationTest
 
 - (void)setUp
 {

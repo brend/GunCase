@@ -1,5 +1,5 @@
 //
-//  GCAnimationTest.h
+//  GCCompositeAnimationTest.h
 //  GunCase
 //
 //  Created by Philipp Brendel on 11.02.12.
@@ -11,7 +11,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "GunCase.h"
 
-@interface GCAnimationTest : SenTestCase
+@interface GCCompositeAnimationTest : SenTestCase
 {
 	NSInteger i;
 }

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
-		5F0B6CCD14E6D0E300A87D18 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */; };
-		5F0B6CCE14E6D0E300A87D18 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */; };
+		5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */; };
+		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
 		5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD014E6D26D00A87D18 /* GDGuy.m */; };
 		5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */; };
 		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
@@ -38,8 +38,14 @@
 		5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB63F14F2616E0062F348 /* GCGraphics.m */; };
 		5F9BB64614F2674C0062F348 /* GCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB64414F2674C0062F348 /* GCVector.h */; };
 		5F9BB64714F2674C0062F348 /* GCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB64514F2674C0062F348 /* GCVector.m */; };
-		5F9F178014E7FCA200428AC4 /* GCLineStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F177E14E7FCA200428AC4 /* GCLineStep.h */; };
-		5F9F178114E7FCA200428AC4 /* GCLineStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F177F14E7FCA200428AC4 /* GCLineStep.m */; };
+		5F9F178014E7FCA200428AC4 /* GCLinearAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9F177E14E7FCA200428AC4 /* GCLinearAnimation.h */; };
+		5F9F178114E7FCA200428AC4 /* GCLinearAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */; };
+		5FAE7FE2150270D2005813DE /* GCScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAE7FE0150270D2005813DE /* GCScene.h */; };
+		5FAE7FE3150270D2005813DE /* GCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FE1150270D2005813DE /* GCScene.m */; };
+		5FAE7FE6150270EE005813DE /* GCDirector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAE7FE4150270EE005813DE /* GCDirector.h */; };
+		5FAE7FE7150270EE005813DE /* GCDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FE5150270EE005813DE /* GCDirector.m */; };
+		5FAE7FEB150273A2005813DE /* NSMutableArray+GCStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */; };
+		5FAE7FEC150273A2005813DE /* NSMutableArray+GCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */; };
 		5FF8AEFA14FA8A5C0093AF4E /* GCGameView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */; };
 		5FF8AEFB14FA8A5C0093AF4E /* GCGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */; };
 /* End PBXBuildFile section */
@@ -56,12 +62,12 @@
 
 /* Begin PBXFileReference section */
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
-		5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
-		5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAnimation.m; path = Classes/GCAnimation.m; sourceTree = "<group>"; };
+		5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCCompositeAnimation.h; path = Classes/GCCompositeAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCCompositeAnimation.m; path = Classes/GCCompositeAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGuy.h; path = Classes/GDGuy.h; sourceTree = "<group>"; };
 		5F0B6CD014E6D26D00A87D18 /* GDGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGuy.m; path = Classes/GDGuy.m; sourceTree = "<group>"; };
-		5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAnimationTest.h; sourceTree = "<group>"; };
-		5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAnimationTest.m; sourceTree = "<group>"; };
+		5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GCAnimationTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GCAnimationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F1C33A814DE99C600BF808B /* libGunCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGunCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33AB14DE99C600BF808B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -98,8 +104,14 @@
 		5F9BB64414F2674C0062F348 /* GCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVector.h; path = Classes/GCVector.h; sourceTree = "<group>"; };
 		5F9BB64514F2674C0062F348 /* GCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVector.m; path = Classes/GCVector.m; sourceTree = "<group>"; };
 		5F9F177C14E7DCAB00428AC4 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
-		5F9F177E14E7FCA200428AC4 /* GCLineStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCLineStep.h; path = Classes/GCLineStep.h; sourceTree = "<group>"; };
-		5F9F177F14E7FCA200428AC4 /* GCLineStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCLineStep.m; path = Classes/GCLineStep.m; sourceTree = "<group>"; };
+		5F9F177E14E7FCA200428AC4 /* GCLinearAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCLinearAnimation.h; path = Classes/GCLinearAnimation.h; sourceTree = "<group>"; };
+		5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCLinearAnimation.m; path = Classes/GCLinearAnimation.m; sourceTree = "<group>"; };
+		5FAE7FE0150270D2005813DE /* GCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCScene.h; path = Classes/GCScene.h; sourceTree = "<group>"; };
+		5FAE7FE1150270D2005813DE /* GCScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCScene.m; path = Classes/GCScene.m; sourceTree = "<group>"; };
+		5FAE7FE4150270EE005813DE /* GCDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDirector.h; path = Classes/GCDirector.h; sourceTree = "<group>"; };
+		5FAE7FE5150270EE005813DE /* GCDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirector.m; path = Classes/GCDirector.m; sourceTree = "<group>"; };
+		5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+GCStack.h"; path = "Classes/NSMutableArray+GCStack.h"; sourceTree = "<group>"; };
+		5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+GCStack.m"; path = "Classes/NSMutableArray+GCStack.m"; sourceTree = "<group>"; };
 		5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGameView.h; path = Classes/GCGameView.h; sourceTree = "<group>"; };
 		5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGameView.m; path = Classes/GCGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,10 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
-				5F0B6CCB14E6D0E300A87D18 /* GCAnimation.h */,
-				5F0B6CCC14E6D0E300A87D18 /* GCAnimation.m */,
-				5F9F177E14E7FCA200428AC4 /* GCLineStep.h */,
-				5F9F177F14E7FCA200428AC4 /* GCLineStep.m */,
+				5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */,
+				5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */,
+				5F9F177E14E7FCA200428AC4 /* GCLinearAnimation.h */,
+				5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -197,6 +209,8 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
+				5FAE7FE815027388005813DE /* Additions */,
+				5FAE7FDE150270B2005813DE /* Scenes */,
 				5FF8AEF714FA89EA0093AF4E /* Application */,
 				5F9BB64314F266090062F348 /* Geometry */,
 				5F1C33F114DE9EC300BF808B /* Graphics */,
@@ -318,6 +332,26 @@
 			name = Geometry;
 			sourceTree = "<group>";
 		};
+		5FAE7FDE150270B2005813DE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5FAE7FE0150270D2005813DE /* GCScene.h */,
+				5FAE7FE1150270D2005813DE /* GCScene.m */,
+				5FAE7FE4150270EE005813DE /* GCDirector.h */,
+				5FAE7FE5150270EE005813DE /* GCDirector.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		5FAE7FE815027388005813DE /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */,
+				5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
 		5FF8AEF714FA89EA0093AF4E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,11 +372,14 @@
 				5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */,
 				5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */,
 				5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */,
-				5F0B6CCD14E6D0E300A87D18 /* GCAnimation.h in Headers */,
-				5F9F178014E7FCA200428AC4 /* GCLineStep.h in Headers */,
+				5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */,
+				5F9F178014E7FCA200428AC4 /* GCLinearAnimation.h in Headers */,
 				5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */,
 				5F9BB64614F2674C0062F348 /* GCVector.h in Headers */,
 				5FF8AEFA14FA8A5C0093AF4E /* GCGameView.h in Headers */,
+				5FAE7FE2150270D2005813DE /* GCScene.h in Headers */,
+				5FAE7FE6150270EE005813DE /* GCDirector.h in Headers */,
+				5FAE7FEB150273A2005813DE /* NSMutableArray+GCStack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,11 +510,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */,
-				5F0B6CCE14E6D0E300A87D18 /* GCAnimation.m in Sources */,
-				5F9F178114E7FCA200428AC4 /* GCLineStep.m in Sources */,
+				5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */,
+				5F9F178114E7FCA200428AC4 /* GCLinearAnimation.m in Sources */,
 				5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */,
 				5F9BB64714F2674C0062F348 /* GCVector.m in Sources */,
 				5FF8AEFB14FA8A5C0093AF4E /* GCGameView.m in Sources */,
+				5FAE7FE3150270D2005813DE /* GCScene.m in Sources */,
+				5FAE7FE7150270EE005813DE /* GCDirector.m in Sources */,
+				5FAE7FEC150273A2005813DE /* NSMutableArray+GCStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCLineStep.h"
+#import "GCLinearAnimation.h"
 #import "GCGraphics.h"
 
-@implementation GCLineStep
+@implementation GCLinearAnimation
 
 - (id)initFrom: (GCVector *) p
 			to: (GCVector *) q
@@ -33,7 +33,7 @@
 			 to: (GCVector *) q
 	 duration: (double) seconds
 {
-	return [[GCLineStep alloc] initFrom: p to: q duration: seconds];
+	return [[GCLinearAnimation alloc] initFrom: p to: q duration: seconds];
 }
 
 - (void) advance: (id<GCMovable>) target

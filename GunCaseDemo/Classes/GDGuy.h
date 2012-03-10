@@ -16,7 +16,7 @@
 @property NSPoint position;
 @property float rotation;
 @property NSSize scale;
-@property (retain) GCAnimation *animation;
+@property (retain) GCCompositeAnimation *animation;
 @property (retain) GCSprite *sprite;
 - (void) draw;
 - (void) flip;

@@ -1,5 +1,5 @@
 //
-//  GCAnimation.h
+//  GCCompositeAnimation.h
 //  GunCase
 //
 //  Created by Philipp Brendel on 11.02.12.
@@ -10,7 +10,7 @@
 #import "GCMovable.h"
 #import "GCVector.h"
 
-@interface GCAnimation : NSObject
+@interface GCCompositeAnimation : NSObject
 {
 	NSMutableArray *steps;
 	NSInteger currentStep;

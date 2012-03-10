@@ -19,7 +19,7 @@
         self.sprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"walker"]];
 		self.scale = NSMakeSize(1, 1);
 		
-		self.animation = [GCAnimation animation];
+		self.animation = [GCCompositeAnimation animation];
 		
 		GCVector
 			*a = [GCVector vectorWithX: 0 y: 0],

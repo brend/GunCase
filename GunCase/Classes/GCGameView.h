@@ -7,8 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "GunCase.h"
-#import "GDGuy.h"
 
 @interface GCGameView : NSOpenGLView
 

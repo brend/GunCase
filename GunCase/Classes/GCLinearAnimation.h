@@ -10,7 +10,7 @@
 #import "GCMovable.h"
 #import "GCVector.h"
 
-@interface GCLineStep : NSObject
+@interface GCLinearAnimation : NSObject
 {
 	GCVector *stepOffset;
 	NSInteger step, numberOfSteps;

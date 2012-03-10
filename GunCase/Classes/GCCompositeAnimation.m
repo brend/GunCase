@@ -1,20 +1,20 @@
 //
-//  GCAnimation.m
+//  GCCompositeAnimation.m
 //  GunCase
 //
 //  Created by Philipp Brendel on 11.02.12.
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCAnimation.h"
-#import "GCLineStep.h"
+#import "GCCompositeAnimation.h"
+#import "GCLinearAnimation.h"
 
-@interface GCAnimation ()
+@interface GCCompositeAnimation ()
 @property NSPoint beginning, end;
 @property NSInteger stepCount, step;
 @end
 
-@implementation GCAnimation
+@implementation GCCompositeAnimation
 
 @synthesize beginning = _beginning, end = _end, stepCount = _stepCount, step = _step;
 
@@ -44,7 +44,7 @@
 			   To: (GCVector *) q
 		 duration: (double) seconds
 {
-	GCLineStep *step = [GCLineStep lineStepFrom: p to: q duration: seconds];
+	GCLinearAnimation *step = [GCLinearAnimation lineStepFrom: p to: q duration: seconds];
 	
 	[steps addObject: step];
 	
@@ -56,7 +56,7 @@
 	if (self.isFinished)
 		return;
 	
-	GCLineStep *s = [steps objectAtIndex: currentStep];
+	GCLinearAnimation *s = [steps objectAtIndex: currentStep];
 	
 	[s advance: target];
 	
@@ -86,7 +86,7 @@
 - (void) rewind
 {
 	currentStep = 0;
-	for (GCLineStep *step in steps) {
+	for (GCLinearAnimation *step in steps) {
 		[step rewind];
 	}
 }
