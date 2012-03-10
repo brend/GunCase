@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCMovable.h"
+#import "GCAnimation.h"
 #import "GCVector.h"
 
-@interface GCCompositeAnimation : NSObject
+@interface GCCompositeAnimation : GCAnimation
 {
 	NSMutableArray *steps;
 	NSInteger currentStep;
@@ -22,9 +22,5 @@
 - (id) lineFrom: (GCVector *) p
 			   To: (GCVector *) q
 		 duration: (double) seconds;
-
-- (void) advance: (id<GCMovable>) target;
-- (BOOL) isFinished;
-- (void) rewind;
 
 @end

@@ -38,7 +38,7 @@
 
 - (void) advance: (id<GCMovable>) target
 {
-	if (self.finished)
+	if (self.isFinished)
 		return;
 	
 	GCVector *position = [stepOffset add: [GCVector vectorWithPoint: target.position]];
@@ -48,7 +48,7 @@
 	++step;
 }
 
-- (BOOL) finished
+- (BOOL) isFinished
 {
 	return step >= numberOfSteps;
 }

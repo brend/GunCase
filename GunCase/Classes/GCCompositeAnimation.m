@@ -60,7 +60,7 @@
 	
 	[s advance: target];
 	
-	if (s.finished)
+	if (s.isFinished)
 		++currentStep;
 }
 
