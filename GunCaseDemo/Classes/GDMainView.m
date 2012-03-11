@@ -16,8 +16,8 @@
 	if (guys == nil) {
 		guys = [NSMutableSet set];
 		
-		for (int i = 0; i < 1; ++i)
-			[guys addObject: [[GDGuy alloc] init]];
+		[guys addObject: [[GDGuy alloc] initWithRectangularAnimation]];
+		[guys addObject: [[GDGuy alloc] initWithCircularAnimation]];
 	}
 	
 	for (GDGuy *guy in guys)

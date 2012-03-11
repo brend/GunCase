@@ -13,7 +13,13 @@
 @implementation GDGuy
 @synthesize position = _position, rotation = _rotation, scale = _scale, sprite = _sprite, animation = _animation;
 
-- (id)init {
+- (id) init
+{
+	return [self initWithRectangularAnimation];
+}
+
+- (id)initWithRectangularAnimation
+{
     self = [super init];
     if (self) {
         self.sprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"walker"]];
@@ -22,16 +28,36 @@
 		self.animation = [GCCompositeAnimation animation];
 		
 		GCVector
-			*a = [GCVector vectorWithX: 0 y: 0],
-			*b = [GCVector vectorWithX: 50 y: 0],
-			*c = [GCVector vectorWithX: 50 y: -50],
-			*d = [GCVector vectorWithX: 0 y: -50];
+		*a = [GCVector vectorWithX: 0 y: 0],
+		*b = [GCVector vectorWithX: 50 y: 0],
+		*c = [GCVector vectorWithX: 50 y: -50],
+		*d = [GCVector vectorWithX: 0 y: -50];
 		
 		[self.animation lineFrom: a To: b duration: 2];
 		[self.animation lineFrom: b To: c duration: 1.5];
 		[self.animation lineFrom: c To: d duration: 1];
 		[self.animation lineFrom: d To: a duration: 0.5];
     }
+    return self;
+}
+
+- (id)initWithCircularAnimation
+{
+    self = [super init];
+    
+	if (self) {
+        self.sprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"walker"]];
+		self.scale = NSMakeSize(1, 1);
+		
+		self.animation = [GCCompositeAnimation animation];
+		
+		GCVector *c = [GCVector vectorWithX: 0 y: 0];
+		float r = 75, s = 0, e = 1.5 * M_PI;
+		double seconds = 3;
+		
+		[self.animation arcWithCenter: c radius: r startAngle: s endAngle: e duration: seconds];
+    }
+	
     return self;
 }
 

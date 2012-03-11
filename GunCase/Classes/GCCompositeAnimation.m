@@ -8,6 +8,7 @@
 
 #import "GCCompositeAnimation.h"
 #import "GCLinearAnimation.h"
+#import "GCArcAnimation.h"
 
 @interface GCCompositeAnimation ()
 @property NSPoint beginning, end;
@@ -45,6 +46,23 @@
 		 duration: (double) seconds
 {
 	GCLinearAnimation *step = [GCLinearAnimation animationFrom: p to: q duration: seconds];
+	
+	[steps addObject: step];
+	
+	return self;
+}
+
+- (id) arcWithCenter: (GCVector *) c
+			  radius: (float) r
+		  startAngle: (float) s
+			endAngle: (float) e
+			duration: (double) seconds
+{
+	GCArcAnimation *step = [GCArcAnimation animationWithCenter: c
+														radius: r
+													startAngle: s
+													  endAngle: e
+													  duration: seconds];
 	
 	[steps addObject: step];
 	

@@ -22,5 +22,10 @@
 - (id) lineFrom: (GCVector *) p
 			   To: (GCVector *) q
 		 duration: (double) seconds;
+- (id) arcWithCenter: (GCVector *) c
+			  radius: (float) r
+		  startAngle: (float) s
+			endAngle: (float) e
+			duration: (double) seconds;
 
 @end

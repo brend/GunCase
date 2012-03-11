@@ -13,6 +13,9 @@
 {
 }
 
+- (id) initWithRectangularAnimation;
+- (id) initWithCircularAnimation;
+
 @property NSPoint position;
 @property float rotation;
 @property NSSize scale;
