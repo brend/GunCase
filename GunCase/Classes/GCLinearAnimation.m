@@ -15,15 +15,14 @@
 			to: (GCVector *) q
 	  duration: (double) seconds
 {
-    self = [super init];
+    self = [super initWithDuration: seconds];
     
 	if (self) {
-		double
-			distance = [q distance: p],
-			updateInterval = [[GCGraphics sharedGraphics] updateInterval];
+		//double distance = [q distance: p];
+//			updateInterval = [[GCGraphics sharedGraphics] updateInterval];
 		
-		stepOffset = [[q subtract: p] scale: updateInterval * 1.0 / seconds];
-		numberOfSteps = (NSInteger) ceil(distance / stepOffset.length);
+		stepOffset = [[q subtract: p] scale: 1.0 / self.numberOfSteps];
+		// numberOfSteps = (NSInteger) ceil(distance / stepOffset.length);
     }
 	
     return self;
@@ -45,17 +44,7 @@
 	
 	target.position = [position point];
 	
-	++step;
-}
-
-- (BOOL) isFinished
-{
-	return step >= numberOfSteps;
-}
-
-- (void) rewind
-{
-	step = 0;
+	++self.currentStep;
 }
 
 @end

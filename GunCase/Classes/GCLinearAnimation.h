@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCAnimation.h"
+#import "GCTimedAnimation.h"
 #import "GCVector.h"
 
-@interface GCLinearAnimation : GCAnimation
+@interface GCLinearAnimation : GCTimedAnimation
 {
 	GCVector *stepOffset;
-	NSInteger step, numberOfSteps;
 }
 
 + (id) animationFrom: (GCVector *) p
