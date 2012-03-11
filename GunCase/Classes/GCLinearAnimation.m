@@ -7,7 +7,6 @@
 //
 
 #import "GCLinearAnimation.h"
-#import "GCGraphics.h"
 
 @implementation GCLinearAnimation
 
@@ -18,11 +17,7 @@
     self = [super initWithDuration: seconds];
     
 	if (self) {
-		//double distance = [q distance: p];
-//			updateInterval = [[GCGraphics sharedGraphics] updateInterval];
-		
 		stepOffset = [[q subtract: p] scale: 1.0 / self.numberOfSteps];
-		// numberOfSteps = (NSInteger) ceil(distance / stepOffset.length);
     }
 	
     return self;
@@ -35,7 +30,7 @@
 	return [[GCLinearAnimation alloc] initFrom: p to: q duration: seconds];
 }
 
-- (void) advance: (id<GCMovable>) target
+- (void) advanceStep:(id<GCMovable>)target
 {
 	if (self.isFinished)
 		return;
@@ -43,8 +38,6 @@
 	GCVector *position = [stepOffset add: [GCVector vectorWithPoint: target.position]];
 	
 	target.position = [position point];
-	
-	++self.currentStep;
 }
 
 @end

@@ -45,4 +45,16 @@
 	_currentStep = 0;
 }
 
+- (void) advance:(id<GCMovable>)target
+{
+	[self advanceStep: target];
+	
+	++_currentStep;
+}
+
+- (void) advanceStep:(id<GCMovable>)target
+{
+	@throw [NSException exceptionWithName: @"AbstractMethod" reason: @"This method must be implemented by a subclass" userInfo: nil];
+}
+
 @end

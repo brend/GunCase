@@ -13,6 +13,8 @@
 - (id) initWithDuration: (double) seconds;
 
 @property (readonly) NSInteger numberOfSteps;
-@property NSInteger currentStep;
+@property (readonly) NSInteger currentStep;
+
+- (void) advanceStep:(id<GCMovable>)target;
 
 @end
