@@ -15,7 +15,10 @@
 
 // Animation
 #import "GCMovable.h"
+#import "GCAnimation.h"
 #import "GCCompositeAnimation.h"
+#import "GCLinearAnimation.h"
+#import "GCArcAnimation.h"
 
 // Application
 #import "GCGameView.h"

@@ -29,7 +29,7 @@
     return self;
 }
 
-+ (id) lineStepFrom: (GCVector *) p
++ (id) animationFrom: (GCVector *) p
 			 to: (GCVector *) q
 	 duration: (double) seconds
 {

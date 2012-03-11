@@ -44,7 +44,7 @@
 			   To: (GCVector *) q
 		 duration: (double) seconds
 {
-	GCLinearAnimation *step = [GCLinearAnimation lineStepFrom: p to: q duration: seconds];
+	GCLinearAnimation *step = [GCLinearAnimation animationFrom: p to: q duration: seconds];
 	
 	[steps addObject: step];
 	

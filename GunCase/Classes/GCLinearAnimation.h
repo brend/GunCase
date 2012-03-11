@@ -16,7 +16,7 @@
 	NSInteger step, numberOfSteps;
 }
 
-+ (id) lineStepFrom: (GCVector *) p
++ (id) animationFrom: (GCVector *) p
 			 to: (GCVector *) q
 	   duration: (double) seconds;
 
