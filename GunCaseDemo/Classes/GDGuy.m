@@ -52,7 +52,7 @@
 		self.animation = [GCCompositeAnimation animation];
 		
 		GCVector *c = [GCVector vectorWithX: 0 y: 0];
-		float r = 75, s = 0, e = 1.5 * M_PI;
+		float r = 75, s = 0, e = 2 * M_PI;
 		double seconds = 3;
 		
 		[self.animation arcWithCenter: c radius: r startAngle: s endAngle: e duration: seconds];

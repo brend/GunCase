@@ -10,6 +10,10 @@
 
 @implementation GCScene
 
+- (void) update
+{
+}
+
 - (void) render
 {
 }

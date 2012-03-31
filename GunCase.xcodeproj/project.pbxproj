@@ -11,7 +11,7 @@
 		5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */; };
 		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
 		5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD014E6D26D00A87D18 /* GDGuy.m */; };
-		5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */; };
+		5F0B6CD414E6D5A600A87D18 /* GCCompositeAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */; };
 		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */; };
 		5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
@@ -33,6 +33,7 @@
 		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
 		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
+		5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E1DA515271713005E5BBE /* GCStackTest.m */; };
 		5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F729414F90A0B000166E5 /* GCVectorTest.m */; };
 		5F68600F150B788500A216C9 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F68600D150B788500A216C9 /* GCAnimation.h */; };
 		5F686010150B788500A216C9 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F68600E150B788500A216C9 /* GCAnimation.m */; };
@@ -40,6 +41,8 @@
 		5F686014150B7CE400A216C9 /* GCArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F686012150B7CE400A216C9 /* GCArcAnimation.m */; };
 		5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */; };
 		5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E72D5150CB50600DB000F /* GCTimedAnimation.m */; };
+		5F8DBEAF15238FD60075ADA6 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F8DBEAD15238FD60075ADA6 /* o.png */; };
+		5F8DBEB015238FD60075ADA6 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F8DBEAE15238FD60075ADA6 /* x.png */; };
 		5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB63E14F2616E0062F348 /* GCGraphics.h */; };
 		5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BB63F14F2616E0062F348 /* GCGraphics.m */; };
 		5F9BB64614F2674C0062F348 /* GCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9BB64414F2674C0062F348 /* GCVector.h */; };
@@ -50,8 +53,10 @@
 		5FAE7FE3150270D2005813DE /* GCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FE1150270D2005813DE /* GCScene.m */; };
 		5FAE7FE6150270EE005813DE /* GCDirector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAE7FE4150270EE005813DE /* GCDirector.h */; };
 		5FAE7FE7150270EE005813DE /* GCDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FE5150270EE005813DE /* GCDirector.m */; };
-		5FAE7FEB150273A2005813DE /* NSMutableArray+GCStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */; };
-		5FAE7FEC150273A2005813DE /* NSMutableArray+GCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */; };
+		5FBFFB30151FBA0100F218AD /* GCStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBFFB2E151FBA0100F218AD /* GCStack.h */; };
+		5FBFFB31151FBA0100F218AD /* GCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFFB2F151FBA0100F218AD /* GCStack.m */; };
+		5FE90D04151F1B0100155BBF /* GDBoardScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE90D03151F1B0100155BBF /* GDBoardScene.m */; };
+		5FE90D07151F208A00155BBF /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE90D06151F208A00155BBF /* board.png */; };
 		5FF8AEFA14FA8A5C0093AF4E /* GCGameView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */; };
 		5FF8AEFB14FA8A5C0093AF4E /* GCGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */; };
 /* End PBXBuildFile section */
@@ -72,8 +77,8 @@
 		5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCCompositeAnimation.m; path = Classes/GCCompositeAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGuy.h; path = Classes/GDGuy.h; sourceTree = "<group>"; };
 		5F0B6CD014E6D26D00A87D18 /* GDGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGuy.m; path = Classes/GDGuy.m; sourceTree = "<group>"; };
-		5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GCAnimationTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GCAnimationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5F0B6CD214E6D5A600A87D18 /* GCCompositeAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = GCCompositeAnimationTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GCCompositeAnimationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F1C33A814DE99C600BF808B /* libGunCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGunCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33AB14DE99C600BF808B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -103,6 +108,8 @@
 		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = GunCaseDemo/Classes/GDMainView.h; sourceTree = SOURCE_ROOT; };
 		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = GunCaseDemo/Classes/GDMainView.m; sourceTree = SOURCE_ROOT; };
 		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
+		5F1E1DA415271713005E5BBE /* GCStackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStackTest.h; path = Tests/GCStackTest.h; sourceTree = "<group>"; };
+		5F1E1DA515271713005E5BBE /* GCStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStackTest.m; path = Tests/GCStackTest.m; sourceTree = "<group>"; };
 		5F2F729314F90A0B000166E5 /* GCVectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVectorTest.h; path = Tests/GCVectorTest.h; sourceTree = "<group>"; };
 		5F2F729414F90A0B000166E5 /* GCVectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVectorTest.m; path = Tests/GCVectorTest.m; sourceTree = "<group>"; };
 		5F68600D150B788500A216C9 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
@@ -111,6 +118,8 @@
 		5F686012150B7CE400A216C9 /* GCArcAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCArcAnimation.m; path = Classes/GCArcAnimation.m; sourceTree = "<group>"; };
 		5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTimedAnimation.h; path = Classes/GCTimedAnimation.h; sourceTree = "<group>"; };
 		5F6E72D5150CB50600DB000F /* GCTimedAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTimedAnimation.m; path = Classes/GCTimedAnimation.m; sourceTree = "<group>"; };
+		5F8DBEAD15238FD60075ADA6 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = o.png; path = Resources/o.png; sourceTree = "<group>"; };
+		5F8DBEAE15238FD60075ADA6 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = x.png; path = Resources/x.png; sourceTree = "<group>"; };
 		5F9BB63E14F2616E0062F348 /* GCGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGraphics.h; path = Classes/GCGraphics.h; sourceTree = "<group>"; };
 		5F9BB63F14F2616E0062F348 /* GCGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGraphics.m; path = Classes/GCGraphics.m; sourceTree = "<group>"; };
 		5F9BB64414F2674C0062F348 /* GCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVector.h; path = Classes/GCVector.h; sourceTree = "<group>"; };
@@ -122,8 +131,11 @@
 		5FAE7FE1150270D2005813DE /* GCScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCScene.m; path = Classes/GCScene.m; sourceTree = "<group>"; };
 		5FAE7FE4150270EE005813DE /* GCDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDirector.h; path = Classes/GCDirector.h; sourceTree = "<group>"; };
 		5FAE7FE5150270EE005813DE /* GCDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirector.m; path = Classes/GCDirector.m; sourceTree = "<group>"; };
-		5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+GCStack.h"; path = "Classes/NSMutableArray+GCStack.h"; sourceTree = "<group>"; };
-		5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+GCStack.m"; path = "Classes/NSMutableArray+GCStack.m"; sourceTree = "<group>"; };
+		5FBFFB2E151FBA0100F218AD /* GCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStack.h; path = Classes/GCStack.h; sourceTree = "<group>"; };
+		5FBFFB2F151FBA0100F218AD /* GCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStack.m; path = Classes/GCStack.m; sourceTree = "<group>"; };
+		5FE90D02151F1B0100155BBF /* GDBoardScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBoardScene.h; path = Classes/GDBoardScene.h; sourceTree = "<group>"; };
+		5FE90D03151F1B0100155BBF /* GDBoardScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDBoardScene.m; path = Classes/GDBoardScene.m; sourceTree = "<group>"; };
+		5FE90D06151F208A00155BBF /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = board.png; path = Resources/board.png; sourceTree = "<group>"; };
 		5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGameView.h; path = Classes/GCGameView.h; sourceTree = "<group>"; };
 		5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGameView.m; path = Classes/GCGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,7 +239,7 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
-				5FAE7FE815027388005813DE /* Additions */,
+				5FAE7FE815027388005813DE /* Containers */,
 				5FAE7FDE150270B2005813DE /* Scenes */,
 				5FF8AEF714FA89EA0093AF4E /* Application */,
 				5F9BB64314F266090062F348 /* Geometry */,
@@ -252,6 +264,7 @@
 		5F1C33C314DE99C600BF808B /* GunCaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				5F1E1DA3152716D9005E5BBE /* Containers */,
 				5F2F729614F90CC7000166E5 /* Animation */,
 				5F2F729114F909E4000166E5 /* Geometry */,
 				5F1C33C414DE99C600BF808B /* Supporting Files */,
@@ -304,6 +317,9 @@
 		5F1C340114DEA35200BF808B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F8DBEAD15238FD60075ADA6 /* o.png */,
+				5F8DBEAE15238FD60075ADA6 /* x.png */,
+				5FE90D06151F208A00155BBF /* board.png */,
 				5F1C340F14DEBA4300BF808B /* walker.png */,
 				5F1C33EA14DE9A8000BF808B /* MainMenu.xib */,
 			);
@@ -319,8 +335,19 @@
 				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
 				5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */,
 				5F0B6CD014E6D26D00A87D18 /* GDGuy.m */,
+				5FE90D02151F1B0100155BBF /* GDBoardScene.h */,
+				5FE90D03151F1B0100155BBF /* GDBoardScene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		5F1E1DA3152716D9005E5BBE /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				5F1E1DA415271713005E5BBE /* GCStackTest.h */,
+				5F1E1DA515271713005E5BBE /* GCStackTest.m */,
+			);
+			name = Containers;
 			sourceTree = "<group>";
 		};
 		5F2F729114F909E4000166E5 /* Geometry */ = {
@@ -335,8 +362,8 @@
 		5F2F729614F90CC7000166E5 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				5F0B6CD214E6D5A600A87D18 /* GCAnimationTest.h */,
-				5F0B6CD314E6D5A600A87D18 /* GCAnimationTest.m */,
+				5F0B6CD214E6D5A600A87D18 /* GCCompositeAnimationTest.h */,
+				5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -361,13 +388,13 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
-		5FAE7FE815027388005813DE /* Additions */ = {
+		5FAE7FE815027388005813DE /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				5FAE7FE9150273A2005813DE /* NSMutableArray+GCStack.h */,
-				5FAE7FEA150273A2005813DE /* NSMutableArray+GCStack.m */,
+				5FBFFB2E151FBA0100F218AD /* GCStack.h */,
+				5FBFFB2F151FBA0100F218AD /* GCStack.m */,
 			);
-			name = Additions;
+			name = Containers;
 			sourceTree = "<group>";
 		};
 		5FF8AEF714FA89EA0093AF4E /* Application */ = {
@@ -397,10 +424,10 @@
 				5FF8AEFA14FA8A5C0093AF4E /* GCGameView.h in Headers */,
 				5FAE7FE2150270D2005813DE /* GCScene.h in Headers */,
 				5FAE7FE6150270EE005813DE /* GCDirector.h in Headers */,
-				5FAE7FEB150273A2005813DE /* NSMutableArray+GCStack.h in Headers */,
 				5F68600F150B788500A216C9 /* GCAnimation.h in Headers */,
 				5F686013150B7CE400A216C9 /* GCArcAnimation.h in Headers */,
 				5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */,
+				5FBFFB30151FBA0100F218AD /* GCStack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +531,9 @@
 				5F1C33E614DE9A8000BF808B /* Credits.rtf in Resources */,
 				5F1C33EC14DE9A8000BF808B /* MainMenu.xib in Resources */,
 				5F1C341014DEBA4300BF808B /* walker.png in Resources */,
+				5FE90D07151F208A00155BBF /* board.png in Resources */,
+				5F8DBEAF15238FD60075ADA6 /* o.png in Resources */,
+				5F8DBEB015238FD60075ADA6 /* x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,10 +568,10 @@
 				5FF8AEFB14FA8A5C0093AF4E /* GCGameView.m in Sources */,
 				5FAE7FE3150270D2005813DE /* GCScene.m in Sources */,
 				5FAE7FE7150270EE005813DE /* GCDirector.m in Sources */,
-				5FAE7FEC150273A2005813DE /* NSMutableArray+GCStack.m in Sources */,
 				5F686010150B788500A216C9 /* GCAnimation.m in Sources */,
 				5F686014150B7CE400A216C9 /* GCArcAnimation.m in Sources */,
 				5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */,
+				5FBFFB31151FBA0100F218AD /* GCStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,8 +579,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0B6CD414E6D5A600A87D18 /* GCAnimationTest.m in Sources */,
+				5F0B6CD414E6D5A600A87D18 /* GCCompositeAnimationTest.m in Sources */,
 				5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */,
+				5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +593,7 @@
 				5F1C33E914DE9A8000BF808B /* GDAppDelegate.m in Sources */,
 				5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */,
 				5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */,
+				5FE90D04151F1B0100155BBF /* GDBoardScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

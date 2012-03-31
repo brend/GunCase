@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "GCScene.h"
+#import "GCStack.h"
 
 @interface GCDirector : NSObject
 {
-	NSMutableArray *sceneStack;
+	GCStack *sceneStack;
 }
 
 + (id) sharedDirector;
 
 - (void) pushScene: (GCScene *) scene;
 - (GCScene *) popScene;
+
+- (GCScene *) activeScene;
+- (void) updateScene;
+- (void) renderScene;
 
 @end

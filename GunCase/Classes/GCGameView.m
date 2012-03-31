@@ -13,16 +13,25 @@
 #define GMWorldWidth	(self.frame.size.width)
 #define GMWorldHeight	(self.frame.size.height)
 
+#pragma mark -
+#pragma mark GCGameView Private Interface
 @interface GCGameView ()
+@property (retain) NSTimer *timer;
 - (void) startTimer;
 - (void) stopTimer;
-@property (retain) NSTimer *timer;
+
 @property (retain) GCGraphics *graphics;
+
 - (void) prepareFrame;
+
+@property BOOL hasBeenSetup;
 @end
 
+#pragma mark -
+#pragma mark GCGameView Implementation
 @implementation GCGameView
 @synthesize timer = _timer, graphics = _graphics;
+@synthesize hasBeenSetup = _hasBeenSetup;
 
 - (void)reshape
 {	
@@ -47,6 +56,12 @@
 	// Enable culling
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
+	
+	// Set up, if not yet setup
+	if (!self.hasBeenSetup) {
+		self.hasBeenSetup = YES;
+		[self setup];
+	}
 	
 	// [self.delegate gameViewDidReshape: self];
 	[self setNeedsDisplay: YES];
@@ -82,11 +97,6 @@
 {
 	[self.timer invalidate];
 	self.timer = nil;
-}
-
-- (void) updateGame
-{
-	// To be implemented in subclass
 }
 
 - (void) prepareFrame
@@ -134,7 +144,17 @@
 	glFlush(); 
 }
 
+- (void) updateGame
+{
+	[[GCDirector sharedDirector] updateScene];
+}
+
 - (void) drawScene:(NSRect)rect
+{
+	[[GCDirector sharedDirector] renderScene];
+}
+
+- (void) setup
 {
 	// To be implemented in subclass
 }

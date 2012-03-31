@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GCDirector.h"
 
 @interface GCGameView : NSOpenGLView
 
+- (void) setup;
 - (void) drawScene: (NSRect) rect;
 - (void) updateGame;
 

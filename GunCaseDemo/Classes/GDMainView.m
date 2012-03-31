@@ -8,17 +8,26 @@
 
 #import "GDMainView.h"
 #import "GunCase.h"
+#import "GDBoardScene.h"
 
 @implementation GDMainView
 
+- (void) setup
+{
+	guys = [NSMutableSet set];
+	
+	[guys addObject: [[GDGuy alloc] initWithRectangularAnimation]];
+	[guys addObject: [[GDGuy alloc] initWithCircularAnimation]];
+	
+	GCScene *boardScene = [[GDBoardScene alloc] init];
+	GCDirector *director = [GCDirector sharedDirector];
+	
+	[director pushScene: boardScene];	
+}
+
 - (void) updateGame
 {
-	if (guys == nil) {
-		guys = [NSMutableSet set];
-		
-		[guys addObject: [[GDGuy alloc] initWithRectangularAnimation]];
-		[guys addObject: [[GDGuy alloc] initWithCircularAnimation]];
-	}
+	[super updateGame];
 	
 	for (GDGuy *guy in guys)
 		[guy update];
@@ -26,6 +35,8 @@
 
 -(void) drawScene: (NSRect) bounds
 {
+	[super drawScene: bounds];
+	
 	for (GDGuy *guy in guys)
 		[guy draw];
 }

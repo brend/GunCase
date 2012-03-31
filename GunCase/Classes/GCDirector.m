@@ -10,7 +10,7 @@
 
 @implementation GCDirector
 
-static NSMutableArray *GCDirectorSceneStack = nil;
+static GCStack *GCDirectorSceneStack = nil;
 
 - (id)init
 {
@@ -23,7 +23,7 @@ static NSMutableArray *GCDirectorSceneStack = nil;
 
 + (void) initialize
 {
-	GCDirectorSceneStack = [NSMutableArray array];
+	GCDirectorSceneStack = [[GCStack alloc] init];
 }
 
 + (id) sharedDirector
@@ -39,6 +39,21 @@ static NSMutableArray *GCDirectorSceneStack = nil;
 - (GCScene *) popScene
 {
 	return sceneStack.pop;
+}
+
+- (GCScene *) activeScene
+{
+	return [sceneStack peek];
+}
+
+- (void) updateScene
+{
+	[self.activeScene update];
+}
+
+- (void) renderScene
+{
+	[self.activeScene render];
 }
 
 @end

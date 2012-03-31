@@ -10,6 +10,7 @@
 
 @interface GCScene : NSObject
 
+- (void) update;
 - (void) render;
 
 @end
