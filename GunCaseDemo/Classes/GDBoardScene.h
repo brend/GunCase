@@ -17,8 +17,10 @@ typedef enum {
 
 @interface GDBoardScene : GCScene
 {
-	GCSprite *boardSprite, *xSprite, *oSprite;
+	GCSprite *boardSprite;
+	GCSprite *tokenSprites[3];
 	Token board[9];
+	NSSize fieldSize;
 }
 
 @end
