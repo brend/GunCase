@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GunCase.h"
 
-@interface GDMarker : NSObject
+@interface GDMarker : NSObject <GCMovable>
+{
+	GCAnimation *animation;
+	GCSprite *sprite;
+}
+
+@property NSPoint position;
+@property float rotation;
+@property NSSize scale;
+
+- (void) placeAtRow: (NSInteger) row column: (NSInteger) col;
+
+- (void) update;
+- (void) render;
 
 @end

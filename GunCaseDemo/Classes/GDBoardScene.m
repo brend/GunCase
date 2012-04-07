@@ -23,17 +23,27 @@
 
 //		board[2] = TokenX;
 //		board[7] = TokenO;
-		for (NSInteger i = 0; i < 3; ++i) {
+		for (NSInteger i = 0; i < 9; ++i) {
 			board[i] = i % 2 + 1;
 		}
+		
+		marker = [[GDMarker alloc] init];
     }
 	
     return self;
 }
 
-- (void) advance
+static int foo = 0;
+
+- (void) update
 {
+	if (++foo % 30 == 0) {
+		int row = rand() % 3, col = rand() % 3;
+		
+		[marker placeAtRow: row column: col];
+	}
 	
+	[marker update];
 }
 
 - (NSPoint) indexToPoint: (NSInteger) i
@@ -48,7 +58,7 @@
 	// 2 -> -1
 	
 	NSInteger x = i % 3, y = i / 3;
-	return NSMakePoint(0, 128);
+	
 	return NSMakePoint(
 		(x - 1) * fieldSize.width,
 		(1 - y) * fieldSize.height);
@@ -56,6 +66,8 @@
 
 - (void) render
 {
+	[super render];	
+	
 	[boardSprite drawAtX: 0 y: 0];
 	
 	for (NSInteger i = 0; i < 9; ++i) {
@@ -65,6 +77,8 @@
 		
 		[s drawAtX: p.x y: p.y];
 	}
+	
+	[marker render];
 }
 
 @end

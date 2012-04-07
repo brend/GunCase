@@ -8,6 +8,7 @@
 
 #import "GCScene.h"
 #import "GunCase.h"
+#import "GDMarker.h"
 
 typedef enum {
 	TokenNone = 0,
@@ -21,6 +22,8 @@ typedef enum {
 	GCSprite *tokenSprites[3];
 	Token board[9];
 	NSSize fieldSize;
+	
+	GDMarker *marker;
 }
 
 @end
