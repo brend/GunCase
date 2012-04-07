@@ -23,8 +23,13 @@
     return self;
 }
 
-- (void) placeAtRow: (NSInteger) row column: (NSInteger) col
+- (void) placeAtRow: (NSInteger) r column: (NSInteger) c
 {
+	if (r >= 0 && r < 3)
+		row = r;
+	if (c >= 0 && c < 3)
+		col = c;
+	
 	float y = (1 - row) * 128, x = (col - 1) * 128;
 	GCVector *here = [GCVector vectorWithPoint: _position], *there = [GCVector vectorWithX: x y: y];
 	
@@ -39,6 +44,27 @@
 - (void) render
 {
 	[sprite drawAtX: _position.x y: _position.y];
+}
+
+
+- (void) moveLeft
+{
+	[self placeAtRow: row column: col - 1];
+}
+
+- (void) moveRight
+{
+	[self placeAtRow: row column: col + 1];
+}
+
+- (void) moveUp
+{
+	[self placeAtRow: row - 1 column: col];
+}
+
+- (void) moveDown
+{
+	[self placeAtRow: row + 1 column: col];
 }
 
 @end

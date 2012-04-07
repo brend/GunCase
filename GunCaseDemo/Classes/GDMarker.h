@@ -13,6 +13,7 @@
 {
 	GCAnimation *animation;
 	GCSprite *sprite;
+	NSInteger row, col;
 }
 
 @property NSPoint position;
@@ -23,5 +24,10 @@
 
 - (void) update;
 - (void) render;
+
+- (void) moveLeft;
+- (void) moveRight;
+- (void) moveDown;
+- (void) moveUp;
 
 @end

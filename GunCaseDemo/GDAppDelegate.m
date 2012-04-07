@@ -15,6 +15,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	// Un-comment to enable mouse movement tracking
+	// [_window setAcceptsMouseMovedEvents: YES];
 }
 
 @end

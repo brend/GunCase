@@ -33,16 +33,8 @@
     return self;
 }
 
-static int foo = 0;
-
 - (void) update
 {
-	if (++foo % 30 == 0) {
-		int row = rand() % 3, col = rand() % 3;
-		
-		[marker placeAtRow: row column: col];
-	}
-	
 	[marker update];
 }
 
@@ -79,6 +71,52 @@ static int foo = 0;
 	}
 	
 	[marker render];
+}
+
+#pragma mark -
+#pragma mark Handling User Input
+- (void)keyDown:(NSEvent *)theEvent
+{
+	[theEvent characters];
+	
+	switch (theEvent.keyCode) {
+		case 123:
+			[marker moveLeft];
+			break;
+		case 124:
+			[marker moveRight];
+			break;
+		case 126:
+			[marker moveUp];
+			break;
+		case 125:
+			[marker moveDown];
+			break;
+		default:
+			break;
+	}
+	
+	NSLog(@"key down");
+}
+
+- (void) keyUp:(NSEvent *)theEvent
+{
+	NSLog(@"key up");
+}
+
+- (void) mouseDown:(NSEvent *)theEvent
+{
+	NSLog(@"mouse down");
+}
+
+- (void) mouseUp:(NSEvent *)theEvent
+{
+	NSLog(@"mouse up");
+}
+
+- (void) mouseMoved:(NSEvent *)theEvent
+{
+	NSLog(@"mouse moved");
 }
 
 @end
