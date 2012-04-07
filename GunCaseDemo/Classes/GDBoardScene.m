@@ -95,28 +95,24 @@
 		default:
 			break;
 	}
-	
-	NSLog(@"key down");
-}
-
-- (void) keyUp:(NSEvent *)theEvent
-{
-	NSLog(@"key up");
 }
 
 - (void) mouseDown:(NSEvent *)theEvent
 {
-	NSLog(@"mouse down");
-}
-
-- (void) mouseUp:(NSEvent *)theEvent
-{
-	NSLog(@"mouse up");
-}
-
-- (void) mouseMoved:(NSEvent *)theEvent
-{
-	NSLog(@"mouse moved");
+	// 1->0, 0->1, -1->2
+	// 480, 348
+	NSPoint p = [theEvent locationInWindow];
+	
+	p.x = p.x + 64 - theEvent.window.frame.size.width / 2;
+	p.y = p.y - 64 - theEvent.window.frame.size.height / 2;
+	
+	NSLog(@"mouse %f, %f", p.x, p.y);
+	
+	NSInteger
+		col = floor(p.x / 128 + 1),
+		row = floor(1 - p.y / 128);
+	
+	[marker placeAtRow: row column: col];
 }
 
 @end

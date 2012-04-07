@@ -12,7 +12,6 @@
 
 @interface GDMainView : GCGameView
 {
-	NSMutableSet *guys;
 }
 
 - (IBAction) toggleTimer: (id) sender;
