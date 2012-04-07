@@ -250,6 +250,7 @@ const GLfloat GCSpriteTexcoords[] =
 {
 	glTranslatef(x, y, 0);
 	[self draw];
+	glTranslatef(-x, -y, 0);
 }
 
 - (void) drawTest
