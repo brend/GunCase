@@ -159,4 +159,33 @@
 	// To be implemented in subclass
 }
 
+#pragma mark -
+#pragma mark Handling User Input
+
+- (BOOL) acceptsFirstResponder
+{
+	return YES;
+}
+
+- (void)keyDown:(NSEvent *)theEvent
+{
+	[[GCDirector sharedDirector] keyDown: theEvent];
+}
+
+- (void) mouseDown: (NSEvent *) theEvent
+{
+	[[GCDirector sharedDirector] mouseDown: theEvent];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+	[[GCDirector sharedDirector] mouseUp: theEvent];
+}
+
+// NOTE: The window must enable mouse movement tracking for this to take effect
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+	[[GCDirector sharedDirector] mouseMoved: theEvent];
+}
+
 @end

@@ -39,4 +39,26 @@
 	rotation = _rotation,
 	scale = _scale;
 
+#pragma mark -
+#pragma mark Handling User Input
+- (void)keyDown:(NSEvent *)theEvent
+{
+}
+
+- (void)keyUp:(NSEvent *)theEvent
+{
+}
+
+- (void) mouseDown: (NSEvent *) theEvent
+{
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+}
+
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+}
+
 @end

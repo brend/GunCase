@@ -56,4 +56,32 @@ static GCStack *GCDirectorSceneStack = nil;
 	[self.activeScene render];
 }
 
+#pragma mark -
+#pragma mark Handling User Input
+
+- (void) keyDown:(NSEvent *)theEvent
+{
+	[self.activeScene keyDown: theEvent];
+}
+
+- (void) keyUp: (NSEvent *) theEvent
+{
+	[self.activeScene keyUp: theEvent];
+}
+
+- (void) mouseDown: (NSEvent *) theEvent
+{
+	[self.activeScene mouseDown: theEvent];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+	[self.activeScene mouseUp: theEvent];
+}
+
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+	[self.activeScene mouseMoved: theEvent];
+}
+
 @end

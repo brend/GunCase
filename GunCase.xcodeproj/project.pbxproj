@@ -315,8 +315,6 @@
 				5F1C33F714DE9F7000BF808B /* GCSprite.m */,
 				5F9BB63E14F2616E0062F348 /* GCGraphics.h */,
 				5F9BB63F14F2616E0062F348 /* GCGraphics.m */,
-				5FAE7FE0150270D2005813DE /* GCScene.h */,
-				5FAE7FE1150270D2005813DE /* GCScene.m */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -392,6 +390,8 @@
 			children = (
 				5FAE7FE4150270EE005813DE /* GCDirector.h */,
 				5FAE7FE5150270EE005813DE /* GCDirector.m */,
+				5FAE7FE0150270D2005813DE /* GCScene.h */,
+				5FAE7FE1150270D2005813DE /* GCScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
