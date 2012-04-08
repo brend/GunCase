@@ -34,6 +34,9 @@
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
 		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
 		5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E1DA515271713005E5BBE /* GCStackTest.m */; };
+		5F2ED53D1531C344002BDE26 /* GCRotationAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2ED53B1531C344002BDE26 /* GCRotationAnimation.h */; };
+		5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */; };
+		5F2ED5421531C444002BDE26 /* GDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED5411531C444002BDE26 /* GDToken.m */; };
 		5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F729414F90A0B000166E5 /* GCVectorTest.m */; };
 		5F68600F150B788500A216C9 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F68600D150B788500A216C9 /* GCAnimation.h */; };
 		5F686010150B788500A216C9 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F68600E150B788500A216C9 /* GCAnimation.m */; };
@@ -114,6 +117,10 @@
 		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
 		5F1E1DA415271713005E5BBE /* GCStackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStackTest.h; path = Tests/GCStackTest.h; sourceTree = "<group>"; };
 		5F1E1DA515271713005E5BBE /* GCStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStackTest.m; path = Tests/GCStackTest.m; sourceTree = "<group>"; };
+		5F2ED53B1531C344002BDE26 /* GCRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCRotationAnimation.h; path = Classes/GCRotationAnimation.h; sourceTree = "<group>"; };
+		5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCRotationAnimation.m; path = Classes/GCRotationAnimation.m; sourceTree = "<group>"; };
+		5F2ED5401531C444002BDE26 /* GDToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDToken.h; path = Classes/GDToken.h; sourceTree = "<group>"; };
+		5F2ED5411531C444002BDE26 /* GDToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDToken.m; path = Classes/GDToken.m; sourceTree = "<group>"; };
 		5F2F729314F90A0B000166E5 /* GCVectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVectorTest.h; path = Tests/GCVectorTest.h; sourceTree = "<group>"; };
 		5F2F729414F90A0B000166E5 /* GCVectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVectorTest.m; path = Tests/GCVectorTest.m; sourceTree = "<group>"; };
 		5F68600D150B788500A216C9 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
@@ -197,6 +204,8 @@
 				5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */,
 				5F686011150B7CE400A216C9 /* GCArcAnimation.h */,
 				5F686012150B7CE400A216C9 /* GCArcAnimation.m */,
+				5F2ED53B1531C344002BDE26 /* GCRotationAnimation.h */,
+				5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -351,6 +360,8 @@
 				5FE90D03151F1B0100155BBF /* GDBoardScene.m */,
 				5F9A78DF15304DE500DC8076 /* GDMarker.h */,
 				5F9A78E015304DE500DC8076 /* GDMarker.m */,
+				5F2ED5401531C444002BDE26 /* GDToken.h */,
+				5F2ED5411531C444002BDE26 /* GDToken.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -442,6 +453,7 @@
 				5F686013150B7CE400A216C9 /* GCArcAnimation.h in Headers */,
 				5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */,
 				5FBFFB30151FBA0100F218AD /* GCStack.h in Headers */,
+				5F2ED53D1531C344002BDE26 /* GCRotationAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +601,7 @@
 				5F686014150B7CE400A216C9 /* GCArcAnimation.m in Sources */,
 				5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */,
 				5FBFFB31151FBA0100F218AD /* GCStack.m in Sources */,
+				5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +625,7 @@
 				5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */,
 				5FE90D04151F1B0100155BBF /* GDBoardScene.m in Sources */,
 				5F9A78E115304DE500DC8076 /* GDMarker.m in Sources */,
+				5F2ED5421531C444002BDE26 /* GDToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

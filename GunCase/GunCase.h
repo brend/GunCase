@@ -19,6 +19,7 @@
 #import "GCCompositeAnimation.h"
 #import "GCLinearAnimation.h"
 #import "GCArcAnimation.h"
+#import "GCRotationAnimation.h"
 
 // Application
 #import "GCGameView.h"
