@@ -11,6 +11,7 @@
 @implementation GDMarker
 
 @synthesize position = _position, rotation = _rotation, scale = _scale;
+@synthesize row, col;
 
 - (id)init
 {

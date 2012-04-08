@@ -30,4 +30,6 @@
 - (void) moveDown;
 - (void) moveUp;
 
+@property (readonly) NSInteger row, col;
+
 @end

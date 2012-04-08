@@ -57,6 +57,8 @@
 		5FAE7FE7150270EE005813DE /* GCDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE7FE5150270EE005813DE /* GCDirector.m */; };
 		5FBFFB30151FBA0100F218AD /* GCStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBFFB2E151FBA0100F218AD /* GCStack.h */; };
 		5FBFFB31151FBA0100F218AD /* GCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFFB2F151FBA0100F218AD /* GCStack.m */; };
+		5FD978A61531950F00A5D88B /* CurrentPlayerLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD978A51531950F00A5D88B /* CurrentPlayerLabel.png */; };
+		5FD978A915319D8400A5D88B /* WinnerLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD978A815319D8400A5D88B /* WinnerLabel.png */; };
 		5FE90D04151F1B0100155BBF /* GDBoardScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE90D03151F1B0100155BBF /* GDBoardScene.m */; };
 		5FE90D07151F208A00155BBF /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE90D06151F208A00155BBF /* board.png */; };
 		5FF8AEFA14FA8A5C0093AF4E /* GCGameView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */; };
@@ -138,6 +140,8 @@
 		5FAE7FE5150270EE005813DE /* GCDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirector.m; path = Classes/GCDirector.m; sourceTree = "<group>"; };
 		5FBFFB2E151FBA0100F218AD /* GCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStack.h; path = Classes/GCStack.h; sourceTree = "<group>"; };
 		5FBFFB2F151FBA0100F218AD /* GCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStack.m; path = Classes/GCStack.m; sourceTree = "<group>"; };
+		5FD978A51531950F00A5D88B /* CurrentPlayerLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CurrentPlayerLabel.png; path = Resources/CurrentPlayerLabel.png; sourceTree = "<group>"; };
+		5FD978A815319D8400A5D88B /* WinnerLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WinnerLabel.png; path = Resources/WinnerLabel.png; sourceTree = "<group>"; };
 		5FE90D02151F1B0100155BBF /* GDBoardScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBoardScene.h; path = Classes/GDBoardScene.h; sourceTree = "<group>"; };
 		5FE90D03151F1B0100155BBF /* GDBoardScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDBoardScene.m; path = Classes/GDBoardScene.m; sourceTree = "<group>"; };
 		5FE90D06151F208A00155BBF /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = board.png; path = Resources/board.png; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 		5F1C340114DEA35200BF808B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD978A815319D8400A5D88B /* WinnerLabel.png */,
+				5FD978A51531950F00A5D88B /* CurrentPlayerLabel.png */,
 				5F9A78E21530508900DC8076 /* marker.png */,
 				5F8DBEAD15238FD60075ADA6 /* o.png */,
 				5F8DBEAE15238FD60075ADA6 /* x.png */,
@@ -543,6 +549,8 @@
 				5F8DBEAF15238FD60075ADA6 /* o.png in Resources */,
 				5F8DBEB015238FD60075ADA6 /* x.png in Resources */,
 				5F9A78E31530508900DC8076 /* marker.png in Resources */,
+				5FD978A61531950F00A5D88B /* CurrentPlayerLabel.png in Resources */,
+				5FD978A915319D8400A5D88B /* WinnerLabel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
