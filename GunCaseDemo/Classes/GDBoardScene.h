@@ -9,23 +9,19 @@
 #import "GCScene.h"
 #import "GunCase.h"
 #import "GDMarker.h"
-
-typedef enum {
-	TokenNone = 0,
-	TokenX = 1,
-	TokenO = 2
-} Token;
+#import "GDToken.h"
 
 @interface GDBoardScene : GCScene
 {
 	GCSprite *boardSprite, *currentPlayerLabelSprite, *winnerLabelSprite;
-	GCSprite *tokenSprites[3];
 	
-	Token board[9];
+	GDToken *board[9];
 	NSSize fieldSize;
 	
 	GDMarker *marker;
-	Token currentToken;
+	GDToken *currentToken;
+	
+	GCAnimation *rotationAnimation;
 }
 
 @end

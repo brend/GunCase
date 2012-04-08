@@ -18,14 +18,17 @@
         boardSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"board"]];
 		currentPlayerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"CurrentPlayerLabel"]];
 		winnerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"WinnerLabel"]];
-		tokenSprites[0] = nil;
-		tokenSprites[1] = [GCSprite spriteWithImage: [NSImage imageNamed: @"x"]];
-		tokenSprites[2] = [GCSprite spriteWithImage: [NSImage imageNamed: @"o"]];
+
 		fieldSize = NSMakeSize(128, 128);
 
 		marker = [[GDMarker alloc] init];
 		[marker placeAtRow: 0 column: 0];
-		currentToken = TokenX;
+
+		currentToken = [GDToken tokenX];
+		
+		for (NSInteger i = 0; i < 9; ++i) {
+			board[i] = [GDToken tokenNone];
+		}
     }
 	
     return self;
@@ -38,15 +41,15 @@
 
 - (void) placeToken
 {
-	if ([self winner] != TokenNone)
+	if (![[self winner] isNone])
 		return;
 	
 	NSInteger row = marker.row, col = marker.col;
 	NSInteger index = row * 3 + col;
 	
-	if (board[index] == TokenNone) {	
+	if ([board[index] isNone]) {	
 		board[index] = currentToken;
-		currentToken = currentToken == TokenX ? TokenO : TokenX;
+		currentToken = [currentToken theOtherOne];
 	} else {
 		// TODO: Display message?
 	}
@@ -74,32 +77,31 @@
 {
 	[super render];
 	
-	Token winner = [self winner];
+	GDToken *winner = [self winner];
 
 	// Draw the board and tokens
 	[boardSprite drawAtX: 0 y: 0];
 	
 	for (NSInteger i = 0; i < 9; ++i) {
-		Token t = board[i];
-		GCSprite *s = tokenSprites[t];
-		NSPoint p = [self indexToPoint: i];
+		GDToken *t = board[i];
 		
-		[s drawAtX: p.x y: p.y];
+		[t drawAtRow: i / 3 col: i % 3];
 	}
 	
 	// Draw the marker
-	if (winner == TokenNone)
+	if ([winner isNone])
 		[marker render];
 	
 	// Draw current player info or winner's token
 	GCSprite *labelSprite = 
-		winner == TokenNone
+		[winner isNone]
 			? currentPlayerLabelSprite
 			: winnerLabelSprite;
+	// TODO: Prettify
 	GCSprite *currentTokenSprite = 
-		winner == TokenNone
-			? tokenSprites[currentToken]
-			: tokenSprites[currentToken == TokenX ? TokenO : TokenX];
+		[winner isNone]
+			? currentToken.sprite
+			: [[currentToken theOtherOne] sprite];
 	
 	[labelSprite drawAtX: -400 + currentPlayerLabelSprite.width / 2 y: 300 - currentPlayerLabelSprite.height / 2];		
 	[currentTokenSprite drawAtX: -400 + currentPlayerLabelSprite.width + currentPlayerLabelSprite.width / 2
@@ -132,8 +134,8 @@
 		case 36:
 		case 49:
 			[self placeToken];
-			if ([self winner] != TokenNone)
-				NSLog(@"Winner: %d", [self winner]);
+			if (![[self winner] isNone])
+				NSLog(@"Winner: %@", [self winner]);
 			break;
 		case 15:
 			[self resetBoard];
@@ -161,11 +163,13 @@
 	[self placeToken];
 }
 
-- (Token) winner
+- (GDToken *) winner
 {
 	// Check rows and cols
 	for (NSInteger i = 0; i < 3; ++i) {
-		Token rowWinner = TokenNone, colWinner = TokenNone;
+		GDToken
+			*rowWinner = [GDToken tokenNone],
+			*colWinner = [GDToken tokenNone];
 		
 		for (NSInteger j = 0; j < 3; ++j) {
 			if (j == 0) {
@@ -173,46 +177,47 @@
 				colWinner = board[i];
 			} else {
 				if (board[i * 3 + j] != rowWinner)
-					rowWinner = TokenNone;
+					rowWinner = [GDToken tokenNone];
 				
 				if (board[j * 3 + i] != colWinner)
-					colWinner = TokenNone;
+					colWinner = [GDToken tokenNone];
 			}
 		}
 		
-		if (rowWinner != TokenNone)
+		if (![rowWinner isNone])
 			return rowWinner;
-		if (colWinner != TokenNone)
+		if (![colWinner isNone])
 			return colWinner;
 	}
 	
 	// Check diagonals
-	Token d1 = TokenNone, d2 = TokenNone;
+	GDToken *d1 = [GDToken tokenNone], *d2 = [GDToken tokenNone];
 	for (NSInteger i = 0; i < 3; ++i) {
 		if (i == 0) {
 			d1 = board[i * 3 + i];
 			d2 = board[i * 3 + (3 - (i + 1))];
 		} else {
 			if (board[i * 3 + i] != d1)
-				d1 = TokenNone;
+				d1 = [GDToken tokenNone];
 			if (board[i * 3 + (3 - (i + 1))] != d2)
-				d2 = TokenNone;
+				d2 = [GDToken tokenNone];
 		}
 	}
 	
-	if (d1 != TokenNone)
+	if (![d1 isNone])
 		return d1;
-	if (d2 != TokenNone)
+	if (![d2 isNone])
 		return d2;
 	
-	return TokenNone;
+	return [GDToken tokenNone];
 }
 
 - (void) resetBoard
 {
 	for (NSInteger i = 0; i < 9; ++i)
-		board[i] = TokenNone;
-	currentToken = TokenX;
+		board[i] = [GDToken tokenNone];
+	
+	currentToken = [GDToken tokenX];
 }
 
 @end
