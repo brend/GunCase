@@ -12,6 +12,14 @@
 		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
 		5F0B6CD114E6D26D00A87D18 /* GDGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD014E6D26D00A87D18 /* GDGuy.m */; };
 		5F0B6CD414E6D5A600A87D18 /* GCCompositeAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */; };
+		5F1997CC1532E7C400D2E44D /* GCLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1997CA1532E7C400D2E44D /* GCLayer.h */; };
+		5F1997CD1532E7C400D2E44D /* GCLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997CB1532E7C400D2E44D /* GCLayer.m */; };
+		5F1997D11532E7DA00D2E44D /* GCLayeredScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1997CF1532E7DA00D2E44D /* GCLayeredScene.h */; };
+		5F1997D21532E7DA00D2E44D /* GCLayeredScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997D01532E7DA00D2E44D /* GCLayeredScene.m */; };
+		5F1997D61532EDD900D2E44D /* GDBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997D51532EDD900D2E44D /* GDBackgroundLayer.m */; };
+		5F1997D91532F56900D2E44D /* GDTokensLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997D81532F56900D2E44D /* GDTokensLayer.m */; };
+		5F1997DC15330B6E00D2E44D /* GDOverheadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997DB15330B6E00D2E44D /* GDOverheadLayer.m */; };
+		5F1997DE15330D1800D2E44D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1997DD15330D1800D2E44D /* background.jpg */; };
 		5F1C33AC14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
 		5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33BD14DE99C600BF808B /* SenTestingKit.framework */; };
 		5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C33AB14DE99C600BF808B /* Cocoa.framework */; };
@@ -86,6 +94,17 @@
 		5F0B6CD014E6D26D00A87D18 /* GDGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGuy.m; path = Classes/GDGuy.m; sourceTree = "<group>"; };
 		5F0B6CD214E6D5A600A87D18 /* GCCompositeAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GCCompositeAnimationTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GCCompositeAnimationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5F1997CA1532E7C400D2E44D /* GCLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCLayer.h; path = Classes/GCLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F1997CB1532E7C400D2E44D /* GCLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCLayer.m; path = Classes/GCLayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5F1997CF1532E7DA00D2E44D /* GCLayeredScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCLayeredScene.h; path = Classes/GCLayeredScene.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F1997D01532E7DA00D2E44D /* GCLayeredScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCLayeredScene.m; path = Classes/GCLayeredScene.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5F1997D41532EDD900D2E44D /* GDBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBackgroundLayer.h; path = Classes/GDBackgroundLayer.h; sourceTree = "<group>"; };
+		5F1997D51532EDD900D2E44D /* GDBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDBackgroundLayer.m; path = Classes/GDBackgroundLayer.m; sourceTree = "<group>"; };
+		5F1997D71532F56900D2E44D /* GDTokensLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTokensLayer.h; path = Classes/GDTokensLayer.h; sourceTree = "<group>"; };
+		5F1997D81532F56900D2E44D /* GDTokensLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTokensLayer.m; path = Classes/GDTokensLayer.m; sourceTree = "<group>"; };
+		5F1997DA15330B6E00D2E44D /* GDOverheadLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDOverheadLayer.h; path = Classes/GDOverheadLayer.h; sourceTree = "<group>"; };
+		5F1997DB15330B6E00D2E44D /* GDOverheadLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDOverheadLayer.m; path = Classes/GDOverheadLayer.m; sourceTree = "<group>"; };
+		5F1997DD15330D1800D2E44D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Resources/background.jpg; sourceTree = "<group>"; };
 		5F1C33A814DE99C600BF808B /* libGunCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGunCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C33AB14DE99C600BF808B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5F1C33AE14DE99C600BF808B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -208,6 +227,21 @@
 				5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */,
 			);
 			name = Animation;
+			sourceTree = "<group>";
+		};
+		5F1997D31532ED1F00D2E44D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5FE90D02151F1B0100155BBF /* GDBoardScene.h */,
+				5FE90D03151F1B0100155BBF /* GDBoardScene.m */,
+				5F1997D41532EDD900D2E44D /* GDBackgroundLayer.h */,
+				5F1997D51532EDD900D2E44D /* GDBackgroundLayer.m */,
+				5F1997D71532F56900D2E44D /* GDTokensLayer.h */,
+				5F1997D81532F56900D2E44D /* GDTokensLayer.m */,
+				5F1997DA15330B6E00D2E44D /* GDOverheadLayer.h */,
+				5F1997DB15330B6E00D2E44D /* GDOverheadLayer.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		5F1C339D14DE99C600BF808B = {
@@ -335,6 +369,7 @@
 		5F1C340114DEA35200BF808B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F1997DD15330D1800D2E44D /* background.jpg */,
 				5FD978A815319D8400A5D88B /* WinnerLabel.png */,
 				5FD978A51531950F00A5D88B /* CurrentPlayerLabel.png */,
 				5F9A78E21530508900DC8076 /* marker.png */,
@@ -350,14 +385,13 @@
 		5F1C340B14DEA4F200BF808B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F1997D31532ED1F00D2E44D /* Scenes */,
 				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
 				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
 				5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */,
 				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
 				5F0B6CCF14E6D26D00A87D18 /* GDGuy.h */,
 				5F0B6CD014E6D26D00A87D18 /* GDGuy.m */,
-				5FE90D02151F1B0100155BBF /* GDBoardScene.h */,
-				5FE90D03151F1B0100155BBF /* GDBoardScene.m */,
 				5F9A78DF15304DE500DC8076 /* GDMarker.h */,
 				5F9A78E015304DE500DC8076 /* GDMarker.m */,
 				5F2ED5401531C444002BDE26 /* GDToken.h */,
@@ -407,8 +441,12 @@
 			children = (
 				5FAE7FE4150270EE005813DE /* GCDirector.h */,
 				5FAE7FE5150270EE005813DE /* GCDirector.m */,
+				5F1997CA1532E7C400D2E44D /* GCLayer.h */,
+				5F1997CB1532E7C400D2E44D /* GCLayer.m */,
 				5FAE7FE0150270D2005813DE /* GCScene.h */,
 				5FAE7FE1150270D2005813DE /* GCScene.m */,
+				5F1997CF1532E7DA00D2E44D /* GCLayeredScene.h */,
+				5F1997D01532E7DA00D2E44D /* GCLayeredScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -454,6 +492,8 @@
 				5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */,
 				5FBFFB30151FBA0100F218AD /* GCStack.h in Headers */,
 				5F2ED53D1531C344002BDE26 /* GCRotationAnimation.h in Headers */,
+				5F1997CC1532E7C400D2E44D /* GCLayer.h in Headers */,
+				5F1997D11532E7DA00D2E44D /* GCLayeredScene.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +603,7 @@
 				5F9A78E31530508900DC8076 /* marker.png in Resources */,
 				5FD978A61531950F00A5D88B /* CurrentPlayerLabel.png in Resources */,
 				5FD978A915319D8400A5D88B /* WinnerLabel.png in Resources */,
+				5F1997DE15330D1800D2E44D /* background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +643,8 @@
 				5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */,
 				5FBFFB31151FBA0100F218AD /* GCStack.m in Sources */,
 				5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */,
+				5F1997CD1532E7C400D2E44D /* GCLayer.m in Sources */,
+				5F1997D21532E7DA00D2E44D /* GCLayeredScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +669,9 @@
 				5FE90D04151F1B0100155BBF /* GDBoardScene.m in Sources */,
 				5F9A78E115304DE500DC8076 /* GDMarker.m in Sources */,
 				5F2ED5421531C444002BDE26 /* GDToken.m in Sources */,
+				5F1997D61532EDD900D2E44D /* GDBackgroundLayer.m in Sources */,
+				5F1997D91532F56900D2E44D /* GDTokensLayer.m in Sources */,
+				5F1997DC15330B6E00D2E44D /* GDOverheadLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

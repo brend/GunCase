@@ -24,4 +24,9 @@
 // Application
 #import "GCGameView.h"
 
+// Scenes and Layers
+#import "GCScene.h"
+#import "GCLayeredScene.h"
+#import "GCLayer.h"
+
 #endif
