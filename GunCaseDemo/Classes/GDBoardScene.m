@@ -7,6 +7,8 @@
 //
 
 #import "GDBoardScene.h"
+#import "GDBackgroundLayer.h"
+#import "GDTokensLayer.h"
 
 @implementation GDBoardScene
 
@@ -15,7 +17,6 @@
     self = [super init];
     
 	if (self) {
-        boardSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"board"]];
 		currentPlayerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"CurrentPlayerLabel"]];
 		winnerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"WinnerLabel"]];
 
@@ -26,9 +27,13 @@
 
 		currentToken = [GDToken tokenX];
 		
+		board = [NSMutableArray array];
 		for (NSInteger i = 0; i < 9; ++i) {
-			board[i] = [GDToken tokenNone];
+			[board addObject: [GDToken tokenNone]];
 		}
+		
+		[self addLayer: [[GDBackgroundLayer alloc] init]];
+		[self addLayer: [[GDTokensLayer alloc] initWithBoard: board]];
     }
 	
     return self;
@@ -39,6 +44,16 @@
 	[marker update];
 }
 
+- (GDToken *) tokenAtIndex: (NSUInteger) index
+{
+	return [board objectAtIndex: index];
+}
+
+- (void) setToken: (GDToken *) token atIndex: (NSUInteger) index
+{
+	[board replaceObjectAtIndex: index withObject: token];
+}
+
 - (void) placeToken
 {
 	if (![[self winner] isNone])
@@ -47,8 +62,8 @@
 	NSInteger row = marker.row, col = marker.col;
 	NSInteger index = row * 3 + col;
 	
-	if ([board[index] isNone]) {	
-		board[index] = currentToken;
+	if ([[self tokenAtIndex: index] isNone]) {	
+		[self setToken: currentToken atIndex: index];
 		currentToken = [currentToken theOtherOne];
 	} else {
 		// TODO: Display message?
@@ -79,15 +94,6 @@
 	
 	GDToken *winner = [self winner];
 
-	// Draw the board and tokens
-	[boardSprite drawAtX: 0 y: 0];
-	
-	for (NSInteger i = 0; i < 9; ++i) {
-		GDToken *t = board[i];
-		
-		[t drawAtRow: i / 3 col: i % 3];
-	}
-	
 	// Draw the marker
 	if ([winner isNone])
 		[marker render];
@@ -173,13 +179,13 @@
 		
 		for (NSInteger j = 0; j < 3; ++j) {
 			if (j == 0) {
-				rowWinner = board[i * 3];
-				colWinner = board[i];
+				rowWinner = [self tokenAtIndex: i * 3];
+				colWinner = [self tokenAtIndex: i];
 			} else {
-				if (board[i * 3 + j] != rowWinner)
+				if ([self tokenAtIndex: i * 3 + j] != rowWinner)
 					rowWinner = [GDToken tokenNone];
 				
-				if (board[j * 3 + i] != colWinner)
+				if ([self tokenAtIndex: j * 3 + i] != colWinner)
 					colWinner = [GDToken tokenNone];
 			}
 		}
@@ -194,12 +200,12 @@
 	GDToken *d1 = [GDToken tokenNone], *d2 = [GDToken tokenNone];
 	for (NSInteger i = 0; i < 3; ++i) {
 		if (i == 0) {
-			d1 = board[i * 3 + i];
-			d2 = board[i * 3 + (3 - (i + 1))];
+			d1 = [self tokenAtIndex: i * 3 + i];
+			d2 = [self tokenAtIndex: i * 3 + (3 - (i + 1))];
 		} else {
-			if (board[i * 3 + i] != d1)
+			if ([self tokenAtIndex: i * 3 + i] != d1)
 				d1 = [GDToken tokenNone];
-			if (board[i * 3 + (3 - (i + 1))] != d2)
+			if ([self tokenAtIndex: i * 3 + (3 - (i + 1))] != d2)
 				d2 = [GDToken tokenNone];
 		}
 	}
@@ -215,7 +221,7 @@
 - (void) resetBoard
 {
 	for (NSInteger i = 0; i < 9; ++i)
-		board[i] = [GDToken tokenNone];
+		[self setToken: [GDToken tokenNone] atIndex: i];
 	
 	currentToken = [GDToken tokenX];
 }

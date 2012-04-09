@@ -11,11 +11,11 @@
 #import "GDMarker.h"
 #import "GDToken.h"
 
-@interface GDBoardScene : GCScene
+@interface GDBoardScene : GCLayeredScene
 {
-	GCSprite *boardSprite, *currentPlayerLabelSprite, *winnerLabelSprite;
+	GCSprite *currentPlayerLabelSprite, *winnerLabelSprite;
 	
-	GDToken *board[9];
+	NSMutableArray *board;
 	NSSize fieldSize;
 	
 	GDMarker *marker;
