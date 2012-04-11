@@ -20,5 +20,6 @@
 - (void) insertLayer: (GCLayer *) layer
 			 atIndex: (NSUInteger) index;
 - (NSUInteger) layerCount;
+@property (retain) GCLayer *respondingLayer;
 
 @end

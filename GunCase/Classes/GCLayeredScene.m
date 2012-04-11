@@ -37,6 +37,8 @@
 	return layers.count;
 }
 
+@synthesize respondingLayer = _respondingLayer;
+
 #pragma mark -
 #pragma mark Updating the Layer
 - (void) update
@@ -53,6 +55,34 @@
 	for (GCLayer *layer in layers) {
 		[layer render];
 	}
+}
+
+#pragma mark -
+#pragma mark Handling User Input
+- (void)keyDown:(NSEvent *)theEvent
+{
+	[self.respondingLayer keyDown: theEvent];
+}
+
+- (void)keyUp:(NSEvent *)theEvent
+{
+	[self.respondingLayer keyUp: theEvent];
+}
+
+- (void) mouseDown: (NSEvent *) theEvent
+{
+	[self.respondingLayer mouseDown: theEvent];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+	[self.respondingLayer mouseUp: theEvent];
+}
+
+// NOTE: The window must enable mouse movement tracking for this to take effect
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+	[self.respondingLayer mouseMoved: theEvent];
 }
 
 @end
