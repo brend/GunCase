@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "GCScene.h"
 #import "GCStack.h"
+#import "GCUserInterface.h"
 
-@interface GCDirector : NSObject
+@interface GCDirector : NSObject <GCUserInterface>
 {
 	GCStack *sceneStack;
 }

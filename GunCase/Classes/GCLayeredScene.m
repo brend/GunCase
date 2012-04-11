@@ -39,6 +39,19 @@
 
 @synthesize respondingLayer = _respondingLayer;
 
+- (GCLayer *) layerNamed: (NSString *) name
+{
+	if (name == nil)
+		return nil;
+	
+	for (GCLayer *layer in layers) {
+		if ([name isEqualToString: layer.name])
+			return layer;
+	}
+	
+	return nil;
+}
+
 #pragma mark -
 #pragma mark Updating the Layer
 - (void) update

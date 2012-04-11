@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCUserInterface.h"
 
-@interface GCLayer : NSObject
+@interface GCLayer : NSObject <GCUserInterface>
 
 #pragma mark -
 #pragma mark Layer Identity

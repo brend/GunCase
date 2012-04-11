@@ -17,9 +17,15 @@
 #pragma mark -
 #pragma mark Managing the Layers
 - (void) addLayer: (GCLayer *) layer;
+
 - (void) insertLayer: (GCLayer *) layer
 			 atIndex: (NSUInteger) index;
+
 - (NSUInteger) layerCount;
+
 @property (retain) GCLayer *respondingLayer;
+
+- (GCLayer *) layerNamed: (NSString *) name;
+
 
 @end

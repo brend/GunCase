@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCUserInterface.h"
 
-@interface GCScene : NSObject
+@interface GCScene : NSObject <GCUserInterface>
 
 #pragma mark -
 #pragma mark Updating the Scene

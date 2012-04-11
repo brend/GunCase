@@ -173,6 +173,7 @@
 		5FE90D06151F208A00155BBF /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = board.png; path = Resources/board.png; sourceTree = "<group>"; };
 		5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGameView.h; path = Classes/GCGameView.h; sourceTree = "<group>"; };
 		5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGameView.m; path = Classes/GCGameView.m; sourceTree = "<group>"; };
+		5FFF5B6C15361978009C379D /* GCUserInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCUserInterface.h; path = Classes/GCUserInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +213,6 @@
 		5F0B6CC714E6CD6F00A87D18 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
 				5F68600D150B788500A216C9 /* GCAnimation.h */,
 				5F68600E150B788500A216C9 /* GCAnimation.m */,
 				5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */,
@@ -291,6 +291,7 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
+				5FFF5B6A1536194C009C379D /* Protocols */,
 				5FAE7FE815027388005813DE /* Containers */,
 				5FAE7FDE150270B2005813DE /* Scenes */,
 				5FF8AEF714FA89EA0093AF4E /* Application */,
@@ -467,6 +468,15 @@
 				5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		5FFF5B6A1536194C009C379D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
+				5FFF5B6C15361978009C379D /* GCUserInterface.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
