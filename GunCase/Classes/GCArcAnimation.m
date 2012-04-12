@@ -48,7 +48,7 @@
 	float x = center.x + radius * cosf(angle);
 	float y = center.y + radius * sinf(angle);
 	
-	target.position = NSMakePoint(x, y);
+	target.position = [GCVector vectorWithX: x y: y];
 }
 
 @end

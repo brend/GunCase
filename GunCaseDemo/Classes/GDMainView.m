@@ -30,8 +30,4 @@
 	[super drawScene: bounds];
 }
 
-- (IBAction) toggleTimer: (id) sender
-{
-}
-
 @end

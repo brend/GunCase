@@ -13,6 +13,10 @@
 #import "GCGraphics.h"
 #import "GCSprite.h"
 
+// Geometry
+#import "GCVector.h"
+#import "GCThing.h"
+
 // Animation
 #import "GCMovable.h"
 #import "GCAnimation.h"

@@ -35,9 +35,9 @@
 	if (self.isFinished)
 		return;
 	
-	GCVector *position = [stepOffset add: [GCVector vectorWithPoint: target.position]];
+	GCVector *position = [stepOffset add: target.position];
 	
-	target.position = [position point];
+	target.position = position;
 }
 
 @end

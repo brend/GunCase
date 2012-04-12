@@ -1,15 +1,15 @@
 //
-//  GCMovable.h
+//  GCThing.h
 //  GunCase
 //
-//  Created by Philipp Brendel on 11.02.12.
+//  Created by Philipp Brendel on 12.04.12.
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "GCVector.h"
+#import "GCMovable.h"
 
-@protocol GCMovable <NSObject>
+@interface GCThing : NSObject <GCMovable>
 
 @property (retain) GCVector *position;
 @property float rotation;

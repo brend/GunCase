@@ -9,16 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "GunCase.h"
 
-@interface GDMarker : NSObject <GCMovable>
+@interface GDMarker : GCThing
 {
 	GCAnimation *animation;
 	GCSprite *sprite;
 	NSInteger row, col;
 }
-
-@property NSPoint position;
-@property float rotation;
-@property NSSize scale;
 
 - (void) placeAtRow: (NSInteger) row column: (NSInteger) col;
 
