@@ -33,4 +33,8 @@
 #import "GCLayeredScene.h"
 #import "GCLayer.h"
 
+// Base Classes
+#import "GCThing.h"
+#import "GCSpriteThing.h"
+
 #endif
