@@ -9,6 +9,8 @@
 #import "GCSprite.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define GCIsPowerOf2(x)		(((x) & ((x) - 1)) == 0)
+
 // Sets up an array of values for the texture coordinates.
 const GLfloat GCSpriteTexcoords[] = 
 {
@@ -56,7 +58,7 @@ const GLfloat GCSpriteTexcoords[] =
 	height = (GLsizei) CGImageGetHeight(spriteImage);
 	// Texture dimensions must be a power of 2. If you write an application that allows users to supply an image,
 	// you'll want to add code that checks the dimensions and takes appropriate action if they are not a power of 2.
-	if (!(GBIsPowerOf2(width) && GBIsPowerOf2(height))) {
+	if (!(GCIsPowerOf2(width) && GCIsPowerOf2(height))) {
 		NSString *message = [NSString stringWithFormat: @"Image dimensions must be powers of two; found: %d, %d", width, height];
 	
 		@throw [NSException exceptionWithName: @"InvalidImageFormat" reason: message userInfo: nil];

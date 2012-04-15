@@ -34,7 +34,6 @@
 		5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33F614DE9F7000BF808B /* GCSprite.h */; };
 		5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C33F714DE9F7000BF808B /* GCSprite.m */; };
 		5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33FB14DE9FA500BF808B /* GunCase.h */; };
-		5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1C33FD14DEA03E00BF808B /* Macros.h */; };
 		5F1C340414DEA37C00BF808B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340214DEA37C00BF808B /* GLUT.framework */; };
 		5F1C340514DEA37C00BF808B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340314DEA37C00BF808B /* OpenGL.framework */; };
 		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
@@ -128,7 +127,6 @@
 		5F1C33F614DE9F7000BF808B /* GCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSprite.h; path = Classes/GCSprite.h; sourceTree = "<group>"; };
 		5F1C33F714DE9F7000BF808B /* GCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSprite.m; path = Classes/GCSprite.m; sourceTree = "<group>"; };
 		5F1C33FB14DE9FA500BF808B /* GunCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunCase.h; sourceTree = "<group>"; };
-		5F1C33FD14DEA03E00BF808B /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		5F1C340214DEA37C00BF808B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		5F1C340314DEA37C00BF808B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5F1C340614DEA38200BF808B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -313,7 +311,6 @@
 		5F1C33B214DE99C600BF808B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5F1C33FD14DEA03E00BF808B /* Macros.h */,
 				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
 				5F1C33FB14DE9FA500BF808B /* GunCase.h */,
 				5F9F177C14E7DCAB00428AC4 /* README */,
@@ -505,7 +502,6 @@
 			files = (
 				5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */,
 				5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */,
-				5F1C33FE14DEA03E00BF808B /* Macros.h in Headers */,
 				5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */,
 				5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */,
 				5F9F178014E7FCA200428AC4 /* GCLinearAnimation.h in Headers */,
