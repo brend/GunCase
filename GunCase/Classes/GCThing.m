@@ -13,4 +13,15 @@
 	position = _position,
 	rotation = _rotation,
 	scale = _scale;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _position = [GCVector vectorWithX: 0 y: 0];
+		_scale = NSMakeSize(1, 1);
+    }
+    return self;
+}
+
 @end
