@@ -32,6 +32,24 @@
 	[self insertLayer: layer atIndex: 0];
 }
 
+- (void) removeLayerAtIndex: (NSUInteger) index
+{
+	[layers removeObjectAtIndex: index];
+}
+
+- (void) removeLayer: (GCLayer *) layer
+{
+	NSUInteger index = [layers indexOfObject: layer];
+	
+	if (index != NSNotFound)
+		[self removeLayerAtIndex: index];
+}
+
+- (void) clearLayers
+{
+	[layers removeAllObjects];
+}
+
 - (NSUInteger) layerCount
 {
 	return layers.count;

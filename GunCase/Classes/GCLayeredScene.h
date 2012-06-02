@@ -21,6 +21,12 @@
 - (void) insertLayer: (GCLayer *) layer
 			 atIndex: (NSUInteger) index;
 
+- (void) removeLayerAtIndex: (NSUInteger) index;
+
+- (void) removeLayer: (GCLayer *) layer;
+
+- (void) clearLayers;
+
 - (NSUInteger) layerCount;
 
 @property (retain) GCLayer *respondingLayer;
