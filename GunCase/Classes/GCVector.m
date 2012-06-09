@@ -21,6 +21,13 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+	GCVector *copy = [[GCVector alloc] initWithX: self.x y: self.y];
+	
+	return copy;
+}
+
 + (id) vectorWithX: (float) x y: (float) y
 {
 	return [[GCVector alloc] initWithX: x y: y];
@@ -29,6 +36,11 @@
 + (id) vectorWithPoint: (NSPoint) p
 {
 	return [[GCVector alloc] initWithX: p.x y: p.y];
+}
+
++ (id) zero
+{
+	return [[GCVector alloc] initWithX: 0 y: 0];
 }
 
 #pragma mark -
@@ -107,6 +119,19 @@
 - (NSString *) description
 {
 	return [NSString stringWithFormat: @"(%f, %f)", x, y];
+}
+
+#pragma mark -
+#pragma mark Vector Equality
+
+- (BOOL) isEqual: (id) anObject
+{
+	if (!([anObject respondsToSelector: @selector(x)]
+		   && [anObject respondsToSelector: @selector(y)]))
+		return NO;
+	
+	return self.x == (float) [anObject x]
+		&& self.y == (float) [anObject y];
 }
 
 @end

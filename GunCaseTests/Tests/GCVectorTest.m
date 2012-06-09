@@ -16,7 +16,6 @@
 
 - (void) tearDown
 {
-	
 }
 
 - (void) testInit
@@ -26,6 +25,16 @@
 	
 	STAssertEquals(x, v.x, @"x");
 	STAssertEquals(y, v.y, @"y");
+	
+	v = [[GCVector alloc] initWithX: x y: y];
+	
+	STAssertEquals(x, v.x, @"x");
+	STAssertEquals(y, v.y, @"y");
+	
+	v = [GCVector zero];
+	
+	STAssertEquals(0.0f, v.x, @"x");
+	STAssertEquals(0.0f, v.y, @"y");
 }
 
 - (void) testLength
@@ -84,6 +93,16 @@
 	GCVector *u = [GCVector vectorWithX: x1 y: y1], *v = [GCVector vectorWithX: x2 y: y2];
 	
 	STAssertEquals(a, [u angle: v], @"angle");
+}
+
+- (void) testIsEqual
+{
+	float x = 17.4, y = 21.0;
+	GCVector 
+		*v = [GCVector vectorWithX: x y: y], 
+		*w = [GCVector vectorWithX: x y: y];
+	
+	STAssertEqualObjects(v, w, @"not equal");
 }
 
 @end

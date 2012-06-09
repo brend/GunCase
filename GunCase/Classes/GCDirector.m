@@ -7,10 +7,14 @@
 //
 
 #import "GCDirector.h"
+#import <QuartzCore/QuartzCore.h>
 
+#pragma mark -
+#pragma mark GCDirector Implementation
 @implementation GCDirector
 
 static GCStack *GCDirectorSceneStack = nil;
+static GCVector *GCDirectorCamera = nil;
 
 - (id)init
 {
@@ -24,6 +28,7 @@ static GCStack *GCDirectorSceneStack = nil;
 + (void) initialize
 {
 	GCDirectorSceneStack = [[GCStack alloc] init];
+	GCDirectorCamera = [[GCVector alloc] initWithX: 0 y: 0];
 }
 
 + (id) sharedDirector
@@ -53,7 +58,23 @@ static GCStack *GCDirectorSceneStack = nil;
 
 - (void) renderScene
 {
+	// Apply the camera translation
+	glTranslatef(self.camera.x, self.camera.y, 0);
+	
+	// Render the scene
 	[self.activeScene render];
+}
+
+#pragma mark -
+#pragma mark Managing the Camera
+- (GCVector *) camera
+{
+	return GCDirectorCamera;
+}
+
+- (void) setCamera:(GCVector *)camera
+{
+	GCDirectorCamera = [camera copy];
 }
 
 #pragma mark -

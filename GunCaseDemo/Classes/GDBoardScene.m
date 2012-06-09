@@ -91,7 +91,7 @@
 - (void) render
 {
 	[super render];
-	
+		
 	GDToken *winner = [self winner];
 
 	// Draw the marker

@@ -46,6 +46,10 @@
 		5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */; };
 		5F2ED5421531C444002BDE26 /* GDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED5411531C444002BDE26 /* GDToken.m */; };
 		5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F729414F90A0B000166E5 /* GCVectorTest.m */; };
+		5F40438C158365AF007C162C /* GCDirectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F40438B158365AF007C162C /* GCDirectorTest.m */; };
+		5F40438D15836688007C162C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
+		5F40438E15836692007C162C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340214DEA37C00BF808B /* GLUT.framework */; };
+		5F40438F15836692007C162C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340314DEA37C00BF808B /* OpenGL.framework */; };
 		5F59810415376EA40023D91B /* GCThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F59810215376EA40023D91B /* GCThing.h */; };
 		5F59810515376EA40023D91B /* GCThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F59810315376EA40023D91B /* GCThing.m */; };
 		5F68600F150B788500A216C9 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F68600D150B788500A216C9 /* GCAnimation.h */; };
@@ -145,6 +149,8 @@
 		5F2ED5411531C444002BDE26 /* GDToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDToken.m; path = Classes/GDToken.m; sourceTree = "<group>"; };
 		5F2F729314F90A0B000166E5 /* GCVectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVectorTest.h; path = Tests/GCVectorTest.h; sourceTree = "<group>"; };
 		5F2F729414F90A0B000166E5 /* GCVectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVectorTest.m; path = Tests/GCVectorTest.m; sourceTree = "<group>"; };
+		5F40438A158365AF007C162C /* GCDirectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDirectorTest.h; path = Tests/GCDirectorTest.h; sourceTree = "<group>"; };
+		5F40438B158365AF007C162C /* GCDirectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirectorTest.m; path = Tests/GCDirectorTest.m; sourceTree = "<group>"; };
 		5F59810215376EA40023D91B /* GCThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCThing.h; path = Classes/GCThing.h; sourceTree = "<group>"; };
 		5F59810315376EA40023D91B /* GCThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCThing.m; path = Classes/GCThing.m; sourceTree = "<group>"; };
 		5F68600D150B788500A216C9 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F40438E15836692007C162C /* GLUT.framework in Frameworks */,
+				5F40438F15836692007C162C /* OpenGL.framework in Frameworks */,
+				5F40438D15836688007C162C /* QuartzCore.framework in Frameworks */,
 				5F1C33BE14DE99C600BF808B /* SenTestingKit.framework in Frameworks */,
 				5F1C33BF14DE99C600BF808B /* Cocoa.framework in Frameworks */,
 				5F1C33C214DE99C600BF808B /* libGunCase.a in Frameworks */,
@@ -326,6 +335,7 @@
 			children = (
 				5F6DEA85155689B2003B691B /* Base Classes */,
 				5F1E1DA3152716D9005E5BBE /* Containers */,
+				5F40438815836598007C162C /* Scenes */,
 				5F2F729614F90CC7000166E5 /* Animation */,
 				5F2F729114F909E4000166E5 /* Geometry */,
 				5F1C33C414DE99C600BF808B /* Supporting Files */,
@@ -443,6 +453,15 @@
 				5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */,
 			);
 			name = Animation;
+			sourceTree = "<group>";
+		};
+		5F40438815836598007C162C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5F40438A158365AF007C162C /* GCDirectorTest.h */,
+				5F40438B158365AF007C162C /* GCDirectorTest.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		5F6DEA85155689B2003B691B /* Base Classes */ = {
@@ -696,6 +715,7 @@
 				5F2F729514F90A0B000166E5 /* GCVectorTest.m in Sources */,
 				5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */,
 				5F6DEA89155689D4003B691B /* GCThingTest.m in Sources */,
+				5F40438C158365AF007C162C /* GCDirectorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

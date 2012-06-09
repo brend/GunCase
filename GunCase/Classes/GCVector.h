@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GCVector : NSObject
+@interface GCVector : NSObject <NSCopying>
 {
 @private
 	float x, y;
 }
 
+- (id) initWithX: (float) x y: (float) y;
 + (id) vectorWithX: (float) x y: (float) y;
 + (id) vectorWithPoint: (NSPoint) p;
++ (id) zero;
 
 - (float) x;
 - (float) y;

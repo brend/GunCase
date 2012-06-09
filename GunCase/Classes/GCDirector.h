@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCVector.h"
 #import "GCScene.h"
 #import "GCStack.h"
 #import "GCUserInterface.h"
@@ -16,14 +17,23 @@
 	GCStack *sceneStack;
 }
 
+#pragma mark -
+#pragma mark Getting the Shared Director
 + (id) sharedDirector;
 
+#pragma mark -
+#pragma mark Managing the Scene Stack
 - (void) pushScene: (GCScene *) scene;
 - (GCScene *) popScene;
 
-- (GCScene *) activeScene;
+@property (readonly) GCScene *activeScene;
+
 - (void) updateScene;
 - (void) renderScene;
+
+#pragma mark -
+#pragma mark Managing the Camera
+@property (nonatomic, copy) GCVector *camera;
 
 #pragma mark -
 #pragma mark Handling User Input
