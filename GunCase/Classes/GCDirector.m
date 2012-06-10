@@ -14,7 +14,6 @@
 @implementation GCDirector
 
 static GCStack *GCDirectorSceneStack = nil;
-static GCVector *GCDirectorCamera = nil;
 
 - (id)init
 {
@@ -28,7 +27,6 @@ static GCVector *GCDirectorCamera = nil;
 + (void) initialize
 {
 	GCDirectorSceneStack = [[GCStack alloc] init];
-	GCDirectorCamera = [[GCVector alloc] initWithX: 0 y: 0];
 }
 
 + (id) sharedDirector
