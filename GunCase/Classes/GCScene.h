@@ -21,7 +21,7 @@
 - (void) render;
 @property float rotation;
 @property NSSize scale;
-@property GCVector *camera;
+@property (nonatomic, copy) GCVector *camera;
 
 #pragma mark -
 #pragma mark Handling User Input

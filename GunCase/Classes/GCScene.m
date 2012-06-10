@@ -17,6 +17,7 @@
     if (self) {
 		_rotation = 0;
         _scale = NSMakeSize(1, 1);
+		self.camera = [GCVector zero];
     }
     return self;
 }
