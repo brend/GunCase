@@ -39,15 +39,8 @@
     return self;
 }
 
-
-static float cx = 0;
-
 - (void) update
 {
-	self.camera = [GCVector vectorWithX: cx y: cx];
-	self.rotation = cx;
-	cx += 0.1;
-	
 	[marker update];
 }
 
