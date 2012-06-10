@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GCUserInterface.h"
+#import "GCVector.h"
 
 @interface GCLayer : NSObject <GCUserInterface>
 
@@ -24,6 +25,7 @@
 - (void) render;
 @property float rotation;
 @property NSSize scale;
+@property (nonatomic, copy) GCVector *camera;
 
 #pragma mark -
 #pragma mark Handling User Input

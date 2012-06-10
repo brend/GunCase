@@ -7,6 +7,7 @@
 //
 
 #import "GCLayeredScene.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation GCLayeredScene
 
@@ -86,7 +87,9 @@
 	[super render];
 	
 	for (GCLayer *layer in layers) {
+		glPushMatrix();
 		[layer render];
+		glPopMatrix();
 	}
 }
 

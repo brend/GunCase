@@ -7,6 +7,7 @@
 //
 
 #import "GCLayer.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation GCLayer
 
@@ -14,9 +15,10 @@
 {
     self = [super init];
     if (self) {
-        _name = [self description];
-		_rotation = 0;
-		_scale = NSMakeSize(1, 1);
+        self.name = [self description];
+		self.rotation = 0;
+		self.scale = NSMakeSize(1, 1);
+		self.camera = [GCVector zero];
     }
     return self;
 }
@@ -36,9 +38,12 @@
 #pragma mark Rendering the Layer
 - (void) render
 {
+	glTranslatef(self.camera.x, self.camera.y, 0);
+	glRotatef(self.rotation, 0, 0, 1);
+	glScalef(self.scale.width, self.scale.height, 1);
 }
 
-@synthesize rotation = _rotation, scale = _scale;
+@synthesize rotation, scale, camera;
 
 #pragma mark -
 #pragma mark Handling User Input
