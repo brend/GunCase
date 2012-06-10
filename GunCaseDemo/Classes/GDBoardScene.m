@@ -41,6 +41,8 @@
 
 - (void) update
 {
+	[super update];
+	
 	[marker update];
 }
 
