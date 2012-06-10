@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GCUserInterface.h"
+#import "GCVector.h"
 
 @interface GCScene : NSObject <GCUserInterface>
 
@@ -20,6 +21,7 @@
 - (void) render;
 @property float rotation;
 @property NSSize scale;
+@property GCVector *camera;
 
 #pragma mark -
 #pragma mark Handling User Input

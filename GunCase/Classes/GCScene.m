@@ -31,11 +31,13 @@
 #pragma mark Rendering the Scene
 - (void) render
 {
+	glTranslatef(_camera.x, _camera.y, 0);
 	glRotatef(_rotation, 0, 0, 1);
 	glScalef(_scale.width, _scale.height, 1);
 }
 
-@synthesize 
+@synthesize
+	camera = _camera,
 	rotation = _rotation,
 	scale = _scale;
 

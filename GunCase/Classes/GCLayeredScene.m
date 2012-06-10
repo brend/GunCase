@@ -83,6 +83,8 @@
 #pragma mark Rendering the Layer
 - (void) render
 {
+	[super render];
+	
 	for (GCLayer *layer in layers) {
 		[layer render];
 	}

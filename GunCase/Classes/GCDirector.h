@@ -32,10 +32,6 @@
 - (void) renderScene;
 
 #pragma mark -
-#pragma mark Managing the Camera
-@property (nonatomic, copy) GCVector *camera;
-
-#pragma mark -
 #pragma mark Handling User Input
 - (void) keyDown: (NSEvent *) theEvent;
 - (void) keyUp: (NSEvent *) theEvent;

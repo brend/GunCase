@@ -58,23 +58,8 @@ static GCVector *GCDirectorCamera = nil;
 
 - (void) renderScene
 {
-	// Apply the camera translation
-	glTranslatef(self.camera.x, self.camera.y, 0);
-	
 	// Render the scene
 	[self.activeScene render];
-}
-
-#pragma mark -
-#pragma mark Managing the Camera
-- (GCVector *) camera
-{
-	return GCDirectorCamera;
-}
-
-- (void) setCamera:(GCVector *)camera
-{
-	GCDirectorCamera = [camera copy];
 }
 
 #pragma mark -
