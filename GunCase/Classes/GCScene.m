@@ -15,8 +15,8 @@
 {
     self = [super init];
     if (self) {
-		_rotation = 0;
-        _scale = NSMakeSize(1, 1);
+		self.rotation = 0;
+        self.scale = NSMakeSize(1, 1);
 		self.camera = [GCVector zero];
     }
     return self;
@@ -32,15 +32,12 @@
 #pragma mark Rendering the Scene
 - (void) render
 {
-	glTranslatef(_camera.x, _camera.y, 0);
-	glRotatef(_rotation, 0, 0, 1);
-	glScalef(_scale.width, _scale.height, 1);
+	glTranslatef(self.camera.x, self.camera.y, 0);
+	glRotatef(self.rotation, 0, 0, 1);
+	glScalef(self.scale.width, self.scale.height, 1);
 }
 
-@synthesize
-	camera = _camera,
-	rotation = _rotation,
-	scale = _scale;
+@synthesize	camera,	rotation, scale;
 
 #pragma mark -
 #pragma mark Handling User Input
