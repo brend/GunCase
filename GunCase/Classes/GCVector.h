@@ -14,22 +14,31 @@
 	float x, y;
 }
 
+#pragma mark -
+#pragma mark Initialization
+
 - (id) initWithX: (float) x y: (float) y;
 + (id) vectorWithX: (float) x y: (float) y;
 + (id) vectorWithPoint: (NSPoint) p;
 + (id) zero;
 
-- (float) x;
-- (float) y;
+#pragma mark -
+#pragma Accessing Vector Components
+
+@property (nonatomic, readonly) float x, y, length;
+
+#pragma mark -
+#pragma mark Vector Arithmetics
 
 - (GCVector *) add: (GCVector *) v;
 - (GCVector *) subtract: (GCVector *) v;
 - (GCVector *) scale: (float) s;
 - (float) dot: (GCVector *) v;
 - (float) angle: (GCVector *) v;
-
-- (float) length;
 - (float) distance: (GCVector *) v;
+
+#pragma mark -
+#pragma mark Converting the Vector
 
 - (NSPoint) point;
 

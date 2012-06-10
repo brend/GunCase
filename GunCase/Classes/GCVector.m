@@ -10,7 +10,8 @@
 
 @implementation GCVector
 
-#pragma mark Initialisation
+#pragma mark Initialization
+
 - (id)initWithX: (float) xcoord y: (float) ycoord
 {
     self = [super init];
@@ -44,7 +45,7 @@
 }
 
 #pragma mark -
-#pragma mark Access to Vector Components
+#pragma mark Accessing Vector Components
 
 - (float) x
 {
