@@ -16,9 +16,6 @@
     self = [super init];
     if (self) {
         self.name = [self description];
-		self.rotation = 0;
-		self.scale = NSMakeSize(1, 1);
-		self.camera = [GCVector zero];
     }
     return self;
 }
@@ -26,24 +23,6 @@
 #pragma mark -
 #pragma mark Layer Identity
 @synthesize name = _name;
-
-
-#pragma mark -
-#pragma mark Updating the Layer
-- (void) update
-{
-}
-
-#pragma mark -
-#pragma mark Rendering the Layer
-- (void) render
-{
-	glTranslatef(self.camera.x, self.camera.y, 0);
-	glRotatef(self.rotation, 0, 0, 1);
-	glScalef(self.scale.width, self.scale.height, 1);
-}
-
-@synthesize rotation, scale, camera;
 
 #pragma mark -
 #pragma mark Handling User Input

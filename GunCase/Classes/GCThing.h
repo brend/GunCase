@@ -11,8 +11,18 @@
 
 @interface GCThing : NSObject <GCMovable>
 
+#pragma mark -
+#pragma mark Transforming the Thing
 @property (retain) GCVector *position;
 @property float rotation;
 @property NSSize scale;
+
+#pragma mark -
+#pragma mark Updating the Thing
+- (void) update;
+
+#pragma mark -
+#pragma mark Rendering the Thing
+- (void) render;
 
 @end

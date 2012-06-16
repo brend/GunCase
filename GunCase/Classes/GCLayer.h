@@ -7,25 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCThing.h"
 #import "GCUserInterface.h"
-#import "GCVector.h"
 
-@interface GCLayer : NSObject <GCUserInterface>
+@interface GCLayer : GCThing <GCUserInterface>
 
 #pragma mark -
 #pragma mark Layer Identity
 @property (copy) NSString *name;
-
-#pragma mark -
-#pragma mark Updating the Layer
-- (void) update;
-
-#pragma mark -
-#pragma mark Rendering the Layer
-- (void) render;
-@property float rotation;
-@property NSSize scale;
-@property (nonatomic, copy) GCVector *camera;
 
 #pragma mark -
 #pragma mark Handling User Input

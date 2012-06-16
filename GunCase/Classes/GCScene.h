@@ -7,21 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCThing.h"
 #import "GCUserInterface.h"
-#import "GCVector.h"
 
-@interface GCScene : NSObject <GCUserInterface>
-
-#pragma mark -
-#pragma mark Updating the Scene
-- (void) update;
-
-#pragma mark -
-#pragma mark Rendering the Scene
-- (void) render;
-@property float rotation;
-@property NSSize scale;
-@property (nonatomic, copy) GCVector *camera;
+@interface GCScene : GCThing <GCUserInterface>
 
 #pragma mark -
 #pragma mark Handling User Input

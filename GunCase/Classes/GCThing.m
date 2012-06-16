@@ -7,21 +7,43 @@
 //
 
 #import "GCThing.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation GCThing
-@synthesize 
-	position = _position,
-	rotation = _rotation,
-	scale = _scale;
 
+#pragma mark -
+#pragma mark Initialization
 - (id)init
 {
     self = [super init];
     if (self) {
         _position = [GCVector vectorWithX: 0 y: 0];
 		_scale = NSMakeSize(1, 1);
+		_rotation = 0;
     }
     return self;
+}
+
+#pragma mark -
+#pragma mark Transforming the Thing
+@synthesize 
+	position = _position,
+	rotation = _rotation,
+	scale = _scale;
+
+#pragma mark -
+#pragma mark Updating the Thing
+- (void) update
+{
+}
+
+#pragma mark -
+#pragma mark Rendering the Thing
+- (void) render
+{
+	glTranslatef(self.position.x, self.position.y, 0);
+	glRotatef(self.rotation, 0, 0, 1);
+	glScalef(self.scale.width, self.scale.height, 1);
 }
 
 @end
