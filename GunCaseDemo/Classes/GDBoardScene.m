@@ -10,6 +10,10 @@
 #import "GDBackgroundLayer.h"
 #import "GDTokensLayer.h"
 
+@interface GDBoardScene	()
+@property (nonatomic, strong) GCFont *font;
+@end
+
 @implementation GDBoardScene
 
 - (id)init
@@ -19,7 +23,10 @@
 	if (self) {
 		currentPlayerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"CurrentPlayerLabel"]];
 		winnerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"WinnerLabel"]];
-
+		
+		NSImage *fontImage = [NSImage imageNamed: @"bwfont"];
+		self.font = [[GCFont alloc] initWithImage: fontImage columns: 16 rows: 16];
+		
 		fieldSize = NSMakeSize(128, 128);
 
 		marker = [[GDMarker alloc] init];
@@ -38,6 +45,8 @@
 	
     return self;
 }
+
+@synthesize font;
 
 - (void) update
 {
@@ -116,6 +125,8 @@
 								  y: 300 - currentPlayerLabelSprite.height / 2
 						   rotation: 0 
 							  scale: NSMakeSize(0.5, 0.5)];
+	
+	[font drawString: @";-)" atPosition: [GCVector vectorWithX: -380 y: -290]];
 }
 
 #pragma mark -
