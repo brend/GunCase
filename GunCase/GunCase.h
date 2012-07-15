@@ -12,6 +12,7 @@
 // Graphics
 #import "GCGraphics.h"
 #import "GCSprite.h"
+#import "GCFont.h"
 
 // Geometry
 #import "GCVector.h"

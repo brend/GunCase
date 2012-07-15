@@ -56,6 +56,9 @@
 		5F686010150B788500A216C9 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F68600E150B788500A216C9 /* GCAnimation.m */; };
 		5F686013150B7CE400A216C9 /* GCArcAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F686011150B7CE400A216C9 /* GCArcAnimation.h */; };
 		5F686014150B7CE400A216C9 /* GCArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F686012150B7CE400A216C9 /* GCArcAnimation.m */; };
+		5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F69679D15B2CA1700D9F1D2 /* GCFont.h */; };
+		5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F69679E15B2CA1700D9F1D2 /* GCFont.m */; };
+		5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F69679E15B2CA1700D9F1D2 /* GCFont.m */; };
 		5F6DEA89155689D4003B691B /* GCThingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DEA88155689D4003B691B /* GCThingTest.m */; };
 		5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */; };
 		5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E72D5150CB50600DB000F /* GCTimedAnimation.m */; };
@@ -157,6 +160,8 @@
 		5F68600E150B788500A216C9 /* GCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAnimation.m; path = Classes/GCAnimation.m; sourceTree = "<group>"; };
 		5F686011150B7CE400A216C9 /* GCArcAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCArcAnimation.h; path = Classes/GCArcAnimation.h; sourceTree = "<group>"; };
 		5F686012150B7CE400A216C9 /* GCArcAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCArcAnimation.m; path = Classes/GCArcAnimation.m; sourceTree = "<group>"; };
+		5F69679D15B2CA1700D9F1D2 /* GCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCFont.h; path = Classes/GCFont.h; sourceTree = "<group>"; };
+		5F69679E15B2CA1700D9F1D2 /* GCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCFont.m; path = Classes/GCFont.m; sourceTree = "<group>"; };
 		5F6DEA87155689D4003B691B /* GCThingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCThingTest.h; path = Tests/GCThingTest.h; sourceTree = "<group>"; };
 		5F6DEA88155689D4003B691B /* GCThingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCThingTest.m; path = Tests/GCThingTest.m; sourceTree = "<group>"; };
 		5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTimedAnimation.h; path = Classes/GCTimedAnimation.h; sourceTree = "<group>"; };
@@ -381,6 +386,8 @@
 				5F1C33F714DE9F7000BF808B /* GCSprite.m */,
 				5F9BB63E14F2616E0062F348 /* GCGraphics.h */,
 				5F9BB63F14F2616E0062F348 /* GCGraphics.m */,
+				5F69679D15B2CA1700D9F1D2 /* GCFont.h */,
+				5F69679E15B2CA1700D9F1D2 /* GCFont.m */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -551,6 +558,7 @@
 				5F1997D11532E7DA00D2E44D /* GCLayeredScene.h in Headers */,
 				5F59810415376EA40023D91B /* GCThing.h in Headers */,
 				5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */,
+				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +712,7 @@
 				5F1997D21532E7DA00D2E44D /* GCLayeredScene.m in Sources */,
 				5F59810515376EA40023D91B /* GCThing.m in Sources */,
 				5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */,
+				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +725,7 @@
 				5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */,
 				5F6DEA89155689D4003B691B /* GCThingTest.m in Sources */,
 				5F40438C158365AF007C162C /* GCDirectorTest.m in Sources */,
+				5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
