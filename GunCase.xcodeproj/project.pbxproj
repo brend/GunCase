@@ -56,10 +56,10 @@
 		5F686010150B788500A216C9 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F68600E150B788500A216C9 /* GCAnimation.m */; };
 		5F686013150B7CE400A216C9 /* GCArcAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F686011150B7CE400A216C9 /* GCArcAnimation.h */; };
 		5F686014150B7CE400A216C9 /* GCArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F686012150B7CE400A216C9 /* GCArcAnimation.m */; };
-		5F69679B15B2C9ED00D9F1D2 /* bwfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F69679A15B2C9ED00D9F1D2 /* bwfont.png */; };
 		5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F69679D15B2CA1700D9F1D2 /* GCFont.h */; };
 		5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F69679E15B2CA1700D9F1D2 /* GCFont.m */; };
 		5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F69679E15B2CA1700D9F1D2 /* GCFont.m */; };
+		5F6967A815B2E5CB00D9F1D2 /* font.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6967A715B2E5CB00D9F1D2 /* font.png */; };
 		5F6DEA89155689D4003B691B /* GCThingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DEA88155689D4003B691B /* GCThingTest.m */; };
 		5F6E72D6150CB50600DB000F /* GCTimedAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */; };
 		5F6E72D7150CB50600DB000F /* GCTimedAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6E72D5150CB50600DB000F /* GCTimedAnimation.m */; };
@@ -161,9 +161,9 @@
 		5F68600E150B788500A216C9 /* GCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAnimation.m; path = Classes/GCAnimation.m; sourceTree = "<group>"; };
 		5F686011150B7CE400A216C9 /* GCArcAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCArcAnimation.h; path = Classes/GCArcAnimation.h; sourceTree = "<group>"; };
 		5F686012150B7CE400A216C9 /* GCArcAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCArcAnimation.m; path = Classes/GCArcAnimation.m; sourceTree = "<group>"; };
-		5F69679A15B2C9ED00D9F1D2 /* bwfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bwfont.png; sourceTree = "<group>"; };
 		5F69679D15B2CA1700D9F1D2 /* GCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCFont.h; path = Classes/GCFont.h; sourceTree = "<group>"; };
 		5F69679E15B2CA1700D9F1D2 /* GCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCFont.m; path = Classes/GCFont.m; sourceTree = "<group>"; };
+		5F6967A715B2E5CB00D9F1D2 /* font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font.png; path = Resources/font.png; sourceTree = "<group>"; };
 		5F6DEA87155689D4003B691B /* GCThingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCThingTest.h; path = Tests/GCThingTest.h; sourceTree = "<group>"; };
 		5F6DEA88155689D4003B691B /* GCThingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCThingTest.m; path = Tests/GCThingTest.m; sourceTree = "<group>"; };
 		5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTimedAnimation.h; path = Classes/GCTimedAnimation.h; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 		5F1C340114DEA35200BF808B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5F69679A15B2C9ED00D9F1D2 /* bwfont.png */,
+				5F6967A715B2E5CB00D9F1D2 /* font.png */,
 				5F1997DD15330D1800D2E44D /* background.jpg */,
 				5FD978A815319D8400A5D88B /* WinnerLabel.png */,
 				5FD978A51531950F00A5D88B /* CurrentPlayerLabel.png */,
@@ -672,7 +672,7 @@
 				5FD978A61531950F00A5D88B /* CurrentPlayerLabel.png in Resources */,
 				5FD978A915319D8400A5D88B /* WinnerLabel.png in Resources */,
 				5F1997DE15330D1800D2E44D /* background.jpg in Resources */,
-				5F69679B15B2C9ED00D9F1D2 /* bwfont.png in Resources */,
+				5F6967A815B2E5CB00D9F1D2 /* font.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

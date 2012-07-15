@@ -24,7 +24,7 @@
 		currentPlayerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"CurrentPlayerLabel"]];
 		winnerLabelSprite = [GCSprite spriteWithImage: [NSImage imageNamed: @"WinnerLabel"]];
 		
-		NSImage *fontImage = [NSImage imageNamed: @"bwfont"];
+		NSImage *fontImage = [NSImage imageNamed: @"font"];
 		self.font = [[GCFont alloc] initWithImage: fontImage columns: 16 rows: 16];
 		
 		fieldSize = NSMakeSize(128, 128);
