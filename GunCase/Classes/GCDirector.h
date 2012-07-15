@@ -24,6 +24,7 @@
 #pragma mark -
 #pragma mark Managing the Scene Stack
 - (void) pushScene: (GCScene *) scene;
+- (void) replaceSceneWithScene: (GCScene *) scene;
 - (GCScene *) popScene;
 
 @property (readonly) GCScene *activeScene;

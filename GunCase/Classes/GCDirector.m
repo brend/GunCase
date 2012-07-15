@@ -39,6 +39,12 @@ static GCStack *GCDirectorSceneStack = nil;
 	[sceneStack push: scene];
 }
 
+- (void) replaceSceneWithScene: (GCScene *) scene
+{
+	[self popScene];
+	[self pushScene: scene];
+}
+
 - (GCScene *) popScene
 {
 	return sceneStack.pop;
