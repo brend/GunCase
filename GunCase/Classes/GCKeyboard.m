@@ -9,7 +9,7 @@
 #import "GCKeyboard.h"
 
 @interface GCKeyboard ()
-@property (nonatomic, strong) NSMutableDictionary *keyStates;
+@property (nonatomic, strong) NSMutableSet *keyStates;
 @end
 
 @implementation GCKeyboard
@@ -18,7 +18,7 @@
 {
     self = [super init];
     if (self) {
-        self.keyStates = [NSMutableDictionary dictionary];
+        self.keyStates = [NSMutableSet set];
     }
     return self;
 }
@@ -27,28 +27,32 @@
 
 - (BOOL) keyPressed: (ushort) keyCode
 {
-    NSNumber *state =
-        [self.keyStates objectForKey: [NSNumber numberWithUnsignedShort: keyCode]];
-    
-    return state.boolValue;
+    return [self.keyStates containsObject: [NSNumber numberWithUnsignedShort: keyCode]];
+}
+
+- (NSArray *) pressedKeys
+{
+    return self.keyStates.allObjects;
 }
 
 - (void) clearKey: (ushort) keyCode
 {
-    [self.keyStates setObject: [NSNumber numberWithBool: NO]
-                       forKey: [NSNumber numberWithUnsignedShort: keyCode]];
+    [self.keyStates removeObject: [NSNumber numberWithUnsignedShort: keyCode]];
+}
+
+- (void) setKey: (ushort) keyCode
+{
+    [self.keyStates addObject: [NSNumber numberWithUnsignedShort: keyCode]];
 }
 
 - (void) keyDown: (NSEvent *) theEvent
 {
-    [self.keyStates setObject: [NSNumber numberWithBool: YES] 
-                       forKey: [NSNumber numberWithUnsignedShort: theEvent.keyCode]];
+    [self setKey: theEvent.keyCode];
 }
 
 - (void) keyUp: (NSEvent *) theEvent
 {
-    [self.keyStates setObject: [NSNumber numberWithBool: YES] 
-                       forKey: [NSNumber numberWithUnsignedShort: theEvent.keyCode]];
+    [self clearKey: theEvent.keyCode];
 }
 
 @end

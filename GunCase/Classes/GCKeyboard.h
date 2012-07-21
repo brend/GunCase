@@ -11,6 +11,8 @@
 @interface GCKeyboard : NSObject
 
 - (BOOL) keyPressed: (ushort) keyCode;
+- (NSArray *) pressedKeys;
+- (void) setKey: (ushort) keyCode;
 - (void) clearKey: (ushort) keyCode;
 
 - (void) keyDown: (NSEvent *) theEvent;
