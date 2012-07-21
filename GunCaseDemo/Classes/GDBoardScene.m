@@ -133,42 +133,37 @@
 #pragma mark -
 #pragma mark Handling User Input
 - (void) processUserInput
-{	
-	if ([self.keyboard keyPressed: 123]) {
-        [self.keyboard clearKey: 123];
-        [marker moveLeft];
+{
+    for (NSNumber *n in self.keyboard.pressedKeys) {
+        ushort keyCode = n.unsignedShortValue;
+        
+        switch (keyCode) {
+            case 123:
+                [marker moveLeft];
+                break;
+            case 124:
+                [marker moveRight];
+                break;
+            case 126:
+                [marker moveUp];
+                break;
+            case 125:
+                [marker moveDown];
+                break;
+            case 36:
+            case 49:
+                [self placeToken];
+                if (![[self winner] isNone])
+                    NSLog(@"Winner: %@", [self winner]);
+                break;
+            case 15:
+                [self resetBoard];
+            default:
+                break;
+        }
+        
+        [self.keyboard clearKey: keyCode];
     }
-    
-    if ([self.keyboard keyPressed: 124]) {
-        [self.keyboard clearKey: 124];
-		[marker moveRight];
-    }
-	
-    if ([self.keyboard keyPressed: 126]) {
-        [self.keyboard clearKey: 126];
-		[marker moveUp];
-    }
-
-    if ([self.keyboard keyPressed: 125]) {
-        [self.keyboard clearKey: 125];
-		[marker moveDown];
-    }
-
-    if ([self.keyboard keyPressed: 36]
-        || [self.keyboard keyPressed: 49]) 
-    {
-        [self.keyboard clearKey: 36];
-        [self.keyboard clearKey: 49];
-        [self placeToken];
-    }
-		
-    if ([self.keyboard keyPressed: 15]) {
-        [self.keyboard clearKey: 15];
-		[self resetBoard];
-    }
-    
-    if (![[self winner] isNone])
-		NSLog(@"Winner: %@", [self winner]);
 }
 
 - (void) mouseDown:(NSEvent *)theEvent
