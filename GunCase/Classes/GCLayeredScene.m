@@ -95,14 +95,10 @@
 
 #pragma mark -
 #pragma mark Handling User Input
-- (void)keyDown:(NSEvent *)theEvent
-{
-	[self.respondingLayer keyDown: theEvent];
-}
 
-- (void)keyUp:(NSEvent *)theEvent
+- (GCKeyboard *) keyboard
 {
-	[self.respondingLayer keyUp: theEvent];
+    return self.respondingLayer ? self.respondingLayer.keyboard : super.keyboard;
 }
 
 - (void) mouseDown: (NSEvent *) theEvent

@@ -71,12 +71,12 @@ static GCStack *GCDirectorSceneStack = nil;
 
 - (void) keyDown:(NSEvent *)theEvent
 {
-	[self.activeScene keyDown: theEvent];
+	[self.activeScene.keyboard keyDown: theEvent];
 }
 
 - (void) keyUp: (NSEvent *) theEvent
 {
-	[self.activeScene keyUp: theEvent];
+	[self.activeScene.keyboard keyUp: theEvent];
 }
 
 - (void) mouseDown: (NSEvent *) theEvent

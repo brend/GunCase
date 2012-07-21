@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.name = [self description];
+        self.keyboard = [[GCKeyboard alloc] init];
     }
     return self;
 }
@@ -26,13 +27,7 @@
 
 #pragma mark -
 #pragma mark Handling User Input
-- (void)keyDown:(NSEvent *)theEvent
-{
-}
-
-- (void)keyUp:(NSEvent *)theEvent
-{
-}
+@synthesize keyboard = _keyboard;
 
 - (void) mouseDown: (NSEvent *) theEvent
 {

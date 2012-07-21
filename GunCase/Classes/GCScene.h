@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "GCThing.h"
-#import "GCUserInterface.h"
+#import "GCKeyboard.h"
 
-@interface GCScene : GCThing <GCUserInterface>
+@interface GCScene : GCThing
 
 #pragma mark -
 #pragma mark Handling User Input
-- (void)keyDown:(NSEvent *)theEvent;
-- (void)keyUp:(NSEvent *)theEvent;
+@property (nonatomic, strong) GCKeyboard *keyboard;
 - (void) mouseDown: (NSEvent *) theEvent;
 - (void)mouseUp:(NSEvent *)theEvent;
 // NOTE: The window must enable mouse movement tracking for this to take effect

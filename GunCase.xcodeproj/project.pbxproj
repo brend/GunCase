@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
+		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
+		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
 		5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */; };
 		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
@@ -98,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
+		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
 		5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCCompositeAnimation.h; path = Classes/GCCompositeAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCCompositeAnimation.m; path = Classes/GCCompositeAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -193,7 +198,6 @@
 		5FE90D06151F208A00155BBF /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = board.png; path = Resources/board.png; sourceTree = "<group>"; };
 		5FF8AEF814FA8A5C0093AF4E /* GCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCGameView.h; path = Classes/GCGameView.h; sourceTree = "<group>"; };
 		5FF8AEF914FA8A5C0093AF4E /* GCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGameView.m; path = Classes/GCGameView.m; sourceTree = "<group>"; };
-		5FFF5B6C15361978009C379D /* GCUserInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCUserInterface.h; path = Classes/GCUserInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4169B3B815BAA582002DB41D /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */,
+				4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
 		5F0B6CC714E6CD6F00A87D18 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +335,7 @@
 				5F9BB64314F266090062F348 /* Geometry */,
 				5F1C33F114DE9EC300BF808B /* Graphics */,
 				5F0B6CC714E6CD6F00A87D18 /* Animation */,
+				4169B3B815BAA582002DB41D /* Input */,
 				5F1C33B214DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCase;
@@ -529,7 +543,6 @@
 			isa = PBXGroup;
 			children = (
 				5F0B6CC914E6CDA100A87D18 /* GCMovable.h */,
-				5FFF5B6C15361978009C379D /* GCUserInterface.h */,
 				5F29BBC3153984C700476BCE /* GCRenderable.h */,
 			);
 			name = Protocols;
@@ -562,6 +575,7 @@
 				5F59810415376EA40023D91B /* GCThing.h in Headers */,
 				5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */,
 				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
+				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +731,7 @@
 				5F59810515376EA40023D91B /* GCThing.m in Sources */,
 				5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */,
 				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
+				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +745,7 @@
 				5F6DEA89155689D4003B691B /* GCThingTest.m in Sources */,
 				5F40438C158365AF007C162C /* GCDirectorTest.m in Sources */,
 				5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */,
+				4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

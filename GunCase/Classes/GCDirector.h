@@ -10,9 +10,8 @@
 #import "GCVector.h"
 #import "GCScene.h"
 #import "GCStack.h"
-#import "GCUserInterface.h"
 
-@interface GCDirector : NSObject <GCUserInterface>
+@interface GCDirector : NSObject
 {
 	GCStack *sceneStack;
 }
