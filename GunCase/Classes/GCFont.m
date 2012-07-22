@@ -34,6 +34,7 @@
 		self.rows = rows;
 		self.spriteSheet = sheet;
 		self.characterWidth = image.size.width / cols;
+        self.characterHeight = image.size.height / rows;
 	}
 	
 	return self;
@@ -43,12 +44,19 @@
 	spriteSheet = _spriteSheet, 
 	columns = _columns, 
 	rows = _rows,
-	characterWidth = _characterWidth;
+	characterWidth = _characterWidth,
+    characterHeight = _characterHeight;
 
 - (void) drawString: (NSString *) aString
-		 atPosition: (GCVector *) position
+             inRect: (NSRect) bounds
+            options: (GCStringRenderOptions) options
 {
-	float x = position.x, y = position.y;
+    float
+        leftEdge = bounds.origin.x, 
+        rightEdge = bounds.origin.x + bounds.size.width,
+        topEdge = bounds.origin.y + bounds.size.height,
+        bottomEdge = bounds.origin.y;
+	float x = leftEdge, y = topEdge;
 	
 	for (NSInteger i = 0; i < aString.length; ++i) {
 		unichar c = 
@@ -68,6 +76,14 @@
 		[characterSprite drawAtX: x y: y];
 		
 		x += self.characterWidth;
+        
+        if ((x + self.characterWidth) > rightEdge) {
+            x = leftEdge;
+            y -= self.characterHeight;
+        }
+        
+        if ((y - self.characterHeight) < bottomEdge)
+            break;
 	}
 }
 

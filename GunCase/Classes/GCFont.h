@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "GCVector.h"
 
+typedef enum {
+    GCStringRenderNoOptions = 0,
+    GCStringRenderWordWrap = 1 << 0
+} GCStringRenderOptions;
+
 @interface GCFont : NSObject
 
 - (id) initWithImage: (NSImage *) image
@@ -16,8 +21,9 @@
 				rows: (NSInteger) rows;
 
 - (void) drawString: (NSString *) aString
-		 atPosition: (GCVector *) position;
+             inRect: (NSRect) bounds
+            options: (GCStringRenderOptions) options;
 
-@property (nonatomic) float characterWidth;
+@property (nonatomic) float characterWidth, characterHeight;
 
 @end
