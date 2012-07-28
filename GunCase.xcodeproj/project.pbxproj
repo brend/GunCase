@@ -10,6 +10,10 @@
 		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
 		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
+		41C1F2CE15C404E600893F21 /* GCCompositeThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C1F2CC15C404E600893F21 /* GCCompositeThing.h */; };
+		41C1F2CF15C404E600893F21 /* GCCompositeThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeThing.m */; };
+		41C1F2D015C404E600893F21 /* GCCompositeThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeThing.m */; };
+		41C1F2D115C404E600893F21 /* GCCompositeThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeThing.m */; };
 		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
 		5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */; };
 		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
@@ -103,6 +107,8 @@
 /* Begin PBXFileReference section */
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
+		41C1F2CC15C404E600893F21 /* GCCompositeThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeThing.h; path = Classes/GCCompositeThing.h; sourceTree = "<group>"; };
+		41C1F2CD15C404E600893F21 /* GCCompositeThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeThing.m; path = Classes/GCCompositeThing.m; sourceTree = "<group>"; };
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
 		5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCCompositeAnimation.h; path = Classes/GCCompositeAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCCompositeAnimation.m; path = Classes/GCCompositeAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -457,6 +463,8 @@
 				5F59810315376EA40023D91B /* GCThing.m */,
 				5F29BBC4153984EC00476BCE /* GCSpriteThing.h */,
 				5F29BBC5153984EC00476BCE /* GCSpriteThing.m */,
+				41C1F2CC15C404E600893F21 /* GCCompositeThing.h */,
+				41C1F2CD15C404E600893F21 /* GCCompositeThing.m */,
 			);
 			name = "Base Classes";
 			sourceTree = "<group>";
@@ -576,6 +584,7 @@
 				5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */,
 				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
 				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
+				41C1F2CE15C404E600893F21 /* GCCompositeThing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +741,7 @@
 				5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */,
 				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
+				41C1F2CF15C404E600893F21 /* GCCompositeThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +756,7 @@
 				5F40438C158365AF007C162C /* GCDirectorTest.m in Sources */,
 				5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
+				41C1F2D015C404E600893F21 /* GCCompositeThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +773,7 @@
 				5F1997D61532EDD900D2E44D /* GDBackgroundLayer.m in Sources */,
 				5F1997D91532F56900D2E44D /* GDTokensLayer.m in Sources */,
 				5F1997DC15330B6E00D2E44D /* GDOverheadLayer.m in Sources */,
+				41C1F2D115C404E600893F21 /* GCCompositeThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
