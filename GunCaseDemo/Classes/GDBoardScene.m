@@ -127,7 +127,9 @@
 						   rotation: 0 
 							  scale: NSMakeSize(0.5, 0.5)];
 	
-	[font drawString: @";-)" atPosition: [GCVector vectorWithX: -380 y: -290]];
+	[font drawString: @"Copyright 2012 by P. Brendel"
+              inRect: NSMakeRect(-380, -280, 254, 32)
+             options: GCStringRenderWordWrap];
 }
 
 #pragma mark -
