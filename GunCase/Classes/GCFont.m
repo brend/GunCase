@@ -9,6 +9,7 @@
 #import "GCFont.h"
 #import "GCSprite.h"
 #import "GCSpriteThing.h"
+#import "GCCompositeThing.h"
 
 @interface GCFont ()
 @property (nonatomic, strong) NSArray *spriteSheet;
@@ -115,13 +116,39 @@
 - (void) drawWordWrappedString: (NSString *) aString
                         inRect: (NSRect) bounds
 {
+    GCThing *t = [self thingWithWordWrappedString: aString inRect: bounds];
+    
+    [t render];
+}
+
+- (GCThing *) createGlyphWithCharacter: (unichar) c
+                                     x: (float) x
+                                     y: (float) y
+{
+    // Reversing the Y-Axis of the sprite map
+    // TODO: Why do I have to do this? Why is the sprite sheet arranged that way?
+    NSInteger
+        fx = c % self.columns,
+        fy = self.columns - (c / self.columns + 1);
+    
+    GCSprite *characterSprite = [self.spriteSheet objectAtIndex: fx + fy * self.columns];
+    GCSpriteThing *glyph = [[GCSpriteThing alloc] initWithSprite: characterSprite];
+    
+    glyph.position = [GCVector vectorWithX: x y: y];
+
+    return glyph;
+}
+
+- (GCThing *) thingWithWordWrappedString: (NSString *) aString
+                                  inRect: (NSRect) bounds
+{
     float
-        leftEdge = bounds.origin.x, 
+        leftEdge = bounds.origin.x,
         rightEdge = bounds.origin.x + bounds.size.width,
         topEdge = bounds.origin.y + bounds.size.height,
         bottomEdge = bounds.origin.y;
 	float
-        x = leftEdge, 
+        x = leftEdge,
         y = topEdge;
     
     NSCharacterSet
@@ -154,7 +181,7 @@
             
             continue;
         }
-
+        
 		GCThing *glyph = [self createGlyphWithCharacter: c x: x y: y];
         
         [currentWord addObject: glyph];
@@ -184,27 +211,11 @@
     
     [fixedCharacters addObjectsFromArray: currentWord];
     
-    for (GCSpriteThing *glyph in fixedCharacters) {
-        [glyph render];
-    }
-}
-
-- (GCThing *) createGlyphWithCharacter: (unichar) c
-                                     x: (float) x
-                                     y: (float) y
-{
-    // Reversing the Y-Axis of the sprite map
-    // TODO: Why do I have to do this? Why is the sprite sheet arranged that way?
-    NSInteger
-        fx = c % self.columns,
-        fy = self.columns - (c / self.columns + 1);
+    GCCompositeThing *t = [[GCCompositeThing alloc] init];
     
-    GCSprite *characterSprite = [self.spriteSheet objectAtIndex: fx + fy * self.columns];
-    GCSpriteThing *glyph = [[GCSpriteThing alloc] initWithSprite: characterSprite];
+    [t addComponentsFromArray: fixedCharacters];
     
-    glyph.position = [GCVector vectorWithX: x y: y];
-
-    return glyph;
+    return t;
 }
 
 @end
