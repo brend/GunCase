@@ -12,7 +12,6 @@
 @property (nonatomic, strong) NSMutableArray *components;
 @end
 
-
 @implementation GCCompositeThing
 
 - (id)init
@@ -37,6 +36,15 @@
 - (void) removeComponent:(id)component
 {
     [self.components removeObject: component];
+}
+
+- (void) update
+{
+    [super update];
+    
+    for (id<GCRenderable> c in self.components) {
+        [c update];
+    }
 }
 
 - (void) render
