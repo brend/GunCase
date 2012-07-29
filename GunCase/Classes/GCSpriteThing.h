@@ -7,10 +7,9 @@
 //
 
 #import "GCThing.h"
-#import "GCRenderable.h"
 #import "GCSprite.h"
 
-@interface GCSpriteThing : GCThing <GCRenderable>
+@interface GCSpriteThing : GCThing <GCMovable, GCRenderable>
 {
 	GCSprite *_sprite;
 }

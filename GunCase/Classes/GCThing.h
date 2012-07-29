@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "GCMovable.h"
+#import "GCRenderable.h"
 
-@interface GCThing : NSObject <GCMovable>
+@interface GCThing : NSObject <GCMovable, GCRenderable>
 
 #pragma mark -
 #pragma mark Transforming the Thing

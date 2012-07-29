@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol GCRenderable <NSObject>
+- (void) update;
 - (void) render;
 @end
