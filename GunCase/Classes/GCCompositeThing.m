@@ -41,9 +41,8 @@
 
 - (void) render
 {
-    // TODO: A composite thing is like a layer,
-    // TODO: in that its components must move along with it.
-    // TODO: This has not yet been implemented.
+    [super render];
+    
     for (id<GCRenderable> c in self.components) {
         [c render];
     }
