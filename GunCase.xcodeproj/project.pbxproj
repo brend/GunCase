@@ -107,6 +107,7 @@
 /* Begin PBXFileReference section */
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
+		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		41C1F2CC15C404E600893F21 /* GCCompositeActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActor.h; path = Classes/GCCompositeActor.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActor.m; path = Classes/GCCompositeActor.m; sourceTree = "<group>"; };
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
@@ -188,7 +189,6 @@
 		5F9BB63F14F2616E0062F348 /* GCGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCGraphics.m; path = Classes/GCGraphics.m; sourceTree = "<group>"; };
 		5F9BB64414F2674C0062F348 /* GCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCVector.h; path = Classes/GCVector.h; sourceTree = "<group>"; };
 		5F9BB64514F2674C0062F348 /* GCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVector.m; path = Classes/GCVector.m; sourceTree = "<group>"; };
-		5F9F177C14E7DCAB00428AC4 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		5F9F177E14E7FCA200428AC4 /* GCLinearAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCLinearAnimation.h; path = Classes/GCLinearAnimation.h; sourceTree = "<group>"; };
 		5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCLinearAnimation.m; path = Classes/GCLinearAnimation.m; sourceTree = "<group>"; };
 		5FAE7FE0150270D2005813DE /* GCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCScene.h; path = Classes/GCScene.h; sourceTree = "<group>"; };
@@ -350,9 +350,9 @@
 		5F1C33B214DE99C600BF808B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41BC7FEE15D12B6A000633FD /* README.markdown */,
 				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
 				5F1C33FB14DE9FA500BF808B /* GunCase.h */,
-				5F9F177C14E7DCAB00428AC4 /* README */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
