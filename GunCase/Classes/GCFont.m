@@ -14,7 +14,7 @@
 @interface GCFont ()
 @property (nonatomic, strong) NSArray *spriteSheet;
 @property (nonatomic) NSInteger columns, rows;
-- (GCThing *) createGlyphWithCharacter: (unichar) c x: (float) x y: (float) y;
+- (GCActor *) createGlyphWithCharacter: (unichar) c x: (float) x y: (float) y;
 - (void) drawCharacterWrappedString: (NSString *) aString
                              inRect: (NSRect) bounds;
 - (void) drawWordWrappedString: (NSString *) aString
@@ -116,12 +116,12 @@
 - (void) drawWordWrappedString: (NSString *) aString
                         inRect: (NSRect) bounds
 {
-    GCThing *t = [self thingWithWordWrappedString: aString inRect: bounds];
+    GCActor *t = [self thingWithWordWrappedString: aString inRect: bounds];
     
     [t render];
 }
 
-- (GCThing *) createGlyphWithCharacter: (unichar) c
+- (GCActor *) createGlyphWithCharacter: (unichar) c
                                      x: (float) x
                                      y: (float) y
 {
@@ -139,7 +139,7 @@
     return glyph;
 }
 
-- (GCThing *) thingWithWordWrappedString: (NSString *) aString
+- (GCActor *) thingWithWordWrappedString: (NSString *) aString
                                   inRect: (NSRect) bounds
 {
     float
@@ -182,14 +182,14 @@
             continue;
         }
         
-		GCThing *glyph = [self createGlyphWithCharacter: c x: x y: y];
+		GCActor *glyph = [self createGlyphWithCharacter: c x: x y: y];
         
         [currentWord addObject: glyph];
         
         if (x > rightEdge) {
             float gx = leftEdge, gy = y - self.characterHeight;
             
-            for (GCThing *g in currentWord) {
+            for (GCActor *g in currentWord) {
                 g.position = [GCVector vectorWithX: gx y: gy];
                 gx += self.characterWidth;
                 // TODO Don't let characters step over the right edge (in case the word itself is wider than the allowed width)

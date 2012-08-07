@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCThing.h"
+#import "GCActor.h"
 #import "GCKeyboard.h"
 
-@interface GCLayer : GCThing
+@interface GCLayer : GCActor
 
 #pragma mark -
 #pragma mark Layer Identity

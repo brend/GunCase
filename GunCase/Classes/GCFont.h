@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GCVector.h"
-#import "GCThing.h"
+#import "GCActor.h"
 
 typedef enum {
     GCStringRenderNoOptions = 0,
@@ -27,7 +27,7 @@ typedef enum {
 
 @property (nonatomic) float characterWidth, characterHeight;
 
-- (GCThing *) thingWithWordWrappedString: (NSString *) aString
+- (GCActor *) thingWithWordWrappedString: (NSString *) aString
                                   inRect: (NSRect) bounds;
 
 @end

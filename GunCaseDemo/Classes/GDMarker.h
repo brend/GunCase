@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GunCase.h"
 
-@interface GDMarker : GCThing
+@interface GDMarker : GCActor
 {
 	GCAnimation *animation;
 	GCSprite *sprite;

@@ -57,8 +57,8 @@
 		5F40438D15836688007C162C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
 		5F40438E15836692007C162C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340214DEA37C00BF808B /* GLUT.framework */; };
 		5F40438F15836692007C162C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340314DEA37C00BF808B /* OpenGL.framework */; };
-		5F59810415376EA40023D91B /* GCThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F59810215376EA40023D91B /* GCThing.h */; };
-		5F59810515376EA40023D91B /* GCThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F59810315376EA40023D91B /* GCThing.m */; };
+		5F59810415376EA40023D91B /* GCActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F59810215376EA40023D91B /* GCActor.h */; };
+		5F59810515376EA40023D91B /* GCActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F59810315376EA40023D91B /* GCActor.m */; };
 		5F68600F150B788500A216C9 /* GCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F68600D150B788500A216C9 /* GCAnimation.h */; };
 		5F686010150B788500A216C9 /* GCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F68600E150B788500A216C9 /* GCAnimation.m */; };
 		5F686013150B7CE400A216C9 /* GCArcAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F686011150B7CE400A216C9 /* GCArcAnimation.h */; };
@@ -166,8 +166,8 @@
 		5F2F729414F90A0B000166E5 /* GCVectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCVectorTest.m; path = Tests/GCVectorTest.m; sourceTree = "<group>"; };
 		5F40438A158365AF007C162C /* GCDirectorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDirectorTest.h; path = Tests/GCDirectorTest.h; sourceTree = "<group>"; };
 		5F40438B158365AF007C162C /* GCDirectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDirectorTest.m; path = Tests/GCDirectorTest.m; sourceTree = "<group>"; };
-		5F59810215376EA40023D91B /* GCThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCThing.h; path = Classes/GCThing.h; sourceTree = "<group>"; };
-		5F59810315376EA40023D91B /* GCThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCThing.m; path = Classes/GCThing.m; sourceTree = "<group>"; };
+		5F59810215376EA40023D91B /* GCActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCActor.h; path = Classes/GCActor.h; sourceTree = "<group>"; };
+		5F59810315376EA40023D91B /* GCActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCActor.m; path = Classes/GCActor.m; sourceTree = "<group>"; };
 		5F68600D150B788500A216C9 /* GCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCAnimation.h; path = Classes/GCAnimation.h; sourceTree = "<group>"; };
 		5F68600E150B788500A216C9 /* GCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCAnimation.m; path = Classes/GCAnimation.m; sourceTree = "<group>"; };
 		5F686011150B7CE400A216C9 /* GCArcAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCArcAnimation.h; path = Classes/GCArcAnimation.h; sourceTree = "<group>"; };
@@ -459,8 +459,8 @@
 		5F29BBC11539847800476BCE /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5F59810215376EA40023D91B /* GCThing.h */,
-				5F59810315376EA40023D91B /* GCThing.m */,
+				5F59810215376EA40023D91B /* GCActor.h */,
+				5F59810315376EA40023D91B /* GCActor.m */,
 				5F29BBC4153984EC00476BCE /* GCSpriteThing.h */,
 				5F29BBC5153984EC00476BCE /* GCSpriteThing.m */,
 				41C1F2CC15C404E600893F21 /* GCCompositeThing.h */,
@@ -580,7 +580,7 @@
 				5F2ED53D1531C344002BDE26 /* GCRotationAnimation.h in Headers */,
 				5F1997CC1532E7C400D2E44D /* GCLayer.h in Headers */,
 				5F1997D11532E7DA00D2E44D /* GCLayeredScene.h in Headers */,
-				5F59810415376EA40023D91B /* GCThing.h in Headers */,
+				5F59810415376EA40023D91B /* GCActor.h in Headers */,
 				5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */,
 				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
 				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
@@ -737,7 +737,7 @@
 				5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */,
 				5F1997CD1532E7C400D2E44D /* GCLayer.m in Sources */,
 				5F1997D21532E7DA00D2E44D /* GCLayeredScene.m in Sources */,
-				5F59810515376EA40023D91B /* GCThing.m in Sources */,
+				5F59810515376EA40023D91B /* GCActor.m in Sources */,
 				5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */,
 				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,

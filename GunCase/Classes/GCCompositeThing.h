@@ -6,9 +6,9 @@
 //
 //
 
-#import "GCThing.h"
+#import "GCActor.h"
 
-@interface GCCompositeThing : GCThing <GCMovable, GCRenderable>
+@interface GCCompositeThing : GCActor <GCMovable, GCRenderable>
 
 - (void) addComponent: (id<GCRenderable>) component;
 - (void) addComponentsFromArray: (NSArray *) components;

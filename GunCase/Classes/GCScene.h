@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCThing.h"
+#import "GCActor.h"
 #import "GCKeyboard.h"
 
-@interface GCScene : GCThing
+@interface GCScene : GCActor
 
 #pragma mark -
 #pragma mark Handling User Input

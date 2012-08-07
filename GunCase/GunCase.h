@@ -16,7 +16,7 @@
 
 // Geometry
 #import "GCVector.h"
-#import "GCThing.h"
+#import "GCActor.h"
 
 // Animation
 #import "GCMovable.h"
@@ -35,7 +35,7 @@
 #import "GCLayer.h"
 
 // Base Classes
-#import "GCThing.h"
+#import "GCActor.h"
 #import "GCSpriteThing.h"
 
 #endif

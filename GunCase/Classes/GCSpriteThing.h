@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCThing.h"
+#import "GCActor.h"
 #import "GCSprite.h"
 
-@interface GCSpriteThing : GCThing <GCMovable, GCRenderable>
+@interface GCSpriteThing : GCActor <GCMovable, GCRenderable>
 {
 	GCSprite *_sprite;
 }

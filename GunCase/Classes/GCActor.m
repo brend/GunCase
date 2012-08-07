@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCThing.h"
+#import "GCActor.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation GCThing
+@implementation GCActor
 
 #pragma mark -
 #pragma mark Initialization

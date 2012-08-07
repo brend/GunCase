@@ -7,13 +7,13 @@
 //
 
 #import "GCThingTest.h"
-#import "GCThing.h"
+#import "GCActor.h"
 
 @implementation GCThingTest
 
 - (void) testInit
 {
-	GCThing *t = [[GCThing alloc] init];
+	GCActor *t = [[GCActor alloc] init];
 	
 	STAssertNotNil(t.position, @"position mustn't be nil");
 	STAssertTrue(NSEqualSizes(NSMakeSize(1, 1), t.scale), @"Scale must be 1x1");
