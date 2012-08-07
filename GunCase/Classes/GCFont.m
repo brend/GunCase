@@ -9,7 +9,7 @@
 #import "GCFont.h"
 #import "GCSprite.h"
 #import "GCSpriteActor.h"
-#import "GCCompositeThing.h"
+#import "GCCompositeActor.h"
 
 @interface GCFont ()
 @property (nonatomic, strong) NSArray *spriteSheet;
@@ -211,7 +211,7 @@
     
     [fixedCharacters addObjectsFromArray: currentWord];
     
-    GCCompositeThing *t = [[GCCompositeThing alloc] init];
+    GCCompositeActor *t = [[GCCompositeActor alloc] init];
     
     [t addComponentsFromArray: fixedCharacters];
     

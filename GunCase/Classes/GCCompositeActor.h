@@ -8,7 +8,7 @@
 
 #import "GCActor.h"
 
-@interface GCCompositeThing : GCActor <GCMovable, GCRenderable>
+@interface GCCompositeActor : GCActor <GCMovable, GCRenderable>
 
 - (void) addComponent: (id<GCRenderable>) component;
 - (void) addComponentsFromArray: (NSArray *) components;

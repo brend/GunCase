@@ -6,13 +6,13 @@
 //
 //
 
-#import "GCCompositeThing.h"
+#import "GCCompositeActor.h"
 
-@interface GCCompositeThing ()
+@interface GCCompositeActor ()
 @property (nonatomic, strong) NSMutableArray *components;
 @end
 
-@implementation GCCompositeThing
+@implementation GCCompositeActor
 
 - (id)init
 {

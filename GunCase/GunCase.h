@@ -37,5 +37,6 @@
 // Base Classes
 #import "GCActor.h"
 #import "GCSpriteActor.h"
+#import "GCCompositeActor.h"
 
 #endif
