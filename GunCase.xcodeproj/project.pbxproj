@@ -15,8 +15,8 @@
 		41C1F2D015C404E600893F21 /* GCCompositeThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeThing.m */; };
 		41C1F2D115C404E600893F21 /* GCCompositeThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeThing.m */; };
 		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
-		5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */; };
-		5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */; };
+		5F0B6CCD14E6D0E300A87D18 /* GCSequentialAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCSequentialAnimation.h */; };
+		5F0B6CCE14E6D0E300A87D18 /* GCSequentialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCSequentialAnimation.m */; };
 		5F0B6CD414E6D5A600A87D18 /* GCCompositeAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */; };
 		5F1997CC1532E7C400D2E44D /* GCLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1997CA1532E7C400D2E44D /* GCLayer.h */; };
 		5F1997CD1532E7C400D2E44D /* GCLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1997CB1532E7C400D2E44D /* GCLayer.m */; };
@@ -110,8 +110,8 @@
 		41C1F2CC15C404E600893F21 /* GCCompositeThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeThing.h; path = Classes/GCCompositeThing.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeThing.m; path = Classes/GCCompositeThing.m; sourceTree = "<group>"; };
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
-		5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCCompositeAnimation.h; path = Classes/GCCompositeAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCCompositeAnimation.m; path = Classes/GCCompositeAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5F0B6CCB14E6D0E300A87D18 /* GCSequentialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCSequentialAnimation.h; path = Classes/GCSequentialAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5F0B6CCC14E6D0E300A87D18 /* GCSequentialAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCSequentialAnimation.m; path = Classes/GCSequentialAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F0B6CD214E6D5A600A87D18 /* GCCompositeAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GCCompositeAnimationTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5F0B6CD314E6D5A600A87D18 /* GCCompositeAnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GCCompositeAnimationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5F1997CA1532E7C400D2E44D /* GCLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCLayer.h; path = Classes/GCLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -259,8 +259,8 @@
 				5F68600E150B788500A216C9 /* GCAnimation.m */,
 				5F6E72D4150CB50600DB000F /* GCTimedAnimation.h */,
 				5F6E72D5150CB50600DB000F /* GCTimedAnimation.m */,
-				5F0B6CCB14E6D0E300A87D18 /* GCCompositeAnimation.h */,
-				5F0B6CCC14E6D0E300A87D18 /* GCCompositeAnimation.m */,
+				5F0B6CCB14E6D0E300A87D18 /* GCSequentialAnimation.h */,
+				5F0B6CCC14E6D0E300A87D18 /* GCSequentialAnimation.m */,
 				5F9F177E14E7FCA200428AC4 /* GCLinearAnimation.h */,
 				5F9F177F14E7FCA200428AC4 /* GCLinearAnimation.m */,
 				5F686011150B7CE400A216C9 /* GCArcAnimation.h */,
@@ -566,7 +566,7 @@
 				5F1C33F814DE9F7000BF808B /* GCSprite.h in Headers */,
 				5F1C33FC14DE9FA500BF808B /* GunCase.h in Headers */,
 				5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */,
-				5F0B6CCD14E6D0E300A87D18 /* GCCompositeAnimation.h in Headers */,
+				5F0B6CCD14E6D0E300A87D18 /* GCSequentialAnimation.h in Headers */,
 				5F9F178014E7FCA200428AC4 /* GCLinearAnimation.h in Headers */,
 				5F9BB64014F2616E0062F348 /* GCGraphics.h in Headers */,
 				5F9BB64614F2674C0062F348 /* GCVector.h in Headers */,
@@ -723,7 +723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1C33F914DE9F7000BF808B /* GCSprite.m in Sources */,
-				5F0B6CCE14E6D0E300A87D18 /* GCCompositeAnimation.m in Sources */,
+				5F0B6CCE14E6D0E300A87D18 /* GCSequentialAnimation.m in Sources */,
 				5F9F178114E7FCA200428AC4 /* GCLinearAnimation.m in Sources */,
 				5F9BB64114F2616E0062F348 /* GCGraphics.m in Sources */,
 				5F9BB64714F2674C0062F348 /* GCVector.m in Sources */,

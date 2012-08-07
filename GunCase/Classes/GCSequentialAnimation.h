@@ -10,7 +10,7 @@
 #import "GCAnimation.h"
 #import "GCVector.h"
 
-@interface GCCompositeAnimation : GCAnimation
+@interface GCSequentialAnimation : GCAnimation
 {
 	NSMutableArray *steps;
 	NSInteger currentStep;

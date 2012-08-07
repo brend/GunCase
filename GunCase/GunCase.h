@@ -21,7 +21,7 @@
 // Animation
 #import "GCMovable.h"
 #import "GCAnimation.h"
-#import "GCCompositeAnimation.h"
+#import "GCSequentialAnimation.h"
 #import "GCLinearAnimation.h"
 #import "GCArcAnimation.h"
 #import "GCRotationAnimation.h"

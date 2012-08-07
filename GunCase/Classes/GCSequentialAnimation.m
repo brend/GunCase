@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCCompositeAnimation.h"
+#import "GCSequentialAnimation.h"
 #import "GCLinearAnimation.h"
 #import "GCArcAnimation.h"
 
-@interface GCCompositeAnimation ()
+@interface GCSequentialAnimation ()
 @property NSPoint beginning, end;
 @property NSInteger stepCount, step;
 @end
 
-@implementation GCCompositeAnimation
+@implementation GCSequentialAnimation
 
 @synthesize beginning = _beginning, end = _end, stepCount = _stepCount, step = _step;
 
