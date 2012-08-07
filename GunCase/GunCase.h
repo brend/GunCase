@@ -36,6 +36,6 @@
 
 // Base Classes
 #import "GCActor.h"
-#import "GCSpriteThing.h"
+#import "GCSpriteActor.h"
 
 #endif

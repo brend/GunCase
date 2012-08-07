@@ -8,7 +8,7 @@
 
 #import "GCFont.h"
 #import "GCSprite.h"
-#import "GCSpriteThing.h"
+#import "GCSpriteActor.h"
 #import "GCCompositeThing.h"
 
 @interface GCFont ()
@@ -132,7 +132,7 @@
         fy = self.columns - (c / self.columns + 1);
     
     GCSprite *characterSprite = [self.spriteSheet objectAtIndex: fx + fy * self.columns];
-    GCSpriteThing *glyph = [[GCSpriteThing alloc] initWithSprite: characterSprite];
+    GCSpriteActor *glyph = [[GCSpriteActor alloc] initWithSprite: characterSprite];
     
     glyph.position = [GCVector vectorWithX: x y: y];
 

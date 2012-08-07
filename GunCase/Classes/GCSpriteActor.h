@@ -9,7 +9,7 @@
 #import "GCActor.h"
 #import "GCSprite.h"
 
-@interface GCSpriteThing : GCActor <GCMovable, GCRenderable>
+@interface GCSpriteActor : GCActor <GCMovable, GCRenderable>
 {
 	GCSprite *_sprite;
 }

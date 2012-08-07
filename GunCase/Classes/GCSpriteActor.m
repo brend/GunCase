@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 BrendCorp. All rights reserved.
 //
 
-#import "GCSpriteThing.h"
+#import "GCSpriteActor.h"
 
-@implementation GCSpriteThing
+@implementation GCSpriteActor
 
 - (id)initWithSprite: (GCSprite *) sprite
 {

@@ -47,8 +47,8 @@
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
 		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
 		5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E1DA515271713005E5BBE /* GCStackTest.m */; };
-		5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F29BBC4153984EC00476BCE /* GCSpriteThing.h */; };
-		5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29BBC5153984EC00476BCE /* GCSpriteThing.m */; };
+		5F29BBC6153984EC00476BCE /* GCSpriteActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F29BBC4153984EC00476BCE /* GCSpriteActor.h */; };
+		5F29BBC7153984EC00476BCE /* GCSpriteActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29BBC5153984EC00476BCE /* GCSpriteActor.m */; };
 		5F2ED53D1531C344002BDE26 /* GCRotationAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2ED53B1531C344002BDE26 /* GCRotationAnimation.h */; };
 		5F2ED53E1531C344002BDE26 /* GCRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */; };
 		5F2ED5421531C444002BDE26 /* GDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2ED5411531C444002BDE26 /* GDToken.m */; };
@@ -156,8 +156,8 @@
 		5F1E1DA415271713005E5BBE /* GCStackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStackTest.h; path = Tests/GCStackTest.h; sourceTree = "<group>"; };
 		5F1E1DA515271713005E5BBE /* GCStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStackTest.m; path = Tests/GCStackTest.m; sourceTree = "<group>"; };
 		5F29BBC3153984C700476BCE /* GCRenderable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCRenderable.h; path = Classes/GCRenderable.h; sourceTree = "<group>"; };
-		5F29BBC4153984EC00476BCE /* GCSpriteThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSpriteThing.h; path = Classes/GCSpriteThing.h; sourceTree = "<group>"; };
-		5F29BBC5153984EC00476BCE /* GCSpriteThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSpriteThing.m; path = Classes/GCSpriteThing.m; sourceTree = "<group>"; };
+		5F29BBC4153984EC00476BCE /* GCSpriteActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSpriteActor.h; path = Classes/GCSpriteActor.h; sourceTree = "<group>"; };
+		5F29BBC5153984EC00476BCE /* GCSpriteActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSpriteActor.m; path = Classes/GCSpriteActor.m; sourceTree = "<group>"; };
 		5F2ED53B1531C344002BDE26 /* GCRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCRotationAnimation.h; path = Classes/GCRotationAnimation.h; sourceTree = "<group>"; };
 		5F2ED53C1531C344002BDE26 /* GCRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCRotationAnimation.m; path = Classes/GCRotationAnimation.m; sourceTree = "<group>"; };
 		5F2ED5401531C444002BDE26 /* GDToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDToken.h; path = Classes/GDToken.h; sourceTree = "<group>"; };
@@ -461,8 +461,8 @@
 			children = (
 				5F59810215376EA40023D91B /* GCActor.h */,
 				5F59810315376EA40023D91B /* GCActor.m */,
-				5F29BBC4153984EC00476BCE /* GCSpriteThing.h */,
-				5F29BBC5153984EC00476BCE /* GCSpriteThing.m */,
+				5F29BBC4153984EC00476BCE /* GCSpriteActor.h */,
+				5F29BBC5153984EC00476BCE /* GCSpriteActor.m */,
 				41C1F2CC15C404E600893F21 /* GCCompositeThing.h */,
 				41C1F2CD15C404E600893F21 /* GCCompositeThing.m */,
 			);
@@ -581,7 +581,7 @@
 				5F1997CC1532E7C400D2E44D /* GCLayer.h in Headers */,
 				5F1997D11532E7DA00D2E44D /* GCLayeredScene.h in Headers */,
 				5F59810415376EA40023D91B /* GCActor.h in Headers */,
-				5F29BBC6153984EC00476BCE /* GCSpriteThing.h in Headers */,
+				5F29BBC6153984EC00476BCE /* GCSpriteActor.h in Headers */,
 				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
 				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
 				41C1F2CE15C404E600893F21 /* GCCompositeThing.h in Headers */,
@@ -738,7 +738,7 @@
 				5F1997CD1532E7C400D2E44D /* GCLayer.m in Sources */,
 				5F1997D21532E7DA00D2E44D /* GCLayeredScene.m in Sources */,
 				5F59810515376EA40023D91B /* GCActor.m in Sources */,
-				5F29BBC7153984EC00476BCE /* GCSpriteThing.m in Sources */,
+				5F29BBC7153984EC00476BCE /* GCSpriteActor.m in Sources */,
 				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 				41C1F2CF15C404E600893F21 /* GCCompositeThing.m in Sources */,
