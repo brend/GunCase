@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4110343015D2865300BC2C40 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4110342E15D2865300BC2C40 /* NSData+Base64.h */; };
+		4110343115D2865300BC2C40 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110342F15D2865300BC2C40 /* NSData+Base64.m */; };
+		4110343215D2865300BC2C40 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110342F15D2865300BC2C40 /* NSData+Base64.m */; };
+		4110343615D287E100BC2C40 /* NSDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343515D287E100BC2C40 /* NSDataTest.m */; };
 		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
 		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
@@ -105,6 +109,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4110342E15D2865300BC2C40 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Classes/NSData+Base64.h"; sourceTree = "<group>"; };
+		4110342F15D2865300BC2C40 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Classes/NSData+Base64.m"; sourceTree = "<group>"; };
+		4110343415D287E100BC2C40 /* NSDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataTest.h; path = Tests/NSDataTest.h; sourceTree = "<group>"; };
+		4110343515D287E100BC2C40 /* NSDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataTest.m; path = Tests/NSDataTest.m; sourceTree = "<group>"; };
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
 		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
@@ -243,6 +251,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4110342D15D2863300BC2C40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4110342E15D2865300BC2C40 /* NSData+Base64.h */,
+				4110342F15D2865300BC2C40 /* NSData+Base64.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		4110343315D287CE00BC2C40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4110343415D287E100BC2C40 /* NSDataTest.h */,
+				4110343515D287E100BC2C40 /* NSDataTest.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		4169B3B815BAA582002DB41D /* Input */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,7 +359,8 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
-				5F29BBC11539847800476BCE /* Base Classes */,
+				4110342D15D2863300BC2C40 /* Data */,
+				5F29BBC11539847800476BCE /* Actors */,
 				5FFF5B6A1536194C009C379D /* Protocols */,
 				5FAE7FE815027388005813DE /* Containers */,
 				5FAE7FDE150270B2005813DE /* Scenes */,
@@ -360,7 +387,8 @@
 		5F1C33C314DE99C600BF808B /* GunCaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				5F6DEA85155689B2003B691B /* Base Classes */,
+				4110343315D287CE00BC2C40 /* Data */,
+				5F6DEA85155689B2003B691B /* Actors */,
 				5F1E1DA3152716D9005E5BBE /* Containers */,
 				5F40438815836598007C162C /* Scenes */,
 				5F2F729614F90CC7000166E5 /* Animation */,
@@ -456,7 +484,7 @@
 			name = Containers;
 			sourceTree = "<group>";
 		};
-		5F29BBC11539847800476BCE /* Base Classes */ = {
+		5F29BBC11539847800476BCE /* Actors */ = {
 			isa = PBXGroup;
 			children = (
 				5F59810215376EA40023D91B /* GCActor.h */,
@@ -466,7 +494,7 @@
 				41C1F2CC15C404E600893F21 /* GCCompositeActor.h */,
 				41C1F2CD15C404E600893F21 /* GCCompositeActor.m */,
 			);
-			name = "Base Classes";
+			name = Actors;
 			sourceTree = "<group>";
 		};
 		5F2F729114F909E4000166E5 /* Geometry */ = {
@@ -496,13 +524,13 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
-		5F6DEA85155689B2003B691B /* Base Classes */ = {
+		5F6DEA85155689B2003B691B /* Actors */ = {
 			isa = PBXGroup;
 			children = (
 				5F6DEA87155689D4003B691B /* GCThingTest.h */,
 				5F6DEA88155689D4003B691B /* GCThingTest.m */,
 			);
-			name = "Base Classes";
+			name = Actors;
 			sourceTree = "<group>";
 		};
 		5F9BB64314F266090062F348 /* Geometry */ = {
@@ -585,6 +613,7 @@
 				5F69679F15B2CA1700D9F1D2 /* GCFont.h in Headers */,
 				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
 				41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */,
+				4110343015D2865300BC2C40 /* NSData+Base64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +771,7 @@
 				5F6967A015B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 				41C1F2CF15C404E600893F21 /* GCCompositeActor.m in Sources */,
+				4110343115D2865300BC2C40 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +787,8 @@
 				5F6967A115B2CA1700D9F1D2 /* GCFont.m in Sources */,
 				4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 				41C1F2D015C404E600893F21 /* GCCompositeActor.m in Sources */,
+				4110343215D2865300BC2C40 /* NSData+Base64.m in Sources */,
+				4110343615D287E100BC2C40 /* NSDataTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +908,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -886,6 +919,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
