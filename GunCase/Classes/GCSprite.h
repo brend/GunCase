@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GCMath.h"
 
 typedef enum {
 	GCSpriteFlipNone = 0,

@@ -9,8 +9,6 @@
 #import "GCSprite.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define GCIsPowerOf2(x)		(((x) & ((x) - 1)) == 0)
-
 // Sets up an array of values for the texture coordinates.
 const GLfloat GCSpriteTexcoords[] = 
 {
@@ -119,25 +117,6 @@ const GLfloat GCSpriteTexcoords[] =
 	return [[GCSprite alloc] initWithImage: image];
 }
 
-//+ (id) spriteWithString: (NSString *) text
-//				   font: (NSFont *) font
-//				  color: (NSColor *) color
-//{
-//	CGRect screenRect = [[NSScreen mainScreen] frame];
-//	CGSize exactSize = [text sizeWithFont: font constrainedToSize: CGSizeMake(screenRect.size.width * 0.75, screenRect.size.height) lineBreakMode: UILineBreakModeWordWrap];
-//	CGSize textureSize = CGSizeMake(GMFindPowerOf2(exactSize.width), GMFindPowerOf2(exactSize.height));
-//	UIImage *image = nil;
-//	
-//	UIGraphicsBeginImageContext(textureSize);
-//	[color setFill];
-//	[text drawInRect: CGRectMake(0, 0, textureSize.width, textureSize.height) withFont: font lineBreakMode: UILineBreakModeWordWrap alignment: UITextAlignmentCenter];
-//	
-//	image = UIGraphicsGetImageFromCurrentImageContext();
-//	UIGraphicsEndImageContext();
-//	
-//	return [GCSprite spriteWithImage: image];
-//}
-
 - (id) initWithVertices: (GLfloat[]) theVertices
 				texture: (GLuint) textureName
 	 textureCoordinates: (GLfloat[]) theTexCoords
@@ -195,26 +174,21 @@ const GLfloat GCSpriteTexcoords[] =
 			[sprites addObject: sprite];
 		}
 	}
+    
+    NSMutableArray *reordered = [NSMutableArray arrayWithCapacity: sprites.count];
+    
+    NSInteger k = sprites.count;
+    
+    while (k > 0) {
+        k -= sheetColumns;
+        
+        for (NSInteger j = 0; j < sheetColumns; ++j) {
+            [reordered addObject: [sprites objectAtIndex: k + j]];
+        }
+    }
 	
-	return sprites;
+	return reordered;
 }
-
-/* Commented out because
- *  1) doesn't belong here
- *  2) may be useful again some day (yeah, right)
- */
-//+ (NSImage *) createThumbnailFromImage: (NSImage *) image
-//						 withRectangle: (NSRect) rect
-//{
-//	NSSize size = NSMakeSize(32, 32);
-//	NSImage *thumbnail = [[NSImage alloc] initWithSize: size];
-//	
-//	[thumbnail lockFocus];
-//	[image drawInRect: NSMakeRect(0, 0, size.width, size.height) fromRect: rect operation: NSCompositeSourceOver fraction: 1];
-//	[thumbnail unlockFocus];
-//	
-//	return thumbnail;
-//}
 
 - (void) dealloc
 {
@@ -241,11 +215,6 @@ const GLfloat GCSpriteTexcoords[] =
 	glVertexPointer(2, GL_FLOAT, 0, spriteVertices);
 	glTexCoordPointer(2, GL_FLOAT, 0, textureCoordinates);
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
-	// NOTE Zwecks Leistungssteigerung deaktiviert
-//	glDisableClientState(GL_VERTEX_ARRAY);
-//	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-//	glDisable(GL_TEXTURE_2D);
 }
 
 - (void) drawAtX: (float) x y: (float) y

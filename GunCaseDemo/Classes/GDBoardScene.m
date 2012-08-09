@@ -155,8 +155,8 @@
             case 36:
             case 49:
                 [self placeToken];
-                if (![[self winner] isNone])
-                    NSLog(@"Winner: %@", [self winner]);
+//                if (![[self winner] isNone])
+//                    NSLog(@"Winner: %@", [self winner]);
                 break;
             case 15:
                 [self resetBoard];

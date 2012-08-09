@@ -11,13 +11,52 @@
 		4110343115D2865300BC2C40 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110342F15D2865300BC2C40 /* NSData+Base64.m */; };
 		4110343215D2865300BC2C40 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110342F15D2865300BC2C40 /* NSData+Base64.m */; };
 		4110343615D287E100BC2C40 /* NSDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343515D287E100BC2C40 /* NSDataTest.m */; };
+		4110343A15D299AD00BC2C40 /* GCMapParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4110343815D299AD00BC2C40 /* GCMapParser.h */; };
+		4110343B15D299AD00BC2C40 /* GCMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343915D299AD00BC2C40 /* GCMapParser.m */; };
+		4110343C15D299AD00BC2C40 /* GCMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343915D299AD00BC2C40 /* GCMapParser.m */; };
+		4110343F15D29A3E00BC2C40 /* GCTiledMapParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4110343D15D29A3E00BC2C40 /* GCTiledMapParser.h */; };
+		4110344015D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */; };
+		4110344115D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */; };
+		4110344515D29D3B00BC2C40 /* GCTiledMapParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */; };
+		4129396415DC0376004F1740 /* GCMapTilesetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396315DC0376004F1740 /* GCMapTilesetTest.m */; };
+		4129396715DC1B49004F1740 /* GCMapLayerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396615DC1B49004F1740 /* GCMapLayerTest.m */; };
+		4129396A15DC1D66004F1740 /* GCMapTileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396915DC1D66004F1740 /* GCMapTileTest.m */; };
 		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
 		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
+		41702BB415D529200046B008 /* GCMapTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 41702BB215D529200046B008 /* GCMapTile.h */; };
+		41702BB515D529200046B008 /* GCMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41702BB315D529200046B008 /* GCMapTile.m */; };
+		41702BB615D529200046B008 /* GCMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41702BB315D529200046B008 /* GCMapTile.m */; };
+		41A3EBA615D3BCD000E21154 /* GCMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBA415D3BCD000E21154 /* GCMap.h */; };
+		41A3EBA715D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
+		41A3EBA815D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
+		41A3EBAB15D3BE1000E21154 /* GCMapLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBA915D3BE1000E21154 /* GCMapLayer.h */; };
+		41A3EBAC15D3BE1000E21154 /* GCMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBAA15D3BE1000E21154 /* GCMapLayer.m */; };
+		41A3EBAD15D3BE1000E21154 /* GCMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBAA15D3BE1000E21154 /* GCMapLayer.m */; };
+		41A3EBB015D3C13200E21154 /* GCMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBAF15D3C13200E21154 /* GCMapTest.m */; };
+		41A3EBB315D3D29C00E21154 /* GCMapTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBB115D3D29C00E21154 /* GCMapTileset.h */; };
+		41A3EBB415D3D29C00E21154 /* GCMapTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBB215D3D29C00E21154 /* GCMapTileset.m */; };
+		41A3EBB515D3D29C00E21154 /* GCMapTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBB215D3D29C00E21154 /* GCMapTileset.m */; };
+		41A3EBBC15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBBA15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h */; };
+		41A3EBBD15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */; };
+		41A3EBBE15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */; };
+		41A3EBC115D4035800E21154 /* GCTiledMapBase64Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */; };
+		41A3EBC215D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
+		41A3EBC315D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
 		41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C1F2CC15C404E600893F21 /* GCCompositeActor.h */; };
 		41C1F2CF15C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
 		41C1F2D015C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
 		41C1F2D115C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
+		41D5F96715D80E4E0084625E /* GDMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96615D80E4E0084625E /* GDMapScene.m */; };
+		41D5F96A15D80F8E0084625E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110342F15D2865300BC2C40 /* NSData+Base64.m */; };
+		41D5F96E15D843440084625E /* GCMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D5F96C15D843440084625E /* GCMath.h */; };
+		41D5F96F15D843440084625E /* GCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96D15D843440084625E /* GCMath.m */; };
+		41D5F97015D843440084625E /* GCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96D15D843440084625E /* GCMath.m */; };
+		41D5F97115D843440084625E /* GCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96D15D843440084625E /* GCMath.m */; };
+		41D5F97415D845CE0084625E /* NSImage+PowersOf2.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D5F97215D845CE0084625E /* NSImage+PowersOf2.h */; };
+		41D5F97515D845CE0084625E /* NSImage+PowersOf2.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F97315D845CE0084625E /* NSImage+PowersOf2.m */; };
+		41D5F97615D845CE0084625E /* NSImage+PowersOf2.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F97315D845CE0084625E /* NSImage+PowersOf2.m */; };
+		41D5F97715D845CE0084625E /* NSImage+PowersOf2.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F97315D845CE0084625E /* NSImage+PowersOf2.m */; };
 		5F0B6CCA14E6CDA100A87D18 /* GCMovable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CC914E6CDA100A87D18 /* GCMovable.h */; };
 		5F0B6CCD14E6D0E300A87D18 /* GCSequentialAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0B6CCB14E6D0E300A87D18 /* GCSequentialAnimation.h */; };
 		5F0B6CCE14E6D0E300A87D18 /* GCSequentialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B6CCC14E6D0E300A87D18 /* GCSequentialAnimation.m */; };
@@ -49,7 +88,6 @@
 		5F1C340514DEA37C00BF808B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340314DEA37C00BF808B /* OpenGL.framework */; };
 		5F1C340714DEA38200BF808B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C340614DEA38200BF808B /* QuartzCore.framework */; };
 		5F1C340E14DEA52C00BF808B /* GDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C340D14DEA52C00BF808B /* GDMainView.m */; };
-		5F1C341014DEBA4300BF808B /* walker.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C340F14DEBA4300BF808B /* walker.png */; };
 		5F1E1DA615271713005E5BBE /* GCStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E1DA515271713005E5BBE /* GCStackTest.m */; };
 		5F29BBC6153984EC00476BCE /* GCSpriteActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F29BBC4153984EC00476BCE /* GCSpriteActor.h */; };
 		5F29BBC7153984EC00476BCE /* GCSpriteActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29BBC5153984EC00476BCE /* GCSpriteActor.m */; };
@@ -113,11 +151,45 @@
 		4110342F15D2865300BC2C40 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Classes/NSData+Base64.m"; sourceTree = "<group>"; };
 		4110343415D287E100BC2C40 /* NSDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataTest.h; path = Tests/NSDataTest.h; sourceTree = "<group>"; };
 		4110343515D287E100BC2C40 /* NSDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataTest.m; path = Tests/NSDataTest.m; sourceTree = "<group>"; };
+		4110343815D299AD00BC2C40 /* GCMapParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapParser.h; path = Classes/GCMapParser.h; sourceTree = "<group>"; };
+		4110343915D299AD00BC2C40 /* GCMapParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapParser.m; path = Classes/GCMapParser.m; sourceTree = "<group>"; };
+		4110343D15D29A3E00BC2C40 /* GCTiledMapParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapParser.h; path = Classes/GCTiledMapParser.h; sourceTree = "<group>"; };
+		4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapParser.m; path = Classes/GCTiledMapParser.m; sourceTree = "<group>"; };
+		4110344315D29D3B00BC2C40 /* GCTiledMapParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapParserTest.h; path = Tests/GCTiledMapParserTest.h; sourceTree = "<group>"; };
+		4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapParserTest.m; path = Tests/GCTiledMapParserTest.m; sourceTree = "<group>"; };
+		4129396215DC0376004F1740 /* GCMapTilesetTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTilesetTest.h; path = Tests/GCMapTilesetTest.h; sourceTree = "<group>"; };
+		4129396315DC0376004F1740 /* GCMapTilesetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTilesetTest.m; path = Tests/GCMapTilesetTest.m; sourceTree = "<group>"; };
+		4129396515DC1B49004F1740 /* GCMapLayerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayerTest.h; path = Tests/GCMapLayerTest.h; sourceTree = "<group>"; };
+		4129396615DC1B49004F1740 /* GCMapLayerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapLayerTest.m; path = Tests/GCMapLayerTest.m; sourceTree = "<group>"; };
+		4129396815DC1D66004F1740 /* GCMapTileTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTileTest.h; path = Tests/GCMapTileTest.h; sourceTree = "<group>"; };
+		4129396915DC1D66004F1740 /* GCMapTileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTileTest.m; path = Tests/GCMapTileTest.m; sourceTree = "<group>"; };
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
+		41702BB215D529200046B008 /* GCMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTile.h; path = Classes/GCMapTile.h; sourceTree = "<group>"; };
+		41702BB315D529200046B008 /* GCMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTile.m; path = Classes/GCMapTile.m; sourceTree = "<group>"; };
+		41A3EBA415D3BCD000E21154 /* GCMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMap.h; path = Classes/GCMap.h; sourceTree = "<group>"; };
+		41A3EBA515D3BCD000E21154 /* GCMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMap.m; path = Classes/GCMap.m; sourceTree = "<group>"; };
+		41A3EBA915D3BE1000E21154 /* GCMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayer.h; path = Classes/GCMapLayer.h; sourceTree = "<group>"; };
+		41A3EBAA15D3BE1000E21154 /* GCMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapLayer.m; path = Classes/GCMapLayer.m; sourceTree = "<group>"; };
+		41A3EBAE15D3C13200E21154 /* GCMapTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTest.h; path = Tests/GCMapTest.h; sourceTree = "<group>"; };
+		41A3EBAF15D3C13200E21154 /* GCMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTest.m; path = Tests/GCMapTest.m; sourceTree = "<group>"; };
+		41A3EBB115D3D29C00E21154 /* GCMapTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTileset.h; path = Classes/GCMapTileset.h; sourceTree = "<group>"; };
+		41A3EBB215D3D29C00E21154 /* GCMapTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTileset.m; path = Classes/GCMapTileset.m; sourceTree = "<group>"; };
+		41A3EBB715D400BC00E21154 /* GCMapLayerDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCMapLayerDataDecoder.h; path = Classes/GCMapLayerDataDecoder.h; sourceTree = "<group>"; };
+		41A3EBB815D400F100E21154 /* GCMapLayerDataDecompressor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCMapLayerDataDecompressor.h; path = Classes/GCMapLayerDataDecompressor.h; sourceTree = "<group>"; };
+		41A3EBBA15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapIdentityDecompressor.h; path = Classes/GCTiledMapIdentityDecompressor.h; sourceTree = "<group>"; };
+		41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapIdentityDecompressor.m; path = Classes/GCTiledMapIdentityDecompressor.m; sourceTree = "<group>"; };
+		41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapBase64Decoder.h; path = Classes/GCTiledMapBase64Decoder.h; sourceTree = "<group>"; };
+		41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapBase64Decoder.m; path = Classes/GCTiledMapBase64Decoder.m; sourceTree = "<group>"; };
 		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		41C1F2CC15C404E600893F21 /* GCCompositeActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActor.h; path = Classes/GCCompositeActor.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActor.m; path = Classes/GCCompositeActor.m; sourceTree = "<group>"; };
+		41D5F96515D80E4E0084625E /* GDMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMapScene.h; path = Classes/GDMapScene.h; sourceTree = "<group>"; };
+		41D5F96615D80E4E0084625E /* GDMapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMapScene.m; path = Classes/GDMapScene.m; sourceTree = "<group>"; };
+		41D5F96C15D843440084625E /* GCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMath.h; path = Classes/GCMath.h; sourceTree = "<group>"; };
+		41D5F96D15D843440084625E /* GCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMath.m; path = Classes/GCMath.m; sourceTree = "<group>"; };
+		41D5F97215D845CE0084625E /* NSImage+PowersOf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+PowersOf2.h"; path = "Classes/NSImage+PowersOf2.h"; sourceTree = "<group>"; };
+		41D5F97315D845CE0084625E /* NSImage+PowersOf2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImage+PowersOf2.m"; path = "Classes/NSImage+PowersOf2.m"; sourceTree = "<group>"; };
 		5F0B6CC914E6CDA100A87D18 /* GCMovable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMovable.h; path = Classes/GCMovable.h; sourceTree = "<group>"; };
 		5F0B6CCB14E6D0E300A87D18 /* GCSequentialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GCSequentialAnimation.h; path = Classes/GCSequentialAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5F0B6CCC14E6D0E300A87D18 /* GCSequentialAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GCSequentialAnimation.m; path = Classes/GCSequentialAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -161,7 +233,6 @@
 		5F1C340614DEA38200BF808B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5F1C340C14DEA52C00BF808B /* GDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDMainView.h; path = GunCaseDemo/Classes/GDMainView.h; sourceTree = SOURCE_ROOT; };
 		5F1C340D14DEA52C00BF808B /* GDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDMainView.m; path = GunCaseDemo/Classes/GDMainView.m; sourceTree = SOURCE_ROOT; };
-		5F1C340F14DEBA4300BF808B /* walker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walker.png; sourceTree = "<group>"; };
 		5F1E1DA415271713005E5BBE /* GCStackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCStackTest.h; path = Tests/GCStackTest.h; sourceTree = "<group>"; };
 		5F1E1DA515271713005E5BBE /* GCStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCStackTest.m; path = Tests/GCStackTest.m; sourceTree = "<group>"; };
 		5F29BBC3153984C700476BCE /* GCRenderable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCRenderable.h; path = Classes/GCRenderable.h; sourceTree = "<group>"; };
@@ -251,13 +322,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4110342D15D2863300BC2C40 /* Data */ = {
+		4110342D15D2863300BC2C40 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				4110342E15D2865300BC2C40 /* NSData+Base64.h */,
 				4110342F15D2865300BC2C40 /* NSData+Base64.m */,
+				41D5F97215D845CE0084625E /* NSImage+PowersOf2.h */,
+				41D5F97315D845CE0084625E /* NSImage+PowersOf2.m */,
 			);
-			name = Data;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		4110343315D287CE00BC2C40 /* Data */ = {
@@ -269,6 +342,41 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		4110343715D2999100BC2C40 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				41A3EBB915D4010700E21154 /* Tiled Maps */,
+				4110343815D299AD00BC2C40 /* GCMapParser.h */,
+				4110343915D299AD00BC2C40 /* GCMapParser.m */,
+				41A3EBA415D3BCD000E21154 /* GCMap.h */,
+				41A3EBA515D3BCD000E21154 /* GCMap.m */,
+				41A3EBA915D3BE1000E21154 /* GCMapLayer.h */,
+				41A3EBAA15D3BE1000E21154 /* GCMapLayer.m */,
+				41A3EBB115D3D29C00E21154 /* GCMapTileset.h */,
+				41A3EBB215D3D29C00E21154 /* GCMapTileset.m */,
+				41702BB215D529200046B008 /* GCMapTile.h */,
+				41702BB315D529200046B008 /* GCMapTile.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		4110344215D29D2600BC2C40 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				4110344315D29D3B00BC2C40 /* GCTiledMapParserTest.h */,
+				4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */,
+				41A3EBAE15D3C13200E21154 /* GCMapTest.h */,
+				41A3EBAF15D3C13200E21154 /* GCMapTest.m */,
+				4129396215DC0376004F1740 /* GCMapTilesetTest.h */,
+				4129396315DC0376004F1740 /* GCMapTilesetTest.m */,
+				4129396515DC1B49004F1740 /* GCMapLayerTest.h */,
+				4129396615DC1B49004F1740 /* GCMapLayerTest.m */,
+				4129396815DC1D66004F1740 /* GCMapTileTest.h */,
+				4129396915DC1D66004F1740 /* GCMapTileTest.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		4169B3B815BAA582002DB41D /* Input */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +384,58 @@
 				4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */,
 			);
 			name = Input;
+			sourceTree = "<group>";
+		};
+		41A3EBB915D4010700E21154 /* Tiled Maps */ = {
+			isa = PBXGroup;
+			children = (
+				4110343D15D29A3E00BC2C40 /* GCTiledMapParser.h */,
+				4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */,
+				41A3EBB715D400BC00E21154 /* GCMapLayerDataDecoder.h */,
+				41A3EBB815D400F100E21154 /* GCMapLayerDataDecompressor.h */,
+				41A3EBBA15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h */,
+				41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */,
+				41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */,
+				41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */,
+			);
+			name = "Tiled Maps";
+			sourceTree = "<group>";
+		};
+		41A3EBC415D4083000E21154 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		41D5F96315D80C680084625E /* TTT */ = {
+			isa = PBXGroup;
+			children = (
+				5F1997D31532ED1F00D2E44D /* Scenes */,
+				5F9A78DF15304DE500DC8076 /* GDMarker.h */,
+				5F9A78E015304DE500DC8076 /* GDMarker.m */,
+				5F2ED5401531C444002BDE26 /* GDToken.h */,
+				5F2ED5411531C444002BDE26 /* GDToken.m */,
+			);
+			name = TTT;
+			sourceTree = "<group>";
+		};
+		41D5F96415D80E190084625E /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				41D5F96515D80E4E0084625E /* GDMapScene.h */,
+				41D5F96615D80E4E0084625E /* GDMapScene.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		41D5F96B15D843240084625E /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				41D5F96C15D843440084625E /* GCMath.h */,
+				41D5F96D15D843440084625E /* GCMath.m */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 		5F0B6CC714E6CD6F00A87D18 /* Animation */ = {
@@ -359,7 +519,8 @@
 		5F1C33B114DE99C600BF808B /* GunCase */ = {
 			isa = PBXGroup;
 			children = (
-				4110342D15D2863300BC2C40 /* Data */,
+				41D5F96B15D843240084625E /* Math */,
+				4110342D15D2863300BC2C40 /* Categories */,
 				5F29BBC11539847800476BCE /* Actors */,
 				5FFF5B6A1536194C009C379D /* Protocols */,
 				5FAE7FE815027388005813DE /* Containers */,
@@ -369,6 +530,7 @@
 				5F1C33F114DE9EC300BF808B /* Graphics */,
 				5F0B6CC714E6CD6F00A87D18 /* Animation */,
 				4169B3B815BAA582002DB41D /* Input */,
+				4110343715D2999100BC2C40 /* Maps */,
 				5F1C33B214DE99C600BF808B /* Supporting Files */,
 			);
 			path = GunCase;
@@ -393,7 +555,9 @@
 				5F40438815836598007C162C /* Scenes */,
 				5F2F729614F90CC7000166E5 /* Animation */,
 				5F2F729114F909E4000166E5 /* Geometry */,
+				4110344215D29D2600BC2C40 /* Maps */,
 				5F1C33C414DE99C600BF808B /* Supporting Files */,
+				41A3EBC415D4083000E21154 /* Resources */,
 			);
 			path = GunCaseTests;
 			sourceTree = "<group>";
@@ -453,7 +617,6 @@
 				5F8DBEAD15238FD60075ADA6 /* o.png */,
 				5F8DBEAE15238FD60075ADA6 /* x.png */,
 				5FE90D06151F208A00155BBF /* board.png */,
-				5F1C340F14DEBA4300BF808B /* walker.png */,
 				5F1C33EA14DE9A8000BF808B /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -462,15 +625,12 @@
 		5F1C340B14DEA4F200BF808B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5F1997D31532ED1F00D2E44D /* Scenes */,
+				41D5F96415D80E190084625E /* Maps */,
+				41D5F96315D80C680084625E /* TTT */,
 				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
 				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
 				5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */,
 				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
-				5F9A78DF15304DE500DC8076 /* GDMarker.h */,
-				5F9A78E015304DE500DC8076 /* GDMarker.m */,
-				5F2ED5401531C444002BDE26 /* GDToken.h */,
-				5F2ED5411531C444002BDE26 /* GDToken.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -614,6 +774,16 @@
 				4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */,
 				41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */,
 				4110343015D2865300BC2C40 /* NSData+Base64.h in Headers */,
+				4110343A15D299AD00BC2C40 /* GCMapParser.h in Headers */,
+				4110343F15D29A3E00BC2C40 /* GCTiledMapParser.h in Headers */,
+				41A3EBA615D3BCD000E21154 /* GCMap.h in Headers */,
+				41A3EBAB15D3BE1000E21154 /* GCMapLayer.h in Headers */,
+				41A3EBB315D3D29C00E21154 /* GCMapTileset.h in Headers */,
+				41A3EBBC15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h in Headers */,
+				41A3EBC115D4035800E21154 /* GCTiledMapBase64Decoder.h in Headers */,
+				41702BB415D529200046B008 /* GCMapTile.h in Headers */,
+				41D5F96E15D843440084625E /* GCMath.h in Headers */,
+				41D5F97415D845CE0084625E /* NSImage+PowersOf2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +886,6 @@
 				5F1C33E014DE9A8000BF808B /* InfoPlist.strings in Resources */,
 				5F1C33E614DE9A8000BF808B /* Credits.rtf in Resources */,
 				5F1C33EC14DE9A8000BF808B /* MainMenu.xib in Resources */,
-				5F1C341014DEBA4300BF808B /* walker.png in Resources */,
 				5FE90D07151F208A00155BBF /* board.png in Resources */,
 				5F8DBEAF15238FD60075ADA6 /* o.png in Resources */,
 				5F8DBEB015238FD60075ADA6 /* x.png in Resources */,
@@ -772,6 +941,16 @@
 				4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */,
 				41C1F2CF15C404E600893F21 /* GCCompositeActor.m in Sources */,
 				4110343115D2865300BC2C40 /* NSData+Base64.m in Sources */,
+				4110343B15D299AD00BC2C40 /* GCMapParser.m in Sources */,
+				4110344015D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */,
+				41A3EBA715D3BCD000E21154 /* GCMap.m in Sources */,
+				41A3EBAC15D3BE1000E21154 /* GCMapLayer.m in Sources */,
+				41A3EBB415D3D29C00E21154 /* GCMapTileset.m in Sources */,
+				41A3EBBD15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m in Sources */,
+				41A3EBC215D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */,
+				41702BB515D529200046B008 /* GCMapTile.m in Sources */,
+				41D5F96F15D843440084625E /* GCMath.m in Sources */,
+				41D5F97515D845CE0084625E /* NSImage+PowersOf2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +968,21 @@
 				41C1F2D015C404E600893F21 /* GCCompositeActor.m in Sources */,
 				4110343215D2865300BC2C40 /* NSData+Base64.m in Sources */,
 				4110343615D287E100BC2C40 /* NSDataTest.m in Sources */,
+				4110343C15D299AD00BC2C40 /* GCMapParser.m in Sources */,
+				4110344115D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */,
+				4110344515D29D3B00BC2C40 /* GCTiledMapParserTest.m in Sources */,
+				41A3EBA815D3BCD000E21154 /* GCMap.m in Sources */,
+				41A3EBAD15D3BE1000E21154 /* GCMapLayer.m in Sources */,
+				41A3EBB015D3C13200E21154 /* GCMapTest.m in Sources */,
+				41A3EBB515D3D29C00E21154 /* GCMapTileset.m in Sources */,
+				41A3EBBE15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m in Sources */,
+				41A3EBC315D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */,
+				41702BB615D529200046B008 /* GCMapTile.m in Sources */,
+				41D5F97015D843440084625E /* GCMath.m in Sources */,
+				41D5F97615D845CE0084625E /* NSImage+PowersOf2.m in Sources */,
+				4129396415DC0376004F1740 /* GCMapTilesetTest.m in Sources */,
+				4129396715DC1B49004F1740 /* GCMapLayerTest.m in Sources */,
+				4129396A15DC1D66004F1740 /* GCMapTileTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +1000,10 @@
 				5F1997D91532F56900D2E44D /* GDTokensLayer.m in Sources */,
 				5F1997DC15330B6E00D2E44D /* GDOverheadLayer.m in Sources */,
 				41C1F2D115C404E600893F21 /* GCCompositeActor.m in Sources */,
+				41D5F96715D80E4E0084625E /* GDMapScene.m in Sources */,
+				41D5F96A15D80F8E0084625E /* NSData+Base64.m in Sources */,
+				41D5F97115D843440084625E /* GCMath.m in Sources */,
+				41D5F97715D845CE0084625E /* NSImage+PowersOf2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

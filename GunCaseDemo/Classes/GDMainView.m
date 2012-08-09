@@ -9,15 +9,18 @@
 #import "GDMainView.h"
 #import "GunCase.h"
 #import "GDBoardScene.h"
+#import "GDMapScene.h"
 
 @implementation GDMainView
 
 - (void) setup
 {
-	GCScene *boardScene = [[GDBoardScene alloc] init];
 	GCDirector *director = [GCDirector sharedDirector];
+	GCScene *scene =
+        //[[GDBoardScene alloc] init];
+        [[GDMapScene alloc] init];
 	
-	[director pushScene: boardScene];	
+	[director pushScene: scene];
 }
 
 - (void) updateGame

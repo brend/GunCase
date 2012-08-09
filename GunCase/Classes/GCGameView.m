@@ -172,6 +172,11 @@
 	[[GCDirector sharedDirector] keyDown: theEvent];
 }
 
+- (void) keyUp:(NSEvent *)theEvent
+{
+    [[GCDirector sharedDirector] keyUp: theEvent];
+}
+
 - (void) mouseDown: (NSEvent *) theEvent
 {
 	[[GCDirector sharedDirector] mouseDown: theEvent];
