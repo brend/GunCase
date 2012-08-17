@@ -46,11 +46,19 @@
 - (void) update
 {
     if ([self.keyboard keyPressed: 123]) {
-        self.position = [self.position add: [GCVector vectorWithX: -1 y: 0]];
+        self.position = [self.position add: [GCVector vectorWithX: -2 y: 0]];
     }
     
     if ([self.keyboard keyPressed: 124]) {
-        self.position = [self.position add: [GCVector vectorWithX: 1 y: 0]];
+        self.position = [self.position add: [GCVector vectorWithX: 2 y: 0]];
+    }
+    
+    if ([self.keyboard keyPressed: 125]) {
+        self.position = [self.position add: [GCVector vectorWithX: 0 y: -2]];
+    }
+    
+    if ([self.keyboard keyPressed: 126]) {
+        self.position = [self.position add: [GCVector vectorWithX: 0 y: 2]];
     }
 }
 
