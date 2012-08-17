@@ -79,6 +79,12 @@
 							   y: self.y + v.y];
 }
 
+- (GCVector *) addX: (float) xOffset y: (float) yOffset
+{
+    return [GCVector vectorWithX: self.x + xOffset
+                               y: self.y + yOffset];
+}
+
 - (GCVector *) subtract: (GCVector *) v
 {
 	return [GCVector vectorWithX: self.x - v.x

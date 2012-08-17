@@ -31,6 +31,7 @@
 #pragma mark Vector Arithmetics
 
 - (GCVector *) add: (GCVector *) v;
+- (GCVector *) addX: (float) x y: (float) y;
 - (GCVector *) subtract: (GCVector *) v;
 - (GCVector *) scale: (float) s;
 - (float) dot: (GCVector *) v;

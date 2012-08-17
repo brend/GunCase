@@ -67,6 +67,16 @@
 	STAssertEquals(y1 + y2, w.y, @"y");
 }
 
+- (void) testAddScalars
+{
+    float x1 = 3, y1 = 7, x2 = 2, y2 = -13;
+	GCVector *u = [GCVector vectorWithX: x1 y: y1];
+	GCVector *w = [u addX: x2 y: y2];
+    
+	STAssertEquals(x1 + x2, w.x, @"x");
+	STAssertEquals(y1 + y2, w.y, @"y");
+}
+
 - (void) testSubtract
 {
 	float x1 = 3, y1 = 7, x2 = 2, y2 = -13;
