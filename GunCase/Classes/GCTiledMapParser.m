@@ -11,6 +11,7 @@
 #import "GCMapLayerDataDecompressor.h"
 
 #import "GCTiledMapIdentityDecompressor.h"
+#import "GCTiledMapGzipDecompressor.h"
 #import "GCTiledMapBase64Decoder.h"
 
 @interface GCTiledMapParser ()
@@ -195,7 +196,7 @@ didStartElement:(NSString *)elementName
         }
         
         else if ([compression isEqualToString: @"gzip"]) {
-            NSLog(@"gzip map compression is not implemented");
+            self.decompressor = [[GCTiledMapGzipDecompressor alloc] init];
         }
         
         else if ([compression isEqualToString: @"zlib"]) {
@@ -234,10 +235,7 @@ didStartElement:(NSString *)elementName
     }
     
     NSData *decompressed = [self.decompressor decompress: decoded];
-    
-    [decoded writeToFile: @"/Users/rumpus/Desktop/decoded" atomically: YES];
-    [decompressed writeToFile: @"/Users/rumpus/Desktop/decompressed" atomically: YES];
-    
+        
     if (decompressed == nil) {
         NSLog(@"Decompression failed");
         return;

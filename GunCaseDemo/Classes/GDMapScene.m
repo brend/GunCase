@@ -15,24 +15,27 @@
 {
     self = [super init];
     if (self) {
-//        // NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"zelda_map" withExtension: @"tmx"];
-//        NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"sewers_base64_uncompressed" withExtension: @"tmx"];
-//        
-//        NSAssert(mapURL, @"Invalid map url");
-//        
-//        GCTiledMapParser *parser = [[GCTiledMapParser alloc] initWithURL: mapURL];
-//        
-//        if ([parser parse]) {
-//            self.map = parser.map;
-//        } else {
-//            NSLog(@"Couldn't parse map file");
-//        }
-//        
-//        float
-//            cx = (float) -self.map.width * self.map.tileWidth / 2,
-//            cy = (float) -self.map.height * self.map.tileHeight / 2;
-//        
-//        self.position = [GCVector vectorWithX: cx y: cy];
+        NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"smalliso" withExtension: @"tmx"];
+        
+        if (mapURL == nil) {
+            NSLog(@"Couldn't find map file in bundle");
+            return nil;
+        }
+        
+        GCTiledMapParser *parser = [[GCTiledMapParser alloc] initWithURL: mapURL];
+        
+        if ([parser parse]) {
+            self.map = parser.map;
+        } else {
+            NSLog(@"Couldn't parse map file");
+            return nil;
+        }
+        
+        float
+            cx = (float) -self.map.width * self.map.tileWidth / 2,
+            cy = (float) -self.map.height * self.map.tileHeight / 2;
+        
+        self.position = [GCVector vectorWithX: cx y: cy];
     }
     return self;
 }
@@ -46,19 +49,19 @@
 - (void) update
 {
     if ([self.keyboard keyPressed: 123]) {
-        self.position = [self.position add: [GCVector vectorWithX: -2 y: 0]];
-    }
-    
-    if ([self.keyboard keyPressed: 124]) {
         self.position = [self.position add: [GCVector vectorWithX: 2 y: 0]];
     }
     
+    if ([self.keyboard keyPressed: 124]) {
+        self.position = [self.position add: [GCVector vectorWithX: -2 y: 0]];
+    }
+    
     if ([self.keyboard keyPressed: 125]) {
-        self.position = [self.position add: [GCVector vectorWithX: 0 y: -2]];
+        self.position = [self.position add: [GCVector vectorWithX: 0 y: 2]];
     }
     
     if ([self.keyboard keyPressed: 126]) {
-        self.position = [self.position add: [GCVector vectorWithX: 0 y: 2]];
+        self.position = [self.position add: [GCVector vectorWithX: 0 y: -2]];
     }
 }
 

@@ -27,6 +27,9 @@
 		41702BB415D529200046B008 /* GCMapTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 41702BB215D529200046B008 /* GCMapTile.h */; };
 		41702BB515D529200046B008 /* GCMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41702BB315D529200046B008 /* GCMapTile.m */; };
 		41702BB615D529200046B008 /* GCMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41702BB315D529200046B008 /* GCMapTile.m */; };
+		4179905F15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */; };
+		4179906015DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
+		4179906115DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
 		41A3EBA615D3BCD000E21154 /* GCMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBA415D3BCD000E21154 /* GCMap.h */; };
 		41A3EBA715D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
 		41A3EBA815D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
@@ -167,6 +170,8 @@
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
 		41702BB215D529200046B008 /* GCMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTile.h; path = Classes/GCMapTile.h; sourceTree = "<group>"; };
 		41702BB315D529200046B008 /* GCMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTile.m; path = Classes/GCMapTile.m; sourceTree = "<group>"; };
+		4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapGzipDecompressor.h; path = Classes/GCTiledMapGzipDecompressor.h; sourceTree = "<group>"; };
+		4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapGzipDecompressor.m; path = Classes/GCTiledMapGzipDecompressor.m; sourceTree = "<group>"; };
 		41A3EBA415D3BCD000E21154 /* GCMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMap.h; path = Classes/GCMap.h; sourceTree = "<group>"; };
 		41A3EBA515D3BCD000E21154 /* GCMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMap.m; path = Classes/GCMap.m; sourceTree = "<group>"; };
 		41A3EBA915D3BE1000E21154 /* GCMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayer.h; path = Classes/GCMapLayer.h; sourceTree = "<group>"; };
@@ -392,11 +397,13 @@
 				4110343D15D29A3E00BC2C40 /* GCTiledMapParser.h */,
 				4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */,
 				41A3EBB715D400BC00E21154 /* GCMapLayerDataDecoder.h */,
+				41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */,
+				41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */,
 				41A3EBB815D400F100E21154 /* GCMapLayerDataDecompressor.h */,
 				41A3EBBA15D402EB00E21154 /* GCTiledMapIdentityDecompressor.h */,
 				41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */,
-				41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */,
-				41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */,
+				4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */,
+				4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */,
 			);
 			name = "Tiled Maps";
 			sourceTree = "<group>";
@@ -436,6 +443,17 @@
 				41D5F96D15D843440084625E /* GCMath.m */,
 			);
 			name = Math;
+			sourceTree = "<group>";
+		};
+		41EFE82315DE90DE006E9396 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
+				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
+				5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */,
+				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		5F0B6CC714E6CD6F00A87D18 /* Animation */ = {
@@ -574,7 +592,9 @@
 		5F1C33DB14DE9A8000BF808B /* GunCaseDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5F1C340B14DEA4F200BF808B /* Classes */,
+				41EFE82315DE90DE006E9396 /* Application */,
+				41D5F96415D80E190084625E /* Maps */,
+				41D5F96315D80C680084625E /* TTT */,
 				5F1C340114DEA35200BF808B /* Resources */,
 				5F1C33DC14DE9A8000BF808B /* Supporting Files */,
 			);
@@ -620,19 +640,6 @@
 				5F1C33EA14DE9A8000BF808B /* MainMenu.xib */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		5F1C340B14DEA4F200BF808B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				41D5F96415D80E190084625E /* Maps */,
-				41D5F96315D80C680084625E /* TTT */,
-				5F1C340C14DEA52C00BF808B /* GDMainView.h */,
-				5F1C340D14DEA52C00BF808B /* GDMainView.m */,
-				5F1C33E714DE9A8000BF808B /* GDAppDelegate.h */,
-				5F1C33E814DE9A8000BF808B /* GDAppDelegate.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		5F1E1DA3152716D9005E5BBE /* Containers */ = {
@@ -784,6 +791,7 @@
 				41702BB415D529200046B008 /* GCMapTile.h in Headers */,
 				41D5F96E15D843440084625E /* GCMath.h in Headers */,
 				41D5F97415D845CE0084625E /* NSImage+PowersOf2.h in Headers */,
+				4179905F15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,6 +959,7 @@
 				41702BB515D529200046B008 /* GCMapTile.m in Sources */,
 				41D5F96F15D843440084625E /* GCMath.m in Sources */,
 				41D5F97515D845CE0084625E /* NSImage+PowersOf2.m in Sources */,
+				4179906015DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +992,7 @@
 				4129396415DC0376004F1740 /* GCMapTilesetTest.m in Sources */,
 				4129396715DC1B49004F1740 /* GCMapLayerTest.m in Sources */,
 				4129396A15DC1D66004F1740 /* GCMapTileTest.m in Sources */,
+				4179906115DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
