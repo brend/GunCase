@@ -11,7 +11,7 @@
 NSInteger GCNearestPowerOf2(NSInteger x)
 {
     if (x <= 0)
-        return 0;
+        return 1;
     
     return exp2(ceil(log2(x)));
 }
