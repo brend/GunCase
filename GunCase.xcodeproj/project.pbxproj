@@ -46,6 +46,8 @@
 		41A3EBC115D4035800E21154 /* GCTiledMapBase64Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */; };
 		41A3EBC215D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
 		41A3EBC315D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
+		41BA51A715E92B4B004862AC /* GCSpriteActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BA51A615E92B4B004862AC /* GCSpriteActorTest.m */; };
+		41BA51AA15E92CFA004862AC /* GCCompositeActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BA51A915E92CFA004862AC /* GCCompositeActorTest.m */; };
 		41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C1F2CC15C404E600893F21 /* GCCompositeActor.h */; };
 		41C1F2CF15C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
 		41C1F2D015C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
@@ -234,6 +236,10 @@
 		41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapBase64Decoder.h; path = Classes/GCTiledMapBase64Decoder.h; sourceTree = "<group>"; };
 		41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapBase64Decoder.m; path = Classes/GCTiledMapBase64Decoder.m; sourceTree = "<group>"; };
 		41BA51A115E8CE34004862AC /* GunCaseTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GunCaseTests-Prefix.pch"; sourceTree = "<group>"; };
+		41BA51A515E92B4B004862AC /* GCSpriteActorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSpriteActorTest.h; path = Tests/GCSpriteActorTest.h; sourceTree = "<group>"; };
+		41BA51A615E92B4B004862AC /* GCSpriteActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSpriteActorTest.m; path = Tests/GCSpriteActorTest.m; sourceTree = "<group>"; };
+		41BA51A815E92CFA004862AC /* GCCompositeActorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActorTest.h; path = Tests/GCCompositeActorTest.h; sourceTree = "<group>"; };
+		41BA51A915E92CFA004862AC /* GCCompositeActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActorTest.m; path = Tests/GCCompositeActorTest.m; sourceTree = "<group>"; };
 		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		41C1F2CC15C404E600893F21 /* GCCompositeActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActor.h; path = Classes/GCCompositeActor.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActor.m; path = Classes/GCCompositeActor.m; sourceTree = "<group>"; };
@@ -761,6 +767,10 @@
 			children = (
 				41EFE83515E0FFAE006E9396 /* GCActorTest.h */,
 				41EFE83615E0FFAE006E9396 /* GCActorTest.m */,
+				41BA51A515E92B4B004862AC /* GCSpriteActorTest.h */,
+				41BA51A615E92B4B004862AC /* GCSpriteActorTest.m */,
+				41BA51A815E92CFA004862AC /* GCCompositeActorTest.h */,
+				41BA51A915E92CFA004862AC /* GCCompositeActorTest.m */,
 			);
 			name = Actors;
 			sourceTree = "<group>";
@@ -1077,6 +1087,8 @@
 				41EFE87315E12187006E9396 /* GCLinearAnimation.m in Sources */,
 				41EFE87415E12187006E9396 /* GCArcAnimation.m in Sources */,
 				41EFE87515E12187006E9396 /* GCRotationAnimation.m in Sources */,
+				41BA51A715E92B4B004862AC /* GCSpriteActorTest.m in Sources */,
+				41BA51AA15E92CFA004862AC /* GCCompositeActorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
