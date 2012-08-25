@@ -233,6 +233,7 @@
 		41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapIdentityDecompressor.m; path = Classes/GCTiledMapIdentityDecompressor.m; sourceTree = "<group>"; };
 		41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapBase64Decoder.h; path = Classes/GCTiledMapBase64Decoder.h; sourceTree = "<group>"; };
 		41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapBase64Decoder.m; path = Classes/GCTiledMapBase64Decoder.m; sourceTree = "<group>"; };
+		41BA51A115E8CE34004862AC /* GunCaseTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GunCaseTests-Prefix.pch"; sourceTree = "<group>"; };
 		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		41C1F2CC15C404E600893F21 /* GCCompositeActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActor.h; path = Classes/GCCompositeActor.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActor.m; path = Classes/GCCompositeActor.m; sourceTree = "<group>"; };
@@ -648,6 +649,7 @@
 			children = (
 				5F1C33C514DE99C600BF808B /* GunCaseTests-Info.plist */,
 				5F1C33C614DE99C600BF808B /* InfoPlist.strings */,
+				41BA51A115E8CE34004862AC /* GunCaseTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1248,7 +1250,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				GCC_PREFIX_HEADER = "GunCaseTests/GunCaseTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1266,7 +1268,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GunCase/GunCase-Prefix.pch";
+				GCC_PREFIX_HEADER = "GunCaseTests/GunCaseTests-Prefix.pch";
 				INFOPLIST_FILE = "GunCaseTests/GunCaseTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;

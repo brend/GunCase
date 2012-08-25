@@ -1,0 +1,9 @@
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif
+
+// Mock OpenGL API
+#define glTranslatef(x, y, z) while(0){}
+#define glRotatef(r, x, y, z) while(0){}
+#define glScalef(x, y, z) while(0){}
