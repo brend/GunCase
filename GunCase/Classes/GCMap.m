@@ -7,10 +7,14 @@
 //
 
 #import "GCMap.h"
+#import "GCOrthogonalMapLayout.h"
+#import "GCIsometricMapLayout.h"
 
 @interface GCMap ()
 @property (nonatomic, strong) NSMutableArray *layers;
 @property (nonatomic, strong) NSMutableArray *tilesets;
+
+- (GCMapLayout *) createMapLayoutStrategy;
 @end
 
 @implementation GCMap
@@ -89,6 +93,9 @@
 {
     [self.layers addObject: layer];
     [self addComponent: layer];
+    
+    // Propagate map information
+    layer.layout = [self createMapLayoutStrategy];
 }
 
 - (GCMapLayer *) topmostLayer
@@ -109,6 +116,21 @@
 - (void) addTile:(GCMapTile *)tile
 {
     [self.topmostLayer addTile: tile];
+}
+
+- (GCMapLayout *) createMapLayoutStrategy
+{
+    GCMapLayout *layout = [self.orientation isEqualToString: @"isometric"]
+        ? [[GCIsometricMapLayout alloc] init]
+        : [[GCOrthogonalMapLayout alloc] init];
+    
+    layout.width = self.width;
+    layout.height = self.height;
+    // TODO: Does the layout rather need the layer's tile{Width,Height}? What's the difference?
+    layout.tileWidth = self.tileWidth;
+    layout.tileHeight = self.tileHeight;
+    
+    return layout;
 }
 
 @end

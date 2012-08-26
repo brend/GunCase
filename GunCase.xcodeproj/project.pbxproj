@@ -46,6 +46,21 @@
 		41A3EBC115D4035800E21154 /* GCTiledMapBase64Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */; };
 		41A3EBC215D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
 		41A3EBC315D4035800E21154 /* GCTiledMapBase64Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */; };
+		41A6410B15EA444400C87420 /* GCMapLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A6410915EA444400C87420 /* GCMapLayout.h */; };
+		41A6410C15EA444400C87420 /* GCMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6410A15EA444400C87420 /* GCMapLayout.m */; };
+		41A6410D15EA444400C87420 /* GCMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6410A15EA444400C87420 /* GCMapLayout.m */; };
+		41A6410E15EA444400C87420 /* GCMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6410A15EA444400C87420 /* GCMapLayout.m */; };
+		41A6411115EA44BE00C87420 /* GCOrthogonalMapLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A6410F15EA44BE00C87420 /* GCOrthogonalMapLayout.h */; };
+		41A6411215EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411015EA44BE00C87420 /* GCOrthogonalMapLayout.m */; };
+		41A6411315EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411015EA44BE00C87420 /* GCOrthogonalMapLayout.m */; };
+		41A6411415EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411015EA44BE00C87420 /* GCOrthogonalMapLayout.m */; };
+		41A6411715EA44DF00C87420 /* GCIsometricMapLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A6411515EA44DF00C87420 /* GCIsometricMapLayout.h */; };
+		41A6411815EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411615EA44DF00C87420 /* GCIsometricMapLayout.m */; };
+		41A6411915EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411615EA44DF00C87420 /* GCIsometricMapLayout.m */; };
+		41A6411A15EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411615EA44DF00C87420 /* GCIsometricMapLayout.m */; };
+		41A6411E15EA4CA100C87420 /* GCMapLayoutTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6411D15EA4CA100C87420 /* GCMapLayoutTest.m */; };
+		41A6412115EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6412015EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m */; };
+		41A6412415EA52FA00C87420 /* GCIsometricMapLayoutTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A6412315EA52FA00C87420 /* GCIsometricMapLayoutTest.m */; };
 		41BA51A715E92B4B004862AC /* GCSpriteActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BA51A615E92B4B004862AC /* GCSpriteActorTest.m */; };
 		41BA51AA15E92CFA004862AC /* GCCompositeActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BA51A915E92CFA004862AC /* GCCompositeActorTest.m */; };
 		41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C1F2CC15C404E600893F21 /* GCCompositeActor.h */; };
@@ -235,6 +250,18 @@
 		41A3EBBB15D402EB00E21154 /* GCTiledMapIdentityDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapIdentityDecompressor.m; path = Classes/GCTiledMapIdentityDecompressor.m; sourceTree = "<group>"; };
 		41A3EBBF15D4035800E21154 /* GCTiledMapBase64Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapBase64Decoder.h; path = Classes/GCTiledMapBase64Decoder.h; sourceTree = "<group>"; };
 		41A3EBC015D4035800E21154 /* GCTiledMapBase64Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapBase64Decoder.m; path = Classes/GCTiledMapBase64Decoder.m; sourceTree = "<group>"; };
+		41A6410915EA444400C87420 /* GCMapLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayout.h; path = Classes/GCMapLayout.h; sourceTree = "<group>"; };
+		41A6410A15EA444400C87420 /* GCMapLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapLayout.m; path = Classes/GCMapLayout.m; sourceTree = "<group>"; };
+		41A6410F15EA44BE00C87420 /* GCOrthogonalMapLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCOrthogonalMapLayout.h; path = Classes/GCOrthogonalMapLayout.h; sourceTree = "<group>"; };
+		41A6411015EA44BE00C87420 /* GCOrthogonalMapLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCOrthogonalMapLayout.m; path = Classes/GCOrthogonalMapLayout.m; sourceTree = "<group>"; };
+		41A6411515EA44DF00C87420 /* GCIsometricMapLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCIsometricMapLayout.h; path = Classes/GCIsometricMapLayout.h; sourceTree = "<group>"; };
+		41A6411615EA44DF00C87420 /* GCIsometricMapLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCIsometricMapLayout.m; path = Classes/GCIsometricMapLayout.m; sourceTree = "<group>"; };
+		41A6411C15EA4CA100C87420 /* GCMapLayoutTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayoutTest.h; path = Tests/GCMapLayoutTest.h; sourceTree = "<group>"; };
+		41A6411D15EA4CA100C87420 /* GCMapLayoutTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapLayoutTest.m; path = Tests/GCMapLayoutTest.m; sourceTree = "<group>"; };
+		41A6411F15EA4DD300C87420 /* GCOrthogonalMapLayoutTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCOrthogonalMapLayoutTest.h; path = Tests/GCOrthogonalMapLayoutTest.h; sourceTree = "<group>"; };
+		41A6412015EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCOrthogonalMapLayoutTest.m; path = Tests/GCOrthogonalMapLayoutTest.m; sourceTree = "<group>"; };
+		41A6412215EA52FA00C87420 /* GCIsometricMapLayoutTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCIsometricMapLayoutTest.h; path = Tests/GCIsometricMapLayoutTest.h; sourceTree = "<group>"; };
+		41A6412315EA52FA00C87420 /* GCIsometricMapLayoutTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCIsometricMapLayoutTest.m; path = Tests/GCIsometricMapLayoutTest.m; sourceTree = "<group>"; };
 		41BA51A115E8CE34004862AC /* GunCaseTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GunCaseTests-Prefix.pch"; sourceTree = "<group>"; };
 		41BA51A515E92B4B004862AC /* GCSpriteActorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCSpriteActorTest.h; path = Tests/GCSpriteActorTest.h; sourceTree = "<group>"; };
 		41BA51A615E92B4B004862AC /* GCSpriteActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCSpriteActorTest.m; path = Tests/GCSpriteActorTest.m; sourceTree = "<group>"; };
@@ -411,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				41A3EBB915D4010700E21154 /* Tiled Maps */,
+				41A6410115EA43AC00C87420 /* Layout */,
 				4110343815D299AD00BC2C40 /* GCMapParser.h */,
 				4110343915D299AD00BC2C40 /* GCMapParser.m */,
 				41A3EBA415D3BCD000E21154 /* GCMap.h */,
@@ -428,6 +456,7 @@
 		4110344215D29D2600BC2C40 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				41A6411B15EA4C8500C87420 /* Layout */,
 				4110344315D29D3B00BC2C40 /* GCTiledMapParserTest.h */,
 				4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */,
 				41A3EBAE15D3C13200E21154 /* GCMapTest.h */,
@@ -473,6 +502,32 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		41A6410115EA43AC00C87420 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				41A6410915EA444400C87420 /* GCMapLayout.h */,
+				41A6410A15EA444400C87420 /* GCMapLayout.m */,
+				41A6410F15EA44BE00C87420 /* GCOrthogonalMapLayout.h */,
+				41A6411015EA44BE00C87420 /* GCOrthogonalMapLayout.m */,
+				41A6411515EA44DF00C87420 /* GCIsometricMapLayout.h */,
+				41A6411615EA44DF00C87420 /* GCIsometricMapLayout.m */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		41A6411B15EA4C8500C87420 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				41A6411C15EA4CA100C87420 /* GCMapLayoutTest.h */,
+				41A6411D15EA4CA100C87420 /* GCMapLayoutTest.m */,
+				41A6411F15EA4DD300C87420 /* GCOrthogonalMapLayoutTest.h */,
+				41A6412015EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m */,
+				41A6412215EA52FA00C87420 /* GCIsometricMapLayoutTest.h */,
+				41A6412315EA52FA00C87420 /* GCIsometricMapLayoutTest.m */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		41D5F96315D80C680084625E /* TTT */ = {
@@ -867,6 +922,9 @@
 				41D5F96E15D843440084625E /* GCMath.h in Headers */,
 				41D5F97415D845CE0084625E /* NSImage+PowersOf2.h in Headers */,
 				4179905F15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h in Headers */,
+				41A6410B15EA444400C87420 /* GCMapLayout.h in Headers */,
+				41A6411115EA44BE00C87420 /* GCOrthogonalMapLayout.h in Headers */,
+				41A6411715EA44DF00C87420 /* GCIsometricMapLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,6 +1093,9 @@
 				41D5F96F15D843440084625E /* GCMath.m in Sources */,
 				41D5F97515D845CE0084625E /* NSImage+PowersOf2.m in Sources */,
 				4179906015DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */,
+				41A6410C15EA444400C87420 /* GCMapLayout.m in Sources */,
+				41A6411215EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */,
+				41A6411815EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,6 +1150,12 @@
 				41EFE87515E12187006E9396 /* GCRotationAnimation.m in Sources */,
 				41BA51A715E92B4B004862AC /* GCSpriteActorTest.m in Sources */,
 				41BA51AA15E92CFA004862AC /* GCCompositeActorTest.m in Sources */,
+				41A6410D15EA444400C87420 /* GCMapLayout.m in Sources */,
+				41A6411315EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */,
+				41A6411915EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */,
+				41A6411E15EA4CA100C87420 /* GCMapLayoutTest.m in Sources */,
+				41A6412115EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m in Sources */,
+				41A6412415EA52FA00C87420 /* GCIsometricMapLayoutTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1138,6 +1205,9 @@
 				41EFE87D15E121A0006E9396 /* GCMapLayer.m in Sources */,
 				41EFE87E15E121A0006E9396 /* GCMapTileset.m in Sources */,
 				41EFE87F15E121A0006E9396 /* GCMapTile.m in Sources */,
+				41A6410E15EA444400C87420 /* GCMapLayout.m in Sources */,
+				41A6411415EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */,
+				41A6411A15EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

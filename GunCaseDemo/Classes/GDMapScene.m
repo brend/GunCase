@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"smalliso" withExtension: @"tmx"];
+        NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"numbered_tiles" withExtension: @"tmx"];
         
         if (mapURL == nil) {
             NSLog(@"Couldn't find map file in bundle");

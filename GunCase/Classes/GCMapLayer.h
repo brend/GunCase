@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GCCompositeActor.h"
 #import "GCMapTile.h"
+#import "GCMapLayout.h"
 
 @interface GCMapLayer : GCCompositeActor <NSCopying>
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSInteger width, height;
+
+@property (nonatomic, strong) GCMapLayout *layout;
 
 #pragma mark -
 #pragma mark Managing Tiles

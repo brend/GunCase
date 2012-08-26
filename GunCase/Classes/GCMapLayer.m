@@ -10,6 +10,9 @@
 
 @interface GCMapLayer ()
 @property (nonatomic, strong) NSMutableArray *tiles;
+// Building the layer
+@property (nonatomic) NSInteger nextTileIndex;
+@property (nonatomic) float nextTileX, nextTileY;
 @end
 
 @implementation GCMapLayer
@@ -46,11 +49,10 @@
 #pragma mark Managing Tiles
 
 - (void) addTile: (GCMapTile *) tile
-{
-    NSInteger tileIndex = self.tileCount;
-    // TODO: Account for isometric maps
-    GCVector *p = [GCVector vectorWithX: (tileIndex % self.width) * self.tileWidth
-                                      y: (self.height - tileIndex / self.width) * self.tileHeight];
+{    
+    GCVector *p = [self.layout next];
+    
+    NSLog(@"Putting %@", p);
     
     tile.position = p;
     
