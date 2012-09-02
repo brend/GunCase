@@ -52,8 +52,6 @@
 {    
     GCVector *p = [self.layout next];
     
-    NSLog(@"Putting %@", p);
-    
     tile.position = p;
     
     [self.tiles addObject: tile];
