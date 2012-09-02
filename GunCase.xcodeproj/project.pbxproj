@@ -18,6 +18,8 @@
 		4110344015D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */; };
 		4110344115D29A3E00BC2C40 /* GCTiledMapParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */; };
 		4110344515D29D3B00BC2C40 /* GCTiledMapParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */; };
+		4111FC0415EE10950015096A /* isometric_grass_and_water.png in Resources */ = {isa = PBXBuildFile; fileRef = 4111FC0215EE10950015096A /* isometric_grass_and_water.png */; };
+		4111FC0515EE10950015096A /* isometric_grass_and_water.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4111FC0315EE10950015096A /* isometric_grass_and_water.tmx */; };
 		4129396415DC0376004F1740 /* GCMapTilesetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396315DC0376004F1740 /* GCMapTilesetTest.m */; };
 		4129396715DC1B49004F1740 /* GCMapLayerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396615DC1B49004F1740 /* GCMapLayerTest.m */; };
 		4129396A15DC1D66004F1740 /* GCMapTileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396915DC1D66004F1740 /* GCMapTileTest.m */; };
@@ -224,6 +226,8 @@
 		4110343E15D29A3E00BC2C40 /* GCTiledMapParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapParser.m; path = Classes/GCTiledMapParser.m; sourceTree = "<group>"; };
 		4110344315D29D3B00BC2C40 /* GCTiledMapParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapParserTest.h; path = Tests/GCTiledMapParserTest.h; sourceTree = "<group>"; };
 		4110344415D29D3B00BC2C40 /* GCTiledMapParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapParserTest.m; path = Tests/GCTiledMapParserTest.m; sourceTree = "<group>"; };
+		4111FC0215EE10950015096A /* isometric_grass_and_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isometric_grass_and_water.png; sourceTree = "<group>"; };
+		4111FC0315EE10950015096A /* isometric_grass_and_water.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = isometric_grass_and_water.tmx; sourceTree = "<group>"; };
 		4129396215DC0376004F1740 /* GCMapTilesetTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTilesetTest.h; path = Tests/GCMapTilesetTest.h; sourceTree = "<group>"; };
 		4129396315DC0376004F1740 /* GCMapTilesetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTilesetTest.m; path = Tests/GCMapTilesetTest.m; sourceTree = "<group>"; };
 		4129396515DC1B49004F1740 /* GCMapLayerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayerTest.h; path = Tests/GCMapLayerTest.h; sourceTree = "<group>"; };
@@ -755,6 +759,8 @@
 		5F1C340114DEA35200BF808B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4111FC0215EE10950015096A /* isometric_grass_and_water.png */,
+				4111FC0315EE10950015096A /* isometric_grass_and_water.tmx */,
 				5F6967A715B2E5CB00D9F1D2 /* font.png */,
 				5F1997DD15330D1800D2E44D /* background.jpg */,
 				5FD978A815319D8400A5D88B /* WinnerLabel.png */,
@@ -1035,6 +1041,8 @@
 				5FD978A915319D8400A5D88B /* WinnerLabel.png in Resources */,
 				5F1997DE15330D1800D2E44D /* background.jpg in Resources */,
 				5F6967A815B2E5CB00D9F1D2 /* font.png in Resources */,
+				4111FC0415EE10950015096A /* isometric_grass_and_water.png in Resources */,
+				4111FC0515EE10950015096A /* isometric_grass_and_water.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

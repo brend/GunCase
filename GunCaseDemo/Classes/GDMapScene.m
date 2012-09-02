@@ -8,6 +8,11 @@
 
 #import "GDMapScene.h"
 #import "GCTiledMapParser.h"
+#import "GCFont.h"
+
+@interface GDMapScene ()
+@property (nonatomic, strong) GCActor *text;
+@end
 
 @implementation GDMapScene
 
@@ -15,27 +20,10 @@
 {
     self = [super init];
     if (self) {
-        NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"numbered_tiles" withExtension: @"tmx"];
-        
-        if (mapURL == nil) {
-            NSLog(@"Couldn't find map file in bundle");
+        if (![self loadMap])
             return nil;
-        }
         
-        GCTiledMapParser *parser = [[GCTiledMapParser alloc] initWithURL: mapURL];
-        
-        if ([parser parse]) {
-            self.map = parser.map;
-        } else {
-            NSLog(@"Couldn't parse map file");
-            return nil;
-        }
-        
-        float
-            cx = (float) -self.map.width * self.map.tileWidth / 2,
-            cy = (float) -self.map.height * self.map.tileHeight / 2;
-        
-        self.position = [GCVector vectorWithX: cx y: cy];
+        [self createText];
     }
     return self;
 }
@@ -44,6 +32,7 @@
 {
     [super render];
     [self.map render];
+    [self.text render];
 }
 
 - (void) update
@@ -63,6 +52,34 @@
     if ([self.keyboard keyPressed: 126]) {
         self.position = [self.position add: [GCVector vectorWithX: 0 y: -2]];
     }
+}
+
+- (BOOL) loadMap
+{
+    NSURL *mapURL = [[NSBundle bundleForClass: [GDMapScene class]] URLForResource:@"isometric_grass_and_water" withExtension: @"tmx"];
+    
+    if (mapURL == nil) {
+        NSLog(@"Couldn't find map file in bundle");
+        return NO;
+    }
+    
+    GCTiledMapParser *parser = [[GCTiledMapParser alloc] initWithURL: mapURL];
+    
+    if ([parser parse]) {
+        self.map = parser.map;
+    } else {
+        NSLog(@"Couldn't parse map file");
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void) createText
+{
+    GCFont *font = [[GCFont alloc] initWithImage: [NSImage imageNamed: @"font"] columns: 16 rows: 16];
+    
+    self.text = [font thingWithWordWrappedString: @"Use arrow keys to pan" inRect: NSMakeRect(0, 0, 14 * 16, 32)];
 }
 
 @end
