@@ -125,12 +125,9 @@
                                      x: (float) x
                                      y: (float) y
 {
-    // Reversing the Y-Axis of the sprite map
-    // TODO: Why do I have to do this? Why is the sprite sheet arranged that way?
     NSInteger
         fx = c % self.columns,
-        fy = self.columns - (c / self.columns + 1);
-    
+        fy = c / self.columns;
     GCSprite *characterSprite = [self.spriteSheet objectAtIndex: fx + fy * self.columns];
     GCSpriteActor *glyph = [[GCSpriteActor alloc] initWithSprite: characterSprite];
     
