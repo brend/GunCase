@@ -63,6 +63,7 @@
 		41C1F2CE15C404E600893F21 /* GCCompositeActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C1F2CC15C404E600893F21 /* GCCompositeActor.h */; };
 		41C1F2CF15C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
 		41C1F2D015C404E600893F21 /* GCCompositeActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C1F2CD15C404E600893F21 /* GCCompositeActor.m */; };
+		41CBF05D160F372F00A43B21 /* GCKeyboardKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CBF05B160F372800A43B21 /* GCKeyboardKeys.h */; };
 		41D5F96E15D843440084625E /* GCMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D5F96C15D843440084625E /* GCMath.h */; };
 		41D5F96F15D843440084625E /* GCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96D15D843440084625E /* GCMath.m */; };
 		41D5F97015D843440084625E /* GCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D5F96D15D843440084625E /* GCMath.m */; };
@@ -209,6 +210,7 @@
 		41BC7FEE15D12B6A000633FD /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 		41C1F2CC15C404E600893F21 /* GCCompositeActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCCompositeActor.h; path = Classes/GCCompositeActor.h; sourceTree = "<group>"; };
 		41C1F2CD15C404E600893F21 /* GCCompositeActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCCompositeActor.m; path = Classes/GCCompositeActor.m; sourceTree = "<group>"; };
+		41CBF05B160F372800A43B21 /* GCKeyboardKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCKeyboardKeys.h; sourceTree = "<group>"; };
 		41D5F96C15D843440084625E /* GCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMath.h; path = Classes/GCMath.h; sourceTree = "<group>"; };
 		41D5F96D15D843440084625E /* GCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMath.m; path = Classes/GCMath.m; sourceTree = "<group>"; };
 		41D5F97215D845CE0084625E /* NSImage+PowersOf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+PowersOf2.h"; path = "Classes/NSImage+PowersOf2.h"; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				41BC7FEE15D12B6A000633FD /* README.markdown */,
 				5F1C33B314DE99C600BF808B /* GunCase-Prefix.pch */,
 				5F1C33FB14DE9FA500BF808B /* GunCase.h */,
+				41CBF05B160F372800A43B21 /* GCKeyboardKeys.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				41A6410B15EA444400C87420 /* GCMapLayout.h in Headers */,
 				41A6411115EA44BE00C87420 /* GCOrthogonalMapLayout.h in Headers */,
 				41A6411715EA44DF00C87420 /* GCIsometricMapLayout.h in Headers */,
+				41CBF05D160F372F00A43B21 /* GCKeyboardKeys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
