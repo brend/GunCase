@@ -21,6 +21,6 @@
 #pragma mark -
 #pragma mark Rendering the Thing
 - (void) render;
-@property (readonly) GCSprite *sprite;
+@property (nonatomic) GCSprite *sprite;
 
 @end

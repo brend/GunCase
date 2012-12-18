@@ -29,6 +29,9 @@
 // Application
 #import "GCGameView.h"
 
+// Input
+#import "GCKeyboardKeys.h"
+
 // Scenes and Layers
 #import "GCScene.h"
 #import "GCLayeredScene.h"
