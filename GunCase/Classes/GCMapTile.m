@@ -37,4 +37,9 @@
     return self.globalID == [object globalID];
 }
 
+- (BOOL) isEmpty
+{
+    return self.globalID == 0;
+}
+
 @end

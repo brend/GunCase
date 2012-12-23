@@ -16,5 +16,6 @@
 + (id) emptyTile;
 
 @property (nonatomic) NSInteger globalID;
+@property (readonly) BOOL isEmpty;
 
 @end
