@@ -32,5 +32,6 @@
 - (void) addTile: (GCMapTile *) tile;
 - (NSInteger) tileCount;
 @property (nonatomic) NSInteger tileWidth, tileHeight;
+- (GCMapTile *) tileAtX: (NSInteger) x y: (NSInteger) y;
 
 @end
