@@ -22,5 +22,6 @@
 #pragma mark Rendering the Thing
 - (void) render;
 @property (nonatomic) GCSprite *sprite;
+@property (nonatomic, retain) GCVector *drawingOffset;
 
 @end
