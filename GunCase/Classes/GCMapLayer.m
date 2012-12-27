@@ -41,6 +41,7 @@
     copy.tileWidth = self.tileWidth;
     copy.tileHeight = self.tileHeight;
     copy.tiles = [[NSMutableArray alloc] initWithArray:self.tiles copyItems: YES];
+    copy.visible = self.visible;
     
     return copy;
 }

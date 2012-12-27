@@ -51,6 +51,9 @@
 {
     [super render];
     
+    if (!self.visible)
+        return;
+    
     for (id<GCRenderable> c in self.components) {
         [c render];
     }

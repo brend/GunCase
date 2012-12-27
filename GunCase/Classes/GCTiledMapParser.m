@@ -155,10 +155,12 @@ didStartElement:(NSString *)elementName
 - (void) addLayerWithAttributes: (NSDictionary *) attrs
 {
     GCMapLayer *layer = [self addLayer];
+    id visibility = [attrs objectForKey: @"visible"];
     
     layer.name = [attrs objectForKey: @"name"];
     layer.width = [[attrs objectForKey: @"width"] integerValue];
     layer.height = [[attrs objectForKey: @"height"] integerValue];
+    layer.visible = visibility == nil ? YES : [visibility boolValue];
     
     layer.tileWidth = self.map.tileWidth;
     layer.tileHeight = self.map.tileHeight;

@@ -9,6 +9,9 @@
 #import "GCActor.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import "GCMapLayer.h"
+
+
 @implementation GCActor
 
 #pragma mark -
@@ -20,6 +23,8 @@
         _position = [GCVector vectorWithX: 0 y: 0];
 		_scale = NSMakeSize(1, 1);
 		_rotation = 0;
+        
+        _visible = YES;
     }
     return self;
 }
@@ -41,9 +46,14 @@
 #pragma mark Rendering the Thing
 - (void) render
 {
+    if (!self.visible)
+        return;
+    
 	glTranslatef(self.position.x, self.position.y, 0);
 	glRotatef(self.rotation, 0, 0, 1);
 	glScalef(self.scale.width, self.scale.height, 1);
 }
+
+@synthesize visible = _visible;
 
 @end

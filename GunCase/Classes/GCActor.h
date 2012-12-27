@@ -25,5 +25,6 @@
 #pragma mark -
 #pragma mark Rendering the Thing
 - (void) render;
+@property (nonatomic) BOOL visible;
 
 @end
