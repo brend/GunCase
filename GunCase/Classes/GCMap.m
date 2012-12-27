@@ -108,6 +108,16 @@
     return [self.layers objectAtIndex: index];
 }
 
+- (GCMapLayer *) layerNamed: (NSString *) name
+{
+    for (GCMapLayer *layer in self.layers) {
+        if ([layer.name isEqualToString: name])
+            return layer;
+    }
+    
+    return nil;
+}
+
 - (NSInteger) layerCount
 {
     return self.layers.count;

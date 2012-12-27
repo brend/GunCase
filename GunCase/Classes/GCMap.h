@@ -19,6 +19,7 @@
 - (void) addLayer: (GCMapLayer *) layer;
 @property (readonly) GCMapLayer *topmostLayer;
 - (GCMapLayer *) layerAtIndex: (NSInteger) index;
+- (GCMapLayer *) layerNamed: (NSString *) name;
 - (NSInteger) layerCount;
 
 #pragma mark -
