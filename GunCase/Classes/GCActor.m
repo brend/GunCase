@@ -9,7 +9,11 @@
 #import "GCActor.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import "GCMapLayer.h"
+
+@interface GCActor ()
+- (void) applyTransformation;
+- (void) revertTransformation;
+@end
 
 
 @implementation GCActor
@@ -44,14 +48,34 @@
 
 #pragma mark -
 #pragma mark Rendering the Thing
+
 - (void) render
 {
     if (!self.visible)
         return;
     
-	glTranslatef(self.position.x, self.position.y, 0);
+    [self applyTransformation];
+    [self renderIndividually];
+    [self revertTransformation];
+}
+
+- (void) renderIndividually
+{
+    // To be implemented by subclasses
+}
+
+- (void) applyTransformation
+{
+    glTranslatef(self.position.x, self.position.y, 0);
 	glRotatef(self.rotation, 0, 0, 1);
 	glScalef(self.scale.width, self.scale.height, 1);
+}
+
+- (void) revertTransformation
+{
+    glScalef(1.0f / self.scale.width, 1.0f / self.scale.height, 0);
+    glRotatef(-self.rotation, 0, 0, 1);
+    glTranslatef(-self.position.x, -self.position.y, 0);
 }
 
 @synthesize visible = _visible;
