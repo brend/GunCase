@@ -66,8 +66,9 @@
 
 - (GCMapTile *) tileAtX: (NSInteger) x y: (NSInteger) y
 {
-    NSAssert(x >= 0 && x < self.width, @"Invalid x coordinate");
-    NSAssert(y >= 0 && y < self.height, @"Invalid y coordinate");
+    if (x < 0 || x >= self.width
+        || y < 0 || y >= self.height)
+        return nil;
     
     return [self.tiles objectAtIndex: x + (self.height - (y + 1)) * self.width];
 }
