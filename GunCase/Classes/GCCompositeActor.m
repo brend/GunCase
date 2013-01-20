@@ -28,6 +28,11 @@
     [self.components addObject: component];
 }
 
+- (void) insertComponent: (id<GCRenderable>) component atIndex: (NSUInteger) index
+{
+    [self.components insertObject: component atIndex: index];
+}
+
 - (void) addComponentsFromArray: (NSArray *) a
 {
     [self.components addObjectsFromArray: a];
@@ -36,6 +41,11 @@
 - (void) removeComponent:(id)component
 {
     [self.components removeObject: component];
+}
+
+- (void) removeComponentAtIndex: (NSUInteger) index
+{
+    [self.components removeObjectAtIndex: index];
 }
 
 - (void) update
