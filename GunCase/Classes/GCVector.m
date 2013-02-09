@@ -141,4 +141,19 @@
 		&& self.y == (float) [anObject y];
 }
 
+- (GCVector *) floor
+{
+    return [GCVector vectorWithX: floorf(self.x) y: floorf(self.y)];
+}
+
+- (GCVector *) ceil
+{
+    return [GCVector vectorWithX: ceilf(self.x) y: ceilf(self.y)];
+}
+
+- (GCVector *) round
+{
+    return [GCVector vectorWithX: roundf(self.x) y: roundf(self.y)];
+}
+
 @end

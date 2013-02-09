@@ -110,9 +110,43 @@
 	float x = 17.4, y = 21.0;
 	GCVector 
 		*v = [GCVector vectorWithX: x y: y], 
-		*w = [GCVector vectorWithX: x y: y];
+		*w = [GCVector vectorWithX: x y: y],
+        *u = [GCVector vectorWithX: x + 0.5 y: y],
+        *q = [GCVector vectorWithX: x y: y + 0.5];
 	
 	STAssertEqualObjects(v, w, @"not equal");
+    STAssertFalse([v isEqual: u], @"supposed to be not equal");
+    STAssertFalse([v isEqual: q], @"supposed to be not equal");
+}
+
+- (void) testFloor
+{
+    float x = 17.0, y = 21.0;
+	GCVector
+        *v = [GCVector vectorWithX: x y: y],
+        *w = [GCVector vectorWithX: x + 0.3 y: y + 0.45];
+    
+    STAssertEqualObjects(v, w.floor, @"not equal");
+}
+
+- (void) testCeil
+{
+    float x = 17.0, y = 21.0;
+	GCVector
+        *v = [GCVector vectorWithX: x y: y],
+        *w = [GCVector vectorWithX: x - 0.3 y: y - 0.45];
+    
+    STAssertEqualObjects(v, w.ceil, @"not equal");
+}
+
+- (void) testRound
+{
+    float x = 17.0, y = 21.0;
+	GCVector
+        *v = [GCVector vectorWithX: x y: y],
+        *w = [GCVector vectorWithX: x - 0.3 y: y + 0.45];
+    
+    STAssertEqualObjects(v, w.round, @"not equal");
 }
 
 @end

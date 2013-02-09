@@ -42,5 +42,8 @@
 #pragma mark Converting the Vector
 
 - (NSPoint) point;
+- (GCVector *) floor;
+- (GCVector *) ceil;
+- (GCVector *) round;
 
 @end
