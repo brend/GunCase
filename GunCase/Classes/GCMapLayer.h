@@ -24,6 +24,8 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSInteger width, height;
 
+@property (nonatomic, copy) NSDictionary *properties;
+
 @property (nonatomic, strong) GCMapLayout *layout;
 
 #pragma mark -

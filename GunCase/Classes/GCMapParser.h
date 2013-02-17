@@ -24,7 +24,9 @@
 #pragma mark -
 #pragma mark Map Construction
 - (GCMap *) createMap;
+@property (nonatomic, copy) NSDictionary *mapProperties;
 - (GCMapLayer *) addLayer;
+@property (nonatomic, copy) NSDictionary *layerProperties;
 - (GCMapTileset *) addTileset;
 - (void) setTilesetImage: (NSImage *) image;
 - (void) addTileOffset: (NSSize) offset;

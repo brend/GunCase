@@ -14,10 +14,24 @@
 #import "GCTiledMapGzipDecompressor.h"
 #import "GCTiledMapBase64Decoder.h"
 
+typedef enum {
+    GCTiledMapNoPropertiesScope = 0,
+    GCTiledMapMapPropertiesScope = 1,
+    GCTiledMapLayerPropertiesScope = 2
+} GCTiledMapPropertiesScope;
+
 @interface GCTiledMapParser ()
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) id<GCMapLayerDataDecoder> decoder;
 @property (nonatomic, strong) id<GCMapLayerDataDecompressor> decompressor;
+
+// {Map, Layer} properties
+@property (nonatomic, strong) NSMutableDictionary *currentProperties;
+@property (nonatomic) GCTiledMapPropertiesScope currentPropertiesScope;
+- (void) beginProperties;
+- (void) setProperties;
+- (void) addProperty: (NSDictionary *) attributes;
+
 @end
 
 @implementation GCTiledMapParser
@@ -86,6 +100,14 @@ didStartElement:(NSString *)elementName
         [self addLayerWithAttributes: attributeDict];
     }
     
+    else if ([elementName isEqualToString: @"properties"]) {
+        [self beginProperties];
+    }
+    
+    else if ([elementName isEqualToString: @"property"]) {
+        [self addProperty: attributeDict];
+    }
+    
     else {
         NSLog(@"Unknown xml element encountered: %@", elementName);
     }
@@ -96,7 +118,9 @@ didStartElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
 {
-    
+    if ([elementName isEqualToString: @"properties"]) {
+        [self setProperties];
+    }
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
@@ -126,6 +150,9 @@ didStartElement:(NSString *)elementName
     map.height = [[attrs objectForKey: @"height"] integerValue];
     map.tileWidth = [[attrs objectForKey: @"tilewidth"] integerValue];
     map.tileHeight = [[attrs objectForKey: @"tileheight"] integerValue];
+    
+    // Update parser state
+    self.currentPropertiesScope = GCTiledMapMapPropertiesScope;
 }
 
 - (void) fillLayerWithData: (id) data
@@ -164,6 +191,9 @@ didStartElement:(NSString *)elementName
     
     layer.tileWidth = self.map.tileWidth;
     layer.tileHeight = self.map.tileHeight;
+    
+    // Update parser state
+    self.currentPropertiesScope = GCTiledMapLayerPropertiesScope;
 }
 
 - (void) addTileWithID: (NSInteger) identifier
@@ -256,6 +286,39 @@ didStartElement:(NSString *)elementName
         
         [self addTileWithID: identifier attributes: nil];
     }
+}
+
+- (void) beginProperties
+{
+    self.currentProperties = [NSMutableDictionary dictionary];
+}
+
+- (void) setProperties
+{
+    switch (self.currentPropertiesScope) {
+        case GCTiledMapMapPropertiesScope:
+            self.map.properties = self.currentProperties;
+            break;
+        case GCTiledMapLayerPropertiesScope:
+            self.map.topmostLayer.properties = self.currentProperties;
+            break;
+        default:
+            @throw [NSException exceptionWithName: @"InvalidState" reason: @"Invalid properties scope" userInfo: nil];
+    }
+    
+    self.currentProperties = nil;
+}
+
+- (void) addProperty: (NSDictionary *) attributes
+{
+    NSString
+        *name = [attributes objectForKey: @"name"],
+        *value = [attributes objectForKey: @"value"];
+    
+    if (name == nil || value == nil)
+        @throw [NSException exceptionWithName: @"InvalidArgument" reason: @"Attributes 'name' and 'value' mustn't be nil" userInfo: nil];
+    
+    [self.currentProperties setObject: value forKey: name];
 }
 
 @end
