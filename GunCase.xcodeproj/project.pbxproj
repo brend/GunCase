@@ -24,6 +24,8 @@
 		4140FF9E16D0E09C0034F6A3 /* GCMapParserScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */; };
 		4140FF9F16D0E09C0034F6A3 /* GCMapParserScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */; };
 		4140FFA016D0E09C0034F6A3 /* GCMapParserScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */; };
+		4140FFA316D0E38C0034F6A3 /* GCMapParserScopeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FFA216D0E38B0034F6A3 /* GCMapParserScopeTest.m */; };
+		4140FFA716D0F62A0034F6A3 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4140FFA516D0E75F0034F6A3 /* OCMock.framework */; };
 		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
 		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
@@ -33,6 +35,7 @@
 		4179905F15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */; };
 		4179906015DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
 		4179906115DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
+		4197165316D8068000DBB348 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4140FFA516D0E75F0034F6A3 /* OCMock.framework */; };
 		41A3EBA615D3BCD000E21154 /* GCMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBA415D3BCD000E21154 /* GCMap.h */; };
 		41A3EBA715D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
 		41A3EBA815D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
@@ -156,6 +159,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4197165216D8059A00DBB348 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4197165316D8068000DBB348 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4110342E15D2865300BC2C40 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Classes/NSData+Base64.h"; sourceTree = "<group>"; };
 		4110342F15D2865300BC2C40 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Classes/NSData+Base64.m"; sourceTree = "<group>"; };
@@ -175,6 +191,9 @@
 		4129396915DC1D66004F1740 /* GCMapTileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTileTest.m; path = Tests/GCMapTileTest.m; sourceTree = "<group>"; };
 		4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapParserScope.h; path = Classes/GCMapParserScope.h; sourceTree = "<group>"; };
 		4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapParserScope.m; path = Classes/GCMapParserScope.m; sourceTree = "<group>"; };
+		4140FFA116D0E38B0034F6A3 /* GCMapParserScopeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapParserScopeTest.h; path = Tests/GCMapParserScopeTest.h; sourceTree = "<group>"; };
+		4140FFA216D0E38B0034F6A3 /* GCMapParserScopeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapParserScopeTest.m; path = Tests/GCMapParserScopeTest.m; sourceTree = "<group>"; };
+		4140FFA516D0E75F0034F6A3 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = GunCaseTests/Frameworks/OCMock.framework; sourceTree = "<group>"; };
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
 		41702BB215D529200046B008 /* GCMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTile.h; path = Classes/GCMapTile.h; sourceTree = "<group>"; };
@@ -301,6 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4140FFA716D0F62A0034F6A3 /* OCMock.framework in Frameworks */,
 				5F40438E15836692007C162C /* GLUT.framework in Frameworks */,
 				5F40438F15836692007C162C /* OpenGL.framework in Frameworks */,
 				5F40438D15836688007C162C /* QuartzCore.framework in Frameworks */,
@@ -370,8 +390,18 @@
 				4129396615DC1B49004F1740 /* GCMapLayerTest.m */,
 				4129396815DC1D66004F1740 /* GCMapTileTest.h */,
 				4129396915DC1D66004F1740 /* GCMapTileTest.m */,
+				4140FFA116D0E38B0034F6A3 /* GCMapParserScopeTest.h */,
+				4140FFA216D0E38B0034F6A3 /* GCMapParserScopeTest.m */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		4140FFA416D0E7060034F6A3 /* Testing Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4140FFA516D0E75F0034F6A3 /* OCMock.framework */,
+			);
+			name = "Testing Frameworks";
 			sourceTree = "<group>";
 		};
 		4169B3B815BAA582002DB41D /* Input */ = {
@@ -492,6 +522,7 @@
 		5F1C33AA14DE99C600BF808B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4140FFA416D0E7060034F6A3 /* Testing Frameworks */,
 				5F1C340614DEA38200BF808B /* QuartzCore.framework */,
 				5F1C340214DEA37C00BF808B /* GLUT.framework */,
 				5F1C340314DEA37C00BF808B /* OpenGL.framework */,
@@ -772,6 +803,7 @@
 				5F1C33B714DE99C600BF808B /* Sources */,
 				5F1C33B814DE99C600BF808B /* Frameworks */,
 				5F1C33B914DE99C600BF808B /* Resources */,
+				4197165216D8059A00DBB348 /* CopyFiles */,
 				5F1C33BA14DE99C600BF808B /* ShellScript */,
 			);
 			buildRules = (
@@ -939,6 +971,7 @@
 				41A6412115EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m in Sources */,
 				41A6412415EA52FA00C87420 /* GCIsometricMapLayoutTest.m in Sources */,
 				4140FFA016D0E09C0034F6A3 /* GCMapParserScope.m in Sources */,
+				4140FFA316D0E38C0034F6A3 /* GCMapParserScopeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,7 +1080,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/GunCaseTests/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GunCaseTests/GunCaseTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1056,6 +1092,7 @@
 					UNIT_TEST,
 				);
 				INFOPLIST_FILE = "GunCaseTests/GunCaseTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1065,10 +1102,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/GunCaseTests/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GunCaseTests/GunCaseTests-Prefix.pch";
 				INFOPLIST_FILE = "GunCaseTests/GunCaseTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
