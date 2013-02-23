@@ -24,7 +24,7 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSInteger width, height;
 
-@property (nonatomic, copy) NSDictionary *properties;
+@property (nonatomic, copy) NSDictionary *attributes;
 
 @property (nonatomic, strong) GCMapLayout *layout;
 

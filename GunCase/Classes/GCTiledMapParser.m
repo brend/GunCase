@@ -26,8 +26,8 @@ typedef enum {
 @property (nonatomic, strong) id<GCMapLayerDataDecompressor> decompressor;
 
 // {Map, Layer} properties
-@property (nonatomic, strong) NSMutableDictionary *currentProperties;
-@property (nonatomic) GCTiledMapPropertiesScope currentPropertiesScope;
+@property (nonatomic, strong) NSMutableDictionary *currentAttributes;
+@property (nonatomic) GCTiledMapPropertiesScope currentAttributesScope;
 - (void) beginProperties;
 - (void) setProperties;
 - (void) addProperty: (NSDictionary *) attributes;
@@ -152,7 +152,7 @@ didStartElement:(NSString *)elementName
     map.tileHeight = [[attrs objectForKey: @"tileheight"] integerValue];
     
     // Update parser state
-    self.currentPropertiesScope = GCTiledMapMapPropertiesScope;
+    self.currentAttributesScope = GCTiledMapMapPropertiesScope;
 }
 
 - (void) fillLayerWithData: (id) data
@@ -193,7 +193,7 @@ didStartElement:(NSString *)elementName
     layer.tileHeight = self.map.tileHeight;
     
     // Update parser state
-    self.currentPropertiesScope = GCTiledMapLayerPropertiesScope;
+    self.currentAttributesScope = GCTiledMapLayerPropertiesScope;
 }
 
 - (void) addTileWithID: (NSInteger) identifier
@@ -290,23 +290,23 @@ didStartElement:(NSString *)elementName
 
 - (void) beginProperties
 {
-    self.currentProperties = [NSMutableDictionary dictionary];
+    self.currentAttributes = [NSMutableDictionary dictionary];
 }
 
 - (void) setProperties
 {
-    switch (self.currentPropertiesScope) {
+    switch (self.currentAttributesScope) {
         case GCTiledMapMapPropertiesScope:
-            self.map.properties = self.currentProperties;
+            self.map.attributes = self.currentAttributes;
             break;
         case GCTiledMapLayerPropertiesScope:
-            self.map.topmostLayer.properties = self.currentProperties;
+            self.map.topmostLayer.attributes = self.currentAttributes;
             break;
         default:
             @throw [NSException exceptionWithName: @"InvalidState" reason: @"Invalid properties scope" userInfo: nil];
     }
     
-    self.currentProperties = nil;
+    self.currentAttributes = nil;
 }
 
 - (void) addProperty: (NSDictionary *) attributes
@@ -318,7 +318,7 @@ didStartElement:(NSString *)elementName
     if (name == nil || value == nil)
         @throw [NSException exceptionWithName: @"InvalidArgument" reason: @"Attributes 'name' and 'value' mustn't be nil" userInfo: nil];
     
-    [self.currentProperties setObject: value forKey: name];
+    [self.currentAttributes setObject: value forKey: name];
 }
 
 @end

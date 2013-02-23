@@ -35,6 +35,6 @@
 
 @property (nonatomic, copy) NSString *version, *orientation;
 @property (nonatomic)  NSInteger width, height, tileWidth, tileHeight;
-@property (nonatomic, copy) NSDictionary *properties;
+@property (nonatomic, copy) NSDictionary *attributes;
 
 @end
