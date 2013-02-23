@@ -21,6 +21,9 @@
 		4129396415DC0376004F1740 /* GCMapTilesetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396315DC0376004F1740 /* GCMapTilesetTest.m */; };
 		4129396715DC1B49004F1740 /* GCMapLayerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396615DC1B49004F1740 /* GCMapLayerTest.m */; };
 		4129396A15DC1D66004F1740 /* GCMapTileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129396915DC1D66004F1740 /* GCMapTileTest.m */; };
+		4140FF9E16D0E09C0034F6A3 /* GCMapParserScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */; };
+		4140FF9F16D0E09C0034F6A3 /* GCMapParserScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */; };
+		4140FFA016D0E09C0034F6A3 /* GCMapParserScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */; };
 		4169B3BC15BAA5C2002DB41D /* GCKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */; };
 		4169B3BD15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
 		4169B3BE15BAA5C2002DB41D /* GCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */; };
@@ -170,6 +173,8 @@
 		4129396615DC1B49004F1740 /* GCMapLayerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapLayerTest.m; path = Tests/GCMapLayerTest.m; sourceTree = "<group>"; };
 		4129396815DC1D66004F1740 /* GCMapTileTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTileTest.h; path = Tests/GCMapTileTest.h; sourceTree = "<group>"; };
 		4129396915DC1D66004F1740 /* GCMapTileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTileTest.m; path = Tests/GCMapTileTest.m; sourceTree = "<group>"; };
+		4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapParserScope.h; path = Classes/GCMapParserScope.h; sourceTree = "<group>"; };
+		4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapParserScope.m; path = Classes/GCMapParserScope.m; sourceTree = "<group>"; };
 		4169B3BA15BAA5C2002DB41D /* GCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCKeyboard.h; path = Classes/GCKeyboard.h; sourceTree = "<group>"; };
 		4169B3BB15BAA5C2002DB41D /* GCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCKeyboard.m; path = Classes/GCKeyboard.m; sourceTree = "<group>"; };
 		41702BB215D529200046B008 /* GCMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapTile.h; path = Classes/GCMapTile.h; sourceTree = "<group>"; };
@@ -345,6 +350,8 @@
 				41A3EBB215D3D29C00E21154 /* GCMapTileset.m */,
 				41702BB215D529200046B008 /* GCMapTile.h */,
 				41702BB315D529200046B008 /* GCMapTile.m */,
+				4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */,
+				4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -734,6 +741,7 @@
 				41A6411115EA44BE00C87420 /* GCOrthogonalMapLayout.h in Headers */,
 				41A6411715EA44DF00C87420 /* GCIsometricMapLayout.h in Headers */,
 				41CBF05D160F372F00A43B21 /* GCKeyboardKeys.h in Headers */,
+				4140FF9E16D0E09C0034F6A3 /* GCMapParserScope.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +877,7 @@
 				41A6410C15EA444400C87420 /* GCMapLayout.m in Sources */,
 				41A6411215EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */,
 				41A6411815EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */,
+				4140FF9F16D0E09C0034F6A3 /* GCMapParserScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +938,7 @@
 				41A6411E15EA4CA100C87420 /* GCMapLayoutTest.m in Sources */,
 				41A6412115EA4DD300C87420 /* GCOrthogonalMapLayoutTest.m in Sources */,
 				41A6412415EA52FA00C87420 /* GCIsometricMapLayoutTest.m in Sources */,
+				4140FFA016D0E09C0034F6A3 /* GCMapParserScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

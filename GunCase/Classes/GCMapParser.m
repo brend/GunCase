@@ -7,6 +7,13 @@
 //
 
 #import "GCMapParser.h"
+#import "GCStack.h"
+#import "GCMapParserScope.h"
+
+@interface GCMapParser ()
+@property (nonatomic, strong) GCStack *scopeStack;
+@property (nonatomic, readonly) GCMapParserScope *currentScope;
+@end
 
 // A base class for map parsers
 @implementation GCMapParser
