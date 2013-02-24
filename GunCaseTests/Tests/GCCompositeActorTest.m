@@ -37,6 +37,8 @@
     GCActor *c = [[GCActor alloc] init];
     
     [self.actor addComponent: c];
+    
+    STAssertTrue([self.actor.components containsObject: c], @"added actor not found");
 }
 
 - (void) testAddComponentsFromArray
@@ -44,6 +46,10 @@
     NSArray *a = [NSArray arrayWithObjects: [[GCActor alloc] init], [[GCActor alloc] init], nil];
     
     [self.actor addComponentsFromArray: a];
+    
+    for (id x in a) {
+        STAssertTrue([self.actor.components containsObject: x], @"added actor not found");
+    }
 }
 
 - (void) testRemoveComponent
@@ -52,13 +58,15 @@
     
     [self.actor addComponent: c];
     [self.actor removeComponent: c];
+    
+    STAssertFalse([self.actor.components containsObject: c], @"removed actor present");
 }
 
 - (void) testRemoveComponentCausesNoException
 {
     GCActor *c = [[GCActor alloc] init];
     
-    [self.actor removeComponent: c];
+    STAssertNoThrow([self.actor removeComponent: c], @"removing mustn't cause exceptions");
 }
 
 @end
