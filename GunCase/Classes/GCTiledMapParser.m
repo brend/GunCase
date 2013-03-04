@@ -14,23 +14,10 @@
 #import "GCTiledMapGzipDecompressor.h"
 #import "GCTiledMapBase64Decoder.h"
 
-typedef enum {
-    GCTiledMapNoPropertiesScope = 0,
-    GCTiledMapMapPropertiesScope = 1,
-    GCTiledMapLayerPropertiesScope = 2
-} GCTiledMapPropertiesScope;
-
 @interface GCTiledMapParser ()
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) id<GCMapLayerDataDecoder> decoder;
 @property (nonatomic, strong) id<GCMapLayerDataDecompressor> decompressor;
-
-// {Map, Layer} properties
-@property (nonatomic, strong) NSMutableDictionary *currentAttributes;
-@property (nonatomic) GCTiledMapPropertiesScope currentAttributesScope;
-- (void) beginProperties;
-- (void) setProperties;
-- (void) addProperty: (NSDictionary *) attributes;
 
 @end
 
@@ -100,12 +87,16 @@ didStartElement:(NSString *)elementName
         [self addLayerWithAttributes: attributeDict];
     }
     
+    else if ([elementName isEqualToString: @"objectgroup"]) {
+        [self addObjectLayerWithAttributes: attributeDict];
+    }
+    
     else if ([elementName isEqualToString: @"properties"]) {
-        [self beginProperties];
+        [self beginAttributes];
     }
     
     else if ([elementName isEqualToString: @"property"]) {
-        [self addProperty: attributeDict];
+        [self addAttribute: attributeDict];
     }
     
     else {
@@ -118,9 +109,30 @@ didStartElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
 {
-    if ([elementName isEqualToString: @"properties"]) {
-        [self setProperties];
+    if ([elementName isEqualToString: @"map"]) {
+        [self finalizeMap];
     }
+    
+    else if ([elementName isEqualToString: @"tileset"]) {
+        [self finalizeTileset];
+    }
+    
+    else if ([elementName isEqualToString: @"layer"]) {
+        [self finalizeLayer];
+    }
+    
+    else if ([elementName isEqualToString: @"objectgroup"]) {
+        [self finalizeObjectLayer];
+    }
+    
+    else if ([elementName isEqualToString: @"properties"]) {
+        [self applyAttributes];
+    }
+    
+    else {
+        NSLog(@"Unknown xml element encountered: %@", elementName);
+    }
+
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
@@ -150,9 +162,6 @@ didStartElement:(NSString *)elementName
     map.height = [[attrs objectForKey: @"height"] integerValue];
     map.tileWidth = [[attrs objectForKey: @"tilewidth"] integerValue];
     map.tileHeight = [[attrs objectForKey: @"tileheight"] integerValue];
-    
-    // Update parser state
-    self.currentAttributesScope = GCTiledMapMapPropertiesScope;
 }
 
 - (void) fillLayerWithData: (id) data
@@ -191,9 +200,17 @@ didStartElement:(NSString *)elementName
     
     layer.tileWidth = self.map.tileWidth;
     layer.tileHeight = self.map.tileHeight;
+}
+
+- (void) addObjectLayerWithAttributes: (NSDictionary *) attrs
+{
+    GCMapObjectLayer *objectLayer = [self addObjectLayer];
+    id visibility = [attrs objectForKey: @"visible"];
     
-    // Update parser state
-    self.currentAttributesScope = GCTiledMapLayerPropertiesScope;
+    objectLayer.name = [attrs objectForKey: @"name"];
+    objectLayer.width = [[attrs objectForKey: @"width"] integerValue];
+    objectLayer.height = [[attrs objectForKey: @"height"] integerValue];
+    objectLayer.visible = visibility == nil ? YES : [visibility boolValue];
 }
 
 - (void) addTileWithID: (NSInteger) identifier
@@ -286,39 +303,6 @@ didStartElement:(NSString *)elementName
         
         [self addTileWithID: identifier attributes: nil];
     }
-}
-
-- (void) beginProperties
-{
-    self.currentAttributes = [NSMutableDictionary dictionary];
-}
-
-- (void) setProperties
-{
-    switch (self.currentAttributesScope) {
-        case GCTiledMapMapPropertiesScope:
-            self.map.attributes = self.currentAttributes;
-            break;
-        case GCTiledMapLayerPropertiesScope:
-            self.map.topmostLayer.attributes = self.currentAttributes;
-            break;
-        default:
-            @throw [NSException exceptionWithName: @"InvalidState" reason: @"Invalid properties scope" userInfo: nil];
-    }
-    
-    self.currentAttributes = nil;
-}
-
-- (void) addProperty: (NSDictionary *) attributes
-{
-    NSString
-        *name = [attributes objectForKey: @"name"],
-        *value = [attributes objectForKey: @"value"];
-    
-    if (name == nil || value == nil)
-        @throw [NSException exceptionWithName: @"InvalidArgument" reason: @"Attributes 'name' and 'value' mustn't be nil" userInfo: nil];
-    
-    [self.currentAttributes setObject: value forKey: name];
 }
 
 @end

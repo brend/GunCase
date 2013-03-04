@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "GCCompositeActor.h"
+#import "GCMapParserScopeTarget.h"
 #import "GCMapTile.h"
 #import "GCMapLayout.h"
 
-@interface GCMapLayer : GCCompositeActor <NSCopying>
+@interface GCMapLayer : GCCompositeActor <NSCopying, GCMapParserScopeTarget>
 
 #pragma mark -
 #pragma mark Initialization

@@ -8,15 +8,35 @@
 
 #import "GCMapParser.h"
 #import "GCStack.h"
-#import "GCMapParserScope.h"
 
 @interface GCMapParser ()
 @property (nonatomic, strong) GCStack *scopeStack;
-@property (nonatomic, readonly) GCMapParserScope *currentScope;
+@property (nonatomic, strong) NSMutableDictionary *currentAttributes;
 @end
 
 // A base class for map parsers
 @implementation GCMapParser
+
+#pragma mark -
+#pragma mark Initialization and Deallocation
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.scopeStack = [[GCStack alloc] init];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    self.scopeStack = nil;
+    self.currentAttributes = nil;
+}
+
+#pragma mark -
+#pragma mark Starting the Parsing
 
 - (BOOL) parse
 {
@@ -28,7 +48,36 @@
 
 - (GCMap *) createMap
 {
-    return self.map = [self instantiateMap];
+    self.map = [self instantiateMap];
+    
+    [self pushScopeNamed: @"map" target: self.map];
+    
+    return self.map;
+}
+
+- (void) finalizeMap
+{
+    [self finalizeScope: @"map"];
+}
+
+- (void) finalizeScope: (NSString *) scopeToBeFinalized
+{
+    GCMapParserScope *scope = self.currentScope;
+    
+    if (scope == nil)
+        @throw [NSException exceptionWithName: @"MissingScope" reason: @"There is no scope that can be finalized" userInfo:nil];
+    
+    if (![scope.name isEqualToString: scopeToBeFinalized]) {
+        NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:
+                            scopeToBeFinalized, @"scopeToBeFinalized",
+                            self.currentScope.name, @"currentScope",
+                            nil];
+        @throw [NSException exceptionWithName: @"ScopeMismatch"
+                                       reason: @"The scope type to be finalized doesn't match the type of the current scope"
+                                     userInfo: ui];
+    }
+    
+    [self popScope];
 }
 
 - (GCMapLayer *) addLayer
@@ -37,7 +86,30 @@
     
     [self.map addLayer: layer];
     
+    [self pushScopeNamed: @"layer" target: layer];
+    
     return layer;
+}
+
+- (void) finalizeLayer
+{
+    [self finalizeScope: @"layer"];
+}
+
+- (GCMapObjectLayer *) addObjectLayer
+{
+    GCMapObjectLayer *objectLayer = [self instantiateObjectLayer];
+    
+    [self.map addLayer: objectLayer];
+    
+    [self pushScopeNamed: @"objectLayer" target: objectLayer];
+    
+    return objectLayer;
+}
+
+- (void) finalizeObjectLayer
+{
+    [self finalizeScope: @"objectLayer"];
 }
 
 - (GCMapTileset *) addTileset
@@ -46,7 +118,14 @@
     
     [self.map addTileset: tileset];
     
+    [self pushScopeNamed: @"tileset" target: tileset];
+    
     return tileset;
+}
+
+- (void) finalizeTileset
+{
+    [self finalizeScope: @"tileset"];
 }
 
 - (void) setTilesetImage:(NSImage *)image
@@ -93,6 +172,30 @@
     return tile;
 }
 
+- (void) beginAttributes
+{
+    self.currentAttributes = [NSMutableDictionary dictionary];
+}
+
+- (void) addAttribute: (NSDictionary *) attributes
+{
+    NSString
+        *name = [attributes objectForKey: @"name"],
+        *value = [attributes objectForKey: @"value"];
+    
+    if (name == nil || value == nil)
+        @throw [NSException exceptionWithName: @"InvalidArgument" reason: @"Attributes 'name' and 'value' mustn't be nil" userInfo: nil];
+    
+    [self.currentAttributes setObject: value forKey: name];
+}
+
+- (void) applyAttributes
+{
+    GCMapParserScope *scope = self.currentScope;
+    
+    [scope setAttributes: self.currentAttributes];
+}
+
 #pragma mark -
 #pragma mark Prototype Instantiation
 
@@ -110,11 +213,39 @@
         : [[GCMapLayer alloc] init];
 }
 
+- (GCMapObjectLayer *) instantiateObjectLayer
+{
+    return self.objectLayerPrototype?
+          [self.objectLayerPrototype copy]
+        : [[GCMapObjectLayer alloc] init];
+}
+
 - (GCMapTileset *) instantiateTileset
 {
     return self.tilesetPrototype?
         [self.tilesetPrototype copy]
       : [[GCMapTileset alloc] init];
+}
+
+#pragma mark -
+#pragma mark Map Element Scope
+
+- (void) pushScopeNamed: (NSString *) name
+                 target: (id<GCMapParserScopeTarget>) target
+{
+    GCMapParserScope *scope = [GCMapParserScope scopeWithTarget: target name: name];
+    
+    [self.scopeStack push: scope];
+}
+
+- (void) popScope
+{
+    [self.scopeStack pop];
+}
+
+- (GCMapParserScope *) currentScope
+{
+    return [self.scopeStack peek];
 }
 
 @end

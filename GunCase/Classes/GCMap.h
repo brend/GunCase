@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GCCompositeActor.h"
+#import "GCMapParserScopeTarget.h"
 #import "GCMapLayer.h"
+#import "GCMapObjectLayer.h"
 #import "GCMapTileset.h"
 
-@interface GCMap : GCCompositeActor <NSCopying>
+@interface GCMap : GCCompositeActor <NSCopying, GCMapParserScopeTarget>
 
 #pragma mark -
 #pragma mark Managing Layers

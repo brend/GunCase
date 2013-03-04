@@ -7,18 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol GCMapParserScopeTarget <NSObject>
-- (void) setAttributes: (NSDictionary *) attrs;
-@end
+#import "GCMapParserScopeTarget.h"
 
 @interface GCMapParserScope : NSObject
 
++ (id) scopeWithName: (NSString *) name;
 + (id) scopeWithTarget: (id<GCMapParserScopeTarget>) target
                   name: (NSString *) name;
 
-@property (readonly, weak) id<GCMapParserScopeTarget> target;
-@property (readonly, copy) NSString *name;
+@property (nonatomic, strong) id<GCMapParserScopeTarget> target;
+@property (nonatomic, copy) NSString *name;
 
 - (void) setAttributes: (NSDictionary *) attrs;
 

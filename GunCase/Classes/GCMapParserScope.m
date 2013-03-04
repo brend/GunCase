@@ -8,12 +8,16 @@
 
 #import "GCMapParserScope.h"
 
-@interface GCMapParserScope ()
-@property (nonatomic, weak) id<GCMapParserScopeTarget> target;
-@property (nonatomic, copy) NSString *name;
-@end
-
 @implementation GCMapParserScope
+
++ (id) scopeWithName:(NSString *)name
+{
+    GCMapParserScope *scope = [[GCMapParserScope alloc] init];
+    
+    scope.name = name;
+    
+    return scope;
+}
 
 + (id) scopeWithTarget:(id<GCMapParserScopeTarget>)target
                   name: (NSString *) name

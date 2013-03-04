@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GCMap.h"
+#import "GCMapParserScope.h"
 
 @interface GCMapParser : NSObject
 
@@ -18,18 +19,36 @@
 @property (nonatomic, strong) id
     mapPrototype,
     layerPrototype,
+    objectLayerPrototype,
     tilesetPrototype,
     tilePrototype;
 
 #pragma mark -
 #pragma mark Map Construction
 - (GCMap *) createMap;
-@property (nonatomic, copy) NSDictionary *mapProperties;
+- (void) finalizeMap;
+
 - (GCMapLayer *) addLayer;
-@property (nonatomic, copy) NSDictionary *layerProperties;
+- (void) finalizeLayer;
+
+- (GCMapObjectLayer *) addObjectLayer;
+- (void) finalizeObjectLayer;
+
 - (GCMapTileset *) addTileset;
 - (void) setTilesetImage: (NSImage *) image;
+- (void) finalizeTileset;
+
 - (void) addTileOffset: (NSSize) offset;
 - (GCMapTile *) addTileWithID: (NSInteger) identifier;
+
+- (void) beginAttributes;
+- (void) addAttribute: (NSDictionary *) attributeInfo;
+- (void) applyAttributes;
+
+#pragma mark -
+#pragma mark Element Scope
+@property (nonatomic, readonly) GCMapParserScope *currentScope;
+- (void) pushScopeNamed: (NSString *) name target: (id<GCMapParserScopeTarget>) target;
+- (void) popScope;
 
 @end

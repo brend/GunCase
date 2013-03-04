@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCMapParserScopeTarget.h"
 #import "GCMapTile.h"
 
-@interface GCMapTileset : NSObject <NSCopying>
+@interface GCMapTileset : NSObject <NSCopying, GCMapParserScopeTarget>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSInteger tileWidth, tileHeight, firstID;
+@property (nonatomic, strong) NSDictionary *attributes;
 
 - (void) setImage: (NSImage *) image;
 @property (nonatomic) NSSize tileOffset;

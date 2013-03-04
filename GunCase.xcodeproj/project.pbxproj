@@ -35,6 +35,9 @@
 		4179905F15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */; };
 		4179906015DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
 		4179906115DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */; };
+		418F786916DA371300A20FAE /* GCMapObjectLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 418F786716DA371300A20FAE /* GCMapObjectLayer.h */; };
+		418F786A16DA371300A20FAE /* GCMapObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 418F786816DA371300A20FAE /* GCMapObjectLayer.m */; };
+		418F786B16DA371300A20FAE /* GCMapObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 418F786816DA371300A20FAE /* GCMapObjectLayer.m */; };
 		4197165316D8068000DBB348 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4140FFA516D0E75F0034F6A3 /* OCMock.framework */; };
 		41A3EBA615D3BCD000E21154 /* GCMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A3EBA415D3BCD000E21154 /* GCMap.h */; };
 		41A3EBA715D3BCD000E21154 /* GCMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3EBA515D3BCD000E21154 /* GCMap.m */; };
@@ -200,6 +203,9 @@
 		41702BB315D529200046B008 /* GCMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapTile.m; path = Classes/GCMapTile.m; sourceTree = "<group>"; };
 		4179905D15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTiledMapGzipDecompressor.h; path = Classes/GCTiledMapGzipDecompressor.h; sourceTree = "<group>"; };
 		4179905E15DE6F8700FA96C7 /* GCTiledMapGzipDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTiledMapGzipDecompressor.m; path = Classes/GCTiledMapGzipDecompressor.m; sourceTree = "<group>"; };
+		418F786716DA371300A20FAE /* GCMapObjectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapObjectLayer.h; path = Classes/GCMapObjectLayer.h; sourceTree = "<group>"; };
+		418F786816DA371300A20FAE /* GCMapObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMapObjectLayer.m; path = Classes/GCMapObjectLayer.m; sourceTree = "<group>"; };
+		418F786C16DA813200A20FAE /* GCMapParserScopeTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCMapParserScopeTarget.h; path = Classes/GCMapParserScopeTarget.h; sourceTree = "<group>"; };
 		41A3EBA415D3BCD000E21154 /* GCMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMap.h; path = Classes/GCMap.h; sourceTree = "<group>"; };
 		41A3EBA515D3BCD000E21154 /* GCMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCMap.m; path = Classes/GCMap.m; sourceTree = "<group>"; };
 		41A3EBA915D3BE1000E21154 /* GCMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCMapLayer.h; path = Classes/GCMapLayer.h; sourceTree = "<group>"; };
@@ -366,12 +372,15 @@
 				41A3EBA515D3BCD000E21154 /* GCMap.m */,
 				41A3EBA915D3BE1000E21154 /* GCMapLayer.h */,
 				41A3EBAA15D3BE1000E21154 /* GCMapLayer.m */,
+				418F786716DA371300A20FAE /* GCMapObjectLayer.h */,
+				418F786816DA371300A20FAE /* GCMapObjectLayer.m */,
 				41A3EBB115D3D29C00E21154 /* GCMapTileset.h */,
 				41A3EBB215D3D29C00E21154 /* GCMapTileset.m */,
 				41702BB215D529200046B008 /* GCMapTile.h */,
 				41702BB315D529200046B008 /* GCMapTile.m */,
 				4140FF9C16D0E09C0034F6A3 /* GCMapParserScope.h */,
 				4140FF9D16D0E09C0034F6A3 /* GCMapParserScope.m */,
+				418F786C16DA813200A20FAE /* GCMapParserScopeTarget.h */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -773,6 +782,7 @@
 				41A6411715EA44DF00C87420 /* GCIsometricMapLayout.h in Headers */,
 				41CBF05D160F372F00A43B21 /* GCKeyboardKeys.h in Headers */,
 				4140FF9E16D0E09C0034F6A3 /* GCMapParserScope.h in Headers */,
+				418F786916DA371300A20FAE /* GCMapObjectLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +920,7 @@
 				41A6411215EA44BE00C87420 /* GCOrthogonalMapLayout.m in Sources */,
 				41A6411815EA44DF00C87420 /* GCIsometricMapLayout.m in Sources */,
 				4140FF9F16D0E09C0034F6A3 /* GCMapParserScope.m in Sources */,
+				418F786A16DA371300A20FAE /* GCMapObjectLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +983,7 @@
 				41A6412415EA52FA00C87420 /* GCIsometricMapLayoutTest.m in Sources */,
 				4140FFA016D0E09C0034F6A3 /* GCMapParserScope.m in Sources */,
 				4140FFA316D0E38C0034F6A3 /* GCMapParserScopeTest.m in Sources */,
+				418F786B16DA371300A20FAE /* GCMapObjectLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
