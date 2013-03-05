@@ -40,6 +40,11 @@
 	rotation = _rotation,
 	scale = _scale;
 
+- (float) baseline
+{
+    return self.position.y;
+}
+
 #pragma mark -
 #pragma mark Updating the Thing
 - (void) update

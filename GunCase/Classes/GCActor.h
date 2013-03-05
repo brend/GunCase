@@ -17,6 +17,7 @@
 @property (retain) GCVector *position;
 @property float rotation;
 @property NSSize scale;
+@property (readonly) float baseline;
 
 #pragma mark -
 #pragma mark Updating the Thing
