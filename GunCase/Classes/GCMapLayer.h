@@ -37,4 +37,6 @@
 @property (nonatomic) NSInteger tileWidth, tileHeight;
 - (GCMapTile *) tileAtX: (NSInteger) x y: (NSInteger) y;
 
+- (void) addObject: (GCActor *) object;
+
 @end

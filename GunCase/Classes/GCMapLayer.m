@@ -9,7 +9,7 @@
 #import "GCMapLayer.h"
 
 @interface GCMapLayer ()
-@property (nonatomic, strong) NSMutableArray *tiles;
+@property (nonatomic, strong) NSMutableArray *tiles, *objects;
 // Building the layer
 @property (nonatomic) NSInteger nextTileIndex;
 @property (nonatomic) float nextTileX, nextTileY;
@@ -22,6 +22,7 @@
     self = [super init];
     if (self) {
         self.tiles = [NSMutableArray array];
+		self.objects = [NSMutableArray array];
     }
     return self;
 }
@@ -71,6 +72,12 @@
         return nil;
     
     return [self.tiles objectAtIndex: x + (self.height - (y + 1)) * self.width];
+}
+
+- (void) addObject:(GCActor *)object
+{
+	[self.objects addObject: object];
+	[self addComponent: object];
 }
 
 @end

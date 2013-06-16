@@ -90,6 +90,10 @@ didStartElement:(NSString *)elementName
     else if ([elementName isEqualToString: @"objectgroup"]) {
         [self addObjectLayerWithAttributes: attributeDict];
     }
+	
+	else if ([elementName isEqualToString: @"object"]) {
+		[self addObjectWithAttributes: attributeDict];
+	}
     
     else if ([elementName isEqualToString: @"properties"]) {
         [self beginAttributes];
@@ -164,11 +168,6 @@ didStartElement:(NSString *)elementName
     map.tileHeight = [[attrs objectForKey: @"tileheight"] integerValue];
 }
 
-- (void) fillLayerWithData: (id) data
-{
-    
-}
-
 - (void) addTilesetWithAttributes: (NSDictionary *) attrs
 {
     GCMapTileset *tileset = [self addTileset];
@@ -226,6 +225,28 @@ didStartElement:(NSString *)elementName
         y = [[attrs objectForKey: @"y"] floatValue];
     
     [self addTileOffset: NSMakeSize(x, y)];
+}
+
+- (void) addObjectWithAttributes: (NSDictionary *) attrs
+{
+	NSInteger
+		gid = [[attrs objectForKey: @"gid"] integerValue],
+		x = [[attrs objectForKey: @"x"] integerValue],
+		y = [[attrs objectForKey: @"y"] integerValue];
+	
+	GCMapTile *tile = [self.map tileWithID: gid];
+	
+	if (tile == nil) {
+		NSDictionary *userInfo = [NSDictionary dictionaryWithObject: [NSNumber numberWithInteger: gid] forKey: @"gid"];
+		@throw [NSException exceptionWithName: @"TileNotFound" reason: @"Tile for object not found" userInfo: userInfo];
+	}
+	
+	// Perform coordinate system conversion (Tiled -> GunCase)
+	y = (self.map.height * self.map.tileHeight) - y + self.map.tileHeight;
+	
+	tile.position = [GCVector vectorWithX: x y: y];
+		
+	[self.map.topmostLayer addObject: tile];
 }
 
 #pragma mark -
