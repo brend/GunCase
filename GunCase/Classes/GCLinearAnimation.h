@@ -13,6 +13,7 @@
 @interface GCLinearAnimation : GCTimedAnimation
 {
 	GCVector *stepOffset;
+	BOOL animationHasBegun;
 }
 
 + (id) animationFrom: (GCVector *) p

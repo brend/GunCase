@@ -8,6 +8,10 @@
 
 #import "GCLinearAnimation.h"
 
+@interface GCLinearAnimation ()
+@property (nonatomic, strong) GCVector *startLocation;
+@end
+
 @implementation GCLinearAnimation
 
 - (id)initFrom: (GCVector *) p
@@ -18,6 +22,7 @@
     
 	if (self) {
 		stepOffset = [[q subtract: p] scale: 1.0 / self.numberOfSteps];
+		self.startLocation = p;
     }
 	
     return self;
@@ -35,9 +40,22 @@
 	if (self.isFinished)
 		return;
 	
+	// At the very first step of the animation,
+	// the target is placed at the animation's starting point
+	if (!animationHasBegun) {
+		target.position = self.startLocation;
+		animationHasBegun = YES;
+	}
+	
 	GCVector *position = [stepOffset add: target.position];
 	
 	target.position = position;
+}
+
+- (void) rewind
+{
+	[super rewind];
+	animationHasBegun = NO;
 }
 
 @end
