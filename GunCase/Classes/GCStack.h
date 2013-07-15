@@ -18,4 +18,6 @@
 - (id) pop;
 - (BOOL) empty;
 
+- (NSArray *) allObjects;
+
 @end

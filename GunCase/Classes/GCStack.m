@@ -48,4 +48,9 @@
 	return items.count == 0;
 }
 
+- (NSArray *) allObjects
+{
+	return items;
+}
+
 @end
