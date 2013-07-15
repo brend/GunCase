@@ -62,8 +62,13 @@ static GCStack *GCDirectorSceneStack = nil;
 
 - (void) renderScene
 {
-	// Render the scene
-	[self.activeScene render];
+//	// Render the scene
+//	[self.activeScene render];
+	
+	// Render the scene stack
+	for (GCScene *scene in [sceneStack allObjects]) {
+		[scene render];
+	}
 }
 
 #pragma mark -
