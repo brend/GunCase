@@ -7,7 +7,8 @@
 //
 
 #import "GCSprite.h"
-#import <QuartzCore/QuartzCore.h>
+#import <OpenGL/OpenGL.h>
+#import <GLUT/GLUT.h>
 
 // Sets up an array of values for the texture coordinates.
 const GLfloat GCSpriteTexcoords[] = 

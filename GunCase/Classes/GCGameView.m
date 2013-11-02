@@ -7,7 +7,8 @@
 //
 
 #import "GCGameView.h"
-#import <QuartzCore/QuartzCore.h>
+#import <OpenGL/OpenGL.h>
+#import <GLUT/GLUT.h>
 #import "GunCase.h"
 
 #define GMWorldWidth	(self.frame.size.width)
