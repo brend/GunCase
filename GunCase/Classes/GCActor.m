@@ -7,7 +7,8 @@
 //
 
 #import "GCActor.h"
-#import <QuartzCore/QuartzCore.h>
+#import <OpenGL/OpenGL.h>
+#import <GLUT/GLUT.h>
 
 
 @interface GCActor ()

@@ -7,7 +7,8 @@
 //
 
 #import "GCLayeredScene.h"
-#import <QuartzCore/QuartzCore.h>
+#import <OpenGL/OpenGL.h>
+#import <GLUT/GLUT.h>
 
 @implementation GCLayeredScene
 
