@@ -87,8 +87,17 @@ const GLfloat GCSpriteTexcoords[] =
 	// Allocated memory needed for the bitmap context
 	spriteData = (GLubyte *) malloc(width * height * 4);
 	memset( spriteData, 0, width * height * 4);
-	// Uses the bitmatp creation function provided by the Core Graphics framework. 
-	spriteContext = CGBitmapContextCreate(spriteData, width, height, 8, width * 4, CGImageGetColorSpace(spriteImage), kCGImageAlphaPremultipliedLast);
+	// Uses the bitmatp creation function provided by the Core Graphics framework.
+
+	spriteContext = CGBitmapContextCreate(spriteData,
+                                          width, height,
+                                          8, width * 4,
+                                          CGImageGetColorSpace(spriteImage),
+// Ignore warning: The Apple Guys (tm) do it, too
+#pragma GCC diagnostic ignored "-Wenum-conversion"
+                                          kCGImageAlphaPremultipliedLast);
+#pragma GCC diagnostic warning "-Wenum-conversion"
+    
 	CGContextTranslateCTM (spriteContext, 0, height);
 	CGContextScaleCTM (spriteContext, 1.0, -1.0);
 	// After you create the context, you can draw the sprite image to the context.
