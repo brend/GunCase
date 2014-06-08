@@ -26,6 +26,10 @@
 #import "GCArcAnimation.h"
 #import "GCRotationAnimation.h"
 
+// Maps
+#import "GCMapParser.h"
+#import "GCTiledMapParser.h"
+
 // Application
 #import "GCGameView.h"
 
